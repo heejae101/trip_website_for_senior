@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여행하다</title>
+
+  <link href="reset.css">  <!-- css reset -->
+</head>
+
+<style>
+
+/*---------------------------------------------default function--------------------------------------------*/
+  ul{
+    padding-left:0;   /* remove default margin */
+  }
+
+  li{
+    display:inline-block;
+    margin-right:10px;
+    list-style: none;  
+  }
+
+  a{
+    cursor:pointer;
+  }
+/*-------------------------------------------------------------------------------------------------------*/
+
+  div#wrap{
+    display:flex;
+    flex-flow:row wrap;
+    width:100%;
+    margin:0 auto;
+  }
+
+  /*----------------------------------header : have to remove/change----------------------------------------*/
+  header.header{
+    display:flex;
+    position:relative;
+    justify-content:flex-end;
+    width:100%;
+  }
+
+  header.header>nav{
+    width:100%;
+    min-height:50px;
+    background:red;
+  }
+/*--------------------------------------------------------------------------------------------------------*/
+
+  section.sign_in_section{
+    display:flex;
+    width:100%;
+    align-items: center;
+    justify-content:center;
+    margin-top:30px;
+    /* background:yellow; */
+  }
+
+  h1.sign_in_text{
+    text-align:center;
+  }
+
+  div.progress{
+    text-align:center;
+  }
+
+  h4.help_text{
+    text-align:left;
+  }
+
+  button.phone_verification_btn{
+    width:300px;
+    height:50px;
+    color:#000000;
+    padding:10px 20px;
+    border-radius:4px;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:800;
+    font-size:0.8rem; 
+  }
+
+  button.phone_verification_btn img{
+    width:20px;
+    margin-right:10px;
+  }
+
+</style>
+
+<body>
+
+  <div id="wrap">
+
+<!---------------------------have to remove/change:header----------------------------->
+    <header class="header">
+      <nav></nav>
+    </header>
+<!-------------------------------have to remove/change:header----------------------------->
+
+    <section class="sign_in_section">
+      <form action="" method="post" name="member">
+      
+        <h1 class="sign_in_text">회원가입</h1>
+
+        <div class="progress">
+          <ul>
+            <li><h2>1.약관동의</h2></li>
+            <li><h2>2.본인인증</h2></li>
+            <li><h2>3.정보입력</h2></li>
+            <li><h2>4.가입완료</h2></li>    
+          </ul>
+        </div>
+
+        <h4 class="help_text">* 아래 버튼을 눌러 휴대폰 인증을 통한 본인인증을 해주세요.</h4>
+
+        <button class="phone_verification_btn">
+          <img src="img/logo_smartphone.png" alt="cellphone check" />휴대폰 인증
+        </button>
+
+        <br/>
+        <h class="help_text">만 14세미만 회원가입 불가(단,법정대리인 동의서 제출 시 포인트 합산 가능)</h>
+      
+      </form>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

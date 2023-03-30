@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여행하다</title>
+  
+  <link href="reset.css">  
+</head>
+
+<style>
+
+  ul{
+    padding-left:0;   /* remove default margin */
+  }
+
+  li{
+    list-style: none;  
+  }
+
+  a{
+    color:#000000;
+    text-decoration:none;
+  }
+
+  a:hover{
+    cursor:pointer;
+  }
+
+  button{
+    border:none;
+    cursor:pointer;
+  }
+
+  hr{
+    width:370px;
+  }
+
+  div.wrap{
+    display:flex;
+    justify-content:center;
+  }
+
+  div.container{ 
+    width:450px;
+    align-items:center;
+    background-color:cyan;
+  }
+
+  input.login{
+    width:370px;
+    background:transparent;
+    border:none;
+    border-bottom:1px solid black;
+    box-shadow:none;
+    /* outline:none; */
+  }
+
+  li.login_input_line{
+    margin-bottom:20px;
+  }
+
+  button.login_btn1{
+    width:370px;
+    height:40px;
+    margin-top:5px;
+    border-radius:5px;
+    background-color:#545353;
+    color:white;
+  }
+
+  img.login_btn_naver{
+    width:180px;
+    height:44px;
+  }
+
+  button.login_sign_up_btn{
+    background-color:#439BFF;
+    color:white;
+  }
+  
+</style>
+
+<body>
+
+  <section class="login_section">
+
+    <form action="" method="post" name="login">
+
+      <div class="wrap">  <!-- entitle container -->
+
+      <!-- elements------------------       
+      | 1. website main logo        |
+      | 2. login elements           |
+      | 3. seperating border        |
+      | 4. login_oauth elements     |                      |
+      | 5. find account, sign up    |
+      ------------------------------>
+        <div class="container">  <!-- container for login elements -->
+        
+        <!-- 1. website main logo -->
+        <div class="login_home_icon">  
+          <h1><a href=https://www.kyowontour.com>여 행 하 다</a></h1>
+        </div>
+
+        <!-- 2. login elements -->
+        <div class="login_input">   
+          <ul>
+            <li class="login_input_line">
+              <label for="id" name="id">전화번호</label><br/>
+              <input class="login id_input" type="text" name="id" placeholder="-없이 입력하세요." required>
+            </li>
+            <li class="login_input_line">
+              <label for="pwd" name="pwd">비밀번호</label><br/>
+              <input class="login pwd_input" type="password" name="pwd" required>
+            </li>
+          </ul>
+          <input class="login_id_check_box" type="checkbox" name="check">계정저장<br/>
+          <a href="#"><button class="login_btn1 login_btn_basic" name="btn" >로그인</button></a>
+        </div>
+
+        <!-- 3. seperating border -->
+        <div class="login_border">
+          <h2 class="login_border_txt">   
+            <span class="login_border_text">다른 계정으로 로그인</span>
+          </h2>
+        </div>
+
+        <!-- 4. login_oauth elements -->  
+        <div class="login_oauth">   
+          <a href="#"><img class="login_btn2 login_btn_naver" src="img/login_naver_btn.png"></a>
+          <a href="#"><img class="login_btn2 login_btn_kakao" src="img/login_kakao_btn.png"></a>
+        </div>
+
+        <!-- 5. find account, sign up -->
+        <button class="login_btn1 login_find_password_btn" name="btn" >비밀번호 찾기</button>
+        <br/>
+        <button class="login_btn1 login_sign_up_btn" name="btn" >회원가입</button>
+   
+      </div>   <!-- for container_login-->
+      </div>  <!-- for container -->
+    </div> <!-- for wrap -->
+    
+  </form>
+
+  </section>
+
+</body>
+</html>

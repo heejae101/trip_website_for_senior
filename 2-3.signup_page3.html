@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>여행하다</title>
+
+  <link href="reset.css">  <!-- css reset -->
+</head>
+
+<body>
+
+  <section class="sign_in_section">
+    <form action="" method="post" name="member">
+    
+      <h1 class="sign_in_text">회원가입</h1>
+
+      <div class="progress">
+        <ul>
+          <li><h2>1.약관동의</h2></li>
+          <li><h2>2.본인인증</h2></li>
+          <li><h2>3.정보입력</h2></li>
+          <li><h2>4.가입완료</h2></li>    
+        </ul>
+      </div>
+
+      <h4 class="help_text">* 고객분들이 서비스를 이용하기 위해 사이트에서 필요한 정보를 입력하는 페이지입니다.</h4>
+
+      <div class="input_user_information">
+        전화번호<br/>
+        <input type="text" name="tel" placeholder="-없이 입력하세요." required/><br/>
+        비밀번호<br/>
+        <input type="password" name="pwd" required/><br/>
+        <p>- 비밀번호는 8자 이상, 최대 20자까지 입력해주세요.<br/>
+           - 연속된 숫자는 사용 불가능합니다.<br/>
+           - 대문자 1글자 이상 필수로 입력하세요.<br/></p>
+        비밀번호 확인<br/>
+        <input type="password" name="pwd" required/><br/>
+        생년월일<br/>
+        <input type="text" name="birth" required/><br/>
+        이메일<br/>
+        <input type="text" name="email_1" reqired/> @ <input type="text" name="email_2" reqired/><br/>
+        <input type="checkbox" name="check_email"/> 이메일 정보 수신동의<br/>
+        <h>- 여행상품과 관련정보(특가상품/신상품/할인쿠폰/뉴스레터 등)의 안내에 활용합니다.<br/>
+           - 제휴 이벤트 등 제3자와의 마케팅 활용 시 별도의 동의를 받고 진행합니다.<br/></h>
+      </div>
+
+      <div class="final_btn">
+        <button class="final_btn_sign_in">회원가입</button>
+        <button class="final_btn_back">뒤로가기</button>
+      </div>
+
+    </form>
+  </section>
+
+</body>
+
+</html>

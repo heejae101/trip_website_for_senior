@@ -1,0 +1,241 @@
+@font-face{
+    font-family: 'nanum';
+    src: url(../font/NanumSquareNeo-cBd.ttf);
+}
+
+em,span{
+    font-family: 'nanum';
+}
+
+
+
+/* --------------------------top------------------------- */
+/* top section 설정 */
+.top_section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('/image/main_banner/first_banner.jpg');
+    background-repeat : no-repeat;
+    background-size : cover;
+    max-width: 100%;
+}
+
+.font_white {
+    color: white;
+}
+/* 아이콘, nav 지역 설정 */
+.top_text_area{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+/* 아이콘 크기 설정 */
+.bi-list, .bi-arrow-down-circle-fill{
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+/* 아이콘 위치 설정 */
+.top_nav_icon_area{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+/* top nav 가로 배치 설정 */
+div.top_nav{
+    display: inline-block;
+}
+
+/* 국내 여행, 해외 여행, 여행 가이드 부분 */
+div.top_nav_menu_area{
+    position: absolute;
+    top: 20px;
+    left: 70px;
+}
+
+div.top_nav_menu_area>ul{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+}
+
+div.top_nav_menu_area li{
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+}
+
+/* login_nav 부분 설정  */
+div.login_nav{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+div.login_nav>ul{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+}
+
+div.login_nav li{
+    display: inline-block;
+    text-align: center;
+    /* margin-left: 10px; */
+    padding: 10px;
+}
+
+/* dropdown 부분 */
+
+
+/* 고객센터부분 */
+div.customer_service{
+    width: 320px;
+    height: 65;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* 스크롤 다운 버튼 */
+div.down_btn{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    display: inline-block;
+    bottom: 20px;
+    right: 20px;
+}
+
+div.down_btn>span, .icon_area{
+    display: inline-block;
+}
+
+
+/* --------------------------top end------------------------- */
+
+
+
+
+
+/* -------------------------middle-------------------------- */
+
+/* middle section 크기 설정 */
+.middle_section{
+    width: 100%;
+    height: 1000px;
+}
+
+.text_popular{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.text_1{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 32px;
+}
+
+.slider_popular{
+    width: 100%;
+    height: 700px;
+}
+
+.mid_hr{
+    background: black;
+    width: 300px;
+}
+
+/* -------------------------middle end-------------------------- */
+
+
+
+
+
+/* ------------------------guide section------------------------- */
+
+.guide_section{
+    width: 100%;
+    height: 700px;
+    text-align: center;
+}
+
+.guide_text{
+    width: 100%;
+    height: 100px;
+}
+
+.guide_h1{
+    font-size: 32px;
+}
+
+.btn_more{
+    width: 75px;
+    height: 25px;
+    position: absolute;
+}
+
+
+.guide_youtube_video_area{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_area{
+    display: inline-block;
+    margin-left: 30px;
+    width: 400px;
+    height: 250px;
+    border-radius: 8px;
+    background-color: aqua;
+}
+
+.video_area{
+    width: 100%;
+    height: 200px;
+}
+
+/* ------------------------guide section end------------------------- */
+
+
+
+
+/* ------------------------------footer---------------------------- */
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
+
+.footer_top {
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.footer_top ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_top li{
+    display: inline-block;
+    padding: 20px;
+}
+
+.footer_bottom {
+    width: 300px;
+    height: 200px;
+}

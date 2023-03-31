@@ -25,6 +25,11 @@
     border:none;
   }
 
+  button:hover{
+    box-shadow:2px 2px 5px #ABA9A9;
+    margin:0px 5px 5px 0px;
+  }
+
   a{
     cursor:pointer;
   }
@@ -77,12 +82,84 @@
   div.help_text{
     font-weight:600;
     margin-bottom:20px;
+    text-align:center;
   }
 
 /*---------------------------------------------------------------------------*/
+  div.input_user_information{
+    justify-content:center;
+    padding-left:80px;
+    /* background-color:yellow; */
+  }
+
   div.input_user_information li{
     display:block;
+    margin: 20px 0px;
   }
+
+  span.input_explanation{
+    display:block;
+    margin:0 5px;
+    font-size:0.9rem;
+  }
+
+  div.input_user_information label{
+    font-weight:800;
+  }
+
+  div.input_user_information span.essential_red{
+    color:red;
+  }
+
+  div.input_user_information input{
+    width:300px;
+    height:25px;
+    margin-top:5px;
+    border-radius:2px;
+  }
+
+  div.input_user_information input#check_email{
+    width:20px;
+    height:20px;
+  }
+
+  span.input_explanation_email{
+    margin-left:30px;
+  }
+
+/*---------------------*/
+
+  div.input_user_information_btn{
+    margin-top:30px;
+  }
+
+  button.btn_btn{
+    width:370px;
+    height:40px;
+    margin-top:5px;
+    border-radius:5px;
+    cursor:pointer;
+  }
+
+  button.btn_sign_in{
+    background-color:#439BFF;
+    color:white;
+  }
+
+  button.btn_back{
+    background-color:#545353;
+    color:#fff;
+  }
+
+/*------------------------------------footer:have to remove/change------------------------------------*/
+  footer.footer{
+    width:100%;
+    height:50px;
+    background:red;
+    margin-top:50px;
+  }
+/*-----------------------------------------------------------------------------------------------------*/
+
 
 </style>
 
@@ -115,6 +192,7 @@
         </div>
 
         <div class="input_user_information">
+
           <ul>
             <li>
               <label for="id" name="id">
@@ -128,9 +206,9 @@
                 비밀번호<span class="essential_red">(필수)</span>
               </label><br/>
               <input type="password" name="pwd" required/><br/>
-              <span>- 비밀번호는 8자 이상, 최대 20자까지 입력해주세요.</span>
-              <span>- 연속된 숫자는 사용 불가능합니다.</span>
-              <span>- 대문자 1글자 이상 필수로 입력하세요.</span>
+              <span class="input_explanation">1. 비밀번호는 8자 이상, 최대 20자까지 입력해주세요.</span>
+              <span class="input_explanation">2. 연속된 숫자는 사용 불가능합니다.</span>
+              <span class="input_explanation">3. 대문자 1글자 이상 필수로 입력하세요.</span>
             </li>
             
             <li>
@@ -156,15 +234,17 @@
           </ul>
 
           <div class="input_user_information_email">
-            <input type="checkbox" name="check_email"/> 이메일 정보 수신동의<br/>
-            <h>- 여행상품과 관련정보(특가상품/신상품/할인쿠폰/뉴스레터 등)의 안내에 활용합니다.<br/>
-               - 제휴 이벤트 등 제3자와의 마케팅 활용 시 별도의 동의를 받고 진행합니다.<br/></h>
+            <input type="checkbox" id="check_email" name="check_email"/>
+            <label for="check_email" name="check_email">이메일 정보 수신동의</label><br/>
+            <span class="input_explanation input_explanation_email">1. 여행상품과 관련정보(특가상품/신상품/할인쿠폰/뉴스레터 등)의 안내에 활용합니다.</span>
+            <span class="input_explanation input_explanation_email">2. 제휴 이벤트 등 제3자와의 마케팅 활용 시 별도의 동의를 받고 진행합니다.</span>
           </div>
-        </div>
 
-        <div class="final_btn">
-          <button class="final_btn_sign_in">회원가입</button>
-          <button class="final_btn_back">뒤로가기</button>
+          <div class="input_user_information_btn">
+            <button class="btn_btn btn_sign_in">회원가입</button>
+            <button class="btn_btn btn_back">뒤로가기</button>
+          </div>
+
         </div>
 
       </form>

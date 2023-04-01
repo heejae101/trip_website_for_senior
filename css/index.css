@@ -1,15 +1,34 @@
 @font-face{
     font-family: 'nanum';
     src: url(../font/NanumSquareNeo-cBd.ttf);
+    font-weight: 400;
 }
 
-em,span{
+@font-face{
     font-family: 'nanum';
+    src: url(../font/NanumSquareNeo-eHv.ttf);
+    font-weight: 700;
+}
+
+em,span,a{
+    font-family: 'nanum';
+    font-weight: 400;
+    letter-spacing: -1.7px;
+}
+
+.border_text{
+    font-family: 'nanum';
+    font-weight: 700;
+}
+
+a{
+    text-decoration:none;
+    color: white;
 }
 
 
 
-/* --------------------------top------------------------- */
+/* ========================== top ========================== */
 /* top section 설정 */
 .top_section{
     width: 100%;
@@ -21,9 +40,11 @@ em,span{
     max-width: 100%;
 }
 
+/* 폰트 화이트 */
 .font_white {
     color: white;
 }
+
 /* 아이콘, nav 지역 설정 */
 .top_text_area{
     width: 100%;
@@ -115,53 +136,231 @@ div.down_btn>span, .icon_area{
     display: inline-block;
 }
 
+/* ======================= center_drop ================== */
+.center_drop{
+    position: absolute;
+    top:40%;
+    left:22.5%;
+    width: 800px;
+    height: 200px;
+}
 
-/* --------------------------top end------------------------- */
+em,.sBtn-text{
+    font-size: 27px;
+}
+
+.text_area{
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    position: relative;
+}
+
+.text_area>span, .select-menu{
+    display: inline-block;
+}
+
+.select-menu{
+    width: 220px;
+    height: 50px;
+}
+
+.select-menu .select-btn{
+    display: flex;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 1000px;
+    /* border-radius: 8px; */
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    border-bottom: 2px solid #333;
+    /* box-shadow: 0 0 5px rgba(0,0,0,0.1); */
+}
+
+.select-btn svg{
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu.active .select-btn svg{
+    transform: rotate(-180deg);
+}
+
+.options{
+    z-index: 1;
+}
+
+.select-menu .options{
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.select-menu.active .options{
+    display: block;
+}
+
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.options .option:hover{
+    background: #f2f2f2;            
+}
+
+.option .option-text{
+    font-size: 18px;
+    color: #333;
+}
+
+.select-menu .options{
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.options .option:hover{
+    font-weight: 600;
+    background: #f2f2f2;
+}
+
+.option .option-text{
+    font-size: 18px;
+    color: #333;
+}
+
+.text_area2{
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    position: relative;
+}
+
+.btn-type-round{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    font-size: 20px;
+    line-height: 1.2;
+    text-decoration: none;
+    min-height: 50px;
+    background: black;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/* ======================== center_drop ======================== */
+
+
+
+/* ========================== top end ========================== */
 
 
 
 
 
-/* -------------------------middle-------------------------- */
+/* ========================== middle ========================== */
 
 /* middle section 크기 설정 */
 .middle_section{
     width: 100%;
-    height: 1000px;
+    height: 800px;
 }
 
 .text_popular{
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     width: 100%;
     height: 100px;
     text-align: center;
 }
 
 .text_1{
+    letter-spacing: -3px;
     width: 200px;
     height: 50px;
     margin: 0 auto;
-    font-size: 32px;
+    font-size: 50px;
+    font-weight: 700px;
 }
 
 .slider_popular{
     width: 100%;
-    height: 700px;
+    height: 500px;
 }
 
-.mid_hr{
-    background: black;
+.slider_popular li{
     width: 300px;
+    height: 480px;
 }
 
-/* -------------------------middle end-------------------------- */
+.slider_popular a,.img_item{
+    width: 100%;
+    height: 100%;
+}
+
+.slider_popular .img_item{
+    position: relative;
+    border-radius: 12px;
+}
+
+.slider_popular .item_info{
+    font-size: 22px;
+    line-height: 1.4em;
+    max-height: 2.8em;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+.slider_popular .content{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
+.slider_popular .cont{
+    font-size: 42px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* ========================== middle end ========================== */
 
 
 
 
 
-/* ------------------------guide section------------------------- */
+/* ========================== guide section ========================== */
 
 .guide_section{
     width: 100%;
@@ -171,11 +370,12 @@ div.down_btn>span, .icon_area{
 
 .guide_text{
     width: 100%;
-    height: 100px;
+    height: 50px;
 }
 
 .guide_h1{
-    font-size: 32px;
+    font-size: 50px;
+    letter-spacing: -3px;
 }
 
 .btn_more{
@@ -189,30 +389,80 @@ div.down_btn>span, .icon_area{
     width: 100%;
     height: 500px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    position: relative;
     justify-content: center;
+    
 }
 
-.content_area{
-    display: inline-block;
+.guide_youtube_video_area>.more_btn{
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 70px;
+}
+
+.more_btn>a{
+    color: black;
+}
+
+.slider5{
+    box-shadow: none;
+}
+
+div.slide img{
+    border-radius: 12px;
+}
+
+div.slide span{
+    font-size: 22px;
+    height: 25px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.bx-wrapper{
     margin-left: 30px;
-    width: 400px;
-    height: 250px;
-    border-radius: 8px;
-    background-color: aqua;
+    margin-right: 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: none;
 }
 
-.video_area{
-    width: 100%;
-    height: 200px;
+.bi-arrow-left-circle,.bi-arrow-right-circle{
+    width: 60px;
+    height: 60px;
+    fill:black;
 }
 
-/* ------------------------guide section end------------------------- */
+.bi-arrow-left-circle:hover,.bi-arrow-right-circle:hover{
+    cursor: pointer;
+}
+
+.left_arrow_area{
+    width: 60px;
+    height: 60px;
+    z-index: 200;
+    position: absolute;
+    left: 0;
+    top: 35%;
+}
+
+.right_arrow_area{
+    width: 60px;
+    height: 60px;
+    z-index: 200;
+    position: absolute;
+    right: 0;
+    top: 35%;
+}
+
+/* ========================== guide section end ========================== */
 
 
 
 
-/* ------------------------------footer---------------------------- */
+/* ========================== footer ========================== */
 .footer{
     width: 100%;
     height: 300px;
@@ -239,3 +489,5 @@ div.down_btn>span, .icon_area{
     width: 300px;
     height: 200px;
 }
+
+/* ========================== footer end ========================== */

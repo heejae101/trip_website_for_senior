@@ -10,6 +10,18 @@
 
     <!-- 스타일시트 영역 -->
     <style>
+        /* 폰트 */
+        @font-face{ /* 일반크기 */
+            font-family: 'nanum';
+            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-cBd.ttf);
+            font-weight: 400;
+        }
+        @font-face{ 
+            font-family: 'nanum';
+            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-eHv.ttf);
+            font-weight: 700;
+        }
+
         /* 클릭을 하더라도 검정색으로 남게 설정 */
         a{
             text-decoration: none;
@@ -24,20 +36,26 @@
         }
         
         /* 고객센터 제목 박스 */
-        div.customer_service>div.customer_title{
+        div.customer_title{
             margin-top: 20px; 
             text-align: center;
-            font-size: 2.0rem;            
+            font-family: 'nanum';
+            font-size: 2.0rem;          
             
         }
         
         /* 무엇을 도와드릴까요? */
         div.customer_service p.customer_subtitle{
+            font-family: 'nanum';
             font-size: 2rem;
             font-weight: 700;
-            margin-left: 100px; /* 이걸 마진으로 배치하는게 과연 편한 일일까? */
-            margin-bottom: 30px;
-            
+            margin-left: 80px; /* 이걸 마진으로 배치하는게 과연 편한 일일까? */
+            margin-bottom: 30px;            
+        }
+        /* placeholder글씨 키우기 */
+        ::placeholder{
+            font-family: 'nanum';
+            font-size: 0.9rem;
         }
 
         /* 텍스트 입력박스와 검색 버튼 영역(일렬, 정중앙 배열) */
@@ -65,6 +83,8 @@
             margin-left: 5px; /* 검색박스와 검색버튼의 간격을 살짝 벌림 */
         }
 
+        /* ---------- 중앙 영역 ----------*/
+
         /* 내비게이션 영역 */
         /* 부모영역-희재님 작성! */
         .customer_nav{
@@ -78,7 +98,9 @@
 
         /* 개별 리스트 영역 */
         .customer_nav>ul{
+            font-family: 'nanum';
             font-size: 1.2rem;
+            /* font-weight: bold; */
         }
         .customer_nav li{
             display: inline-block;
@@ -97,6 +119,7 @@
             /*background-color: aqua; /* 지움 */
         }
         div.title{
+            font-family: 'nanum';
             font-size: 1.5rem;
             border-bottom: 2px solid black;
             display: flex; /* 자주하는질문과 더보기를 떨어뜨리자 */
@@ -134,8 +157,13 @@
          /* 질문들 예시 part */  
         div.question{
             position: relative;        
+            font-family: 'nanum';
         }
-
+        /* div.question>svg{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }         */
         div.question>ul{
             width: 100%;
             height: 60px;
@@ -146,6 +174,7 @@
             position: absolute;
             left: 60px;
             line-height: 60px;
+            /* font-family: 'nanum'; */
             font-size: 1.3rem;
             font-weight: bold;
         }
@@ -164,9 +193,9 @@
             line-height: 60px; 
             /*font-weight: bold; /* 이건 추후 논의 후 결정하는게 나을듯 */
         }
-        div.question li.box4{
+        div.question li.box4{ /* svg포함된 영역 */
             position: absolute;
-            left: 900px;
+            left: 900px;                   
             height: 60px;  
             line-height: 60px;      
             font-size: 1.7rem;  
@@ -235,31 +264,52 @@
                     <li class="box1">Q</li>
                     <li class="box2">결제문의</li>
                     <li class="box3">상품권 사용은 어떻게 하나요?</li>                    
-                    <li class="box4">▼</li></a>                
+                    <li class="box4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </li></a>                                    
+                    
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">기타문의</li>
                     <li class="box3">관심 상품은 어떻게 등록하나요?</li>            
-                    <li class="box4">▼</li></a>     
+                    <li class="box4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </li></a>   
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">상품문의</li>
                     <li class="box3">패키지여행 일정에 '자유 일정'이 있는데 그때는 무엇을 하나요?</li>
-                    <li class="box4">▼</li></a>
+                    <li class="box4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </li></a>   
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">결제문의</li>
                     <li class="box3">인터넷에서 예약 시 요금 결제는 어떻게 하나요?</li>
-                    <li class="box4">▼</li></a>
+                    <li class="box4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </li></a>   
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">결제문의</li>
                     <li class="box3">예약 취소 후 바로 환불 처리가 되나요?</li>
-                    <li class="box4">▼</li></a>
+                    <li class="box4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </li></a>   
                 </ul>
             </div>           
             <!-- 여행이지 사이트 하단의 [공지사항] 영역은 제외하기로 -->

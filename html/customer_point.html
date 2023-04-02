@@ -10,6 +10,19 @@
 
     <!-- 스타일시트 영역 -->
     <style>
+        /* 폰트 */
+        @font-face{ /* 일반크기 */
+            font-family: 'nanum';
+            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-cBd.ttf);
+            font-weight: 400;
+        }
+        @font-face{ 
+            font-family: 'nanum';
+            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-eHv.ttf);
+            font-weight: 700;
+        }
+        
+
         ul,li{
             list-style: none;            
         }
@@ -26,13 +39,15 @@
 
         div.customer_point .title{
             text-align: center;
+            font-family: 'nanum';
             font-size: 2.0rem;
             margin-top: 20px;
         } 
         
 
         .customer_point_info{
-            font-size: 0.9rem;
+            font-family: 'nanum';
+            font-size: 1rem;
             margin-top: 70px;
         }
         span.redmark{
@@ -61,6 +76,7 @@
             top: 25px;
             width: 350px;
             height: 100px;
+            font-family: 'nanum';
             font-size: 1.2rem;
             /*border: 2px dotted black; /* 지움 */
         }
@@ -75,7 +91,8 @@
             right: 100px;
             top: 25px;
             width: 300px;
-            height: 100px;           
+            height: 100px;     
+            font-family: 'nanum';      
             font-size: 1.2rem;
             /*border: 2px dotted black; /* 지움 */
         }
@@ -91,6 +108,7 @@
             height: 100px;
             right: 70px;
             top: 25px;
+            font-family: 'nanum';
             /*border: 2px dotted black; /* 지움 */
         }
         .customer_point_informbox_3 li{
@@ -107,6 +125,7 @@
         /* 전체, 적립, 사용, 소멸예정포인트 안내 텍스트 */       
         div.customer_point_inform_nav{
             display: flex;
+            font-family: 'nanum';
             margin-top: 50px;           
         }
         div.customer_point_inform_nav>ul{    
@@ -117,7 +136,7 @@
             margin-right: 15px;        
         }
         div.customer_point_inform_nav a{
-            color: rgb(181, 180, 180);
+            color: rgb(94, 94, 94);
         }
         
 
@@ -169,6 +188,7 @@
         }
         /* 총 1건 텍스트 */
         div.customer_point_page>.total_point{
+            font-family: 'nanum';
             font-size: 1.0rem;
             font-weight: 700;
             width: 100%;
@@ -194,6 +214,7 @@
         /* width: 1010px; */
         height: 60px;
         line-height: 60px;
+        font-family: 'nanum';
         /* border-top: 2px solid black; */
         border-bottom: 1px solid rgb(188, 186, 186) ;
             /* 왜 여기서는 line-height를 잡아야 하는걸까? */
@@ -205,7 +226,7 @@
             /* border-top: 2px solid black;   */
         }    
         div.point_content_part1 li.a{
-            margin-left: 32px;
+            margin-left: 40px;
             margin-right: 197px;
         }
         div.point_content_part1 li.b{
@@ -216,7 +237,7 @@
             margin-right: 35px;
         }
         div.point_content_part1 li.d{        
-            margin-left: 25px;
+            margin-left: 40px;
         }
         /* 이건 뭐하는 짓일까? */
         /* part2 영역...(잘 모를땐 이렇게 뻘짓도 좀 하는거지 썅) */
@@ -224,7 +245,8 @@
             display: flex;
             width: 1010px;   
             height: 60px; 
-            line-height: 60px;               
+            line-height: 60px;   
+            font-family: 'nanum';            
             border-bottom: 1px solid rgb(188, 186, 186) ;
         }
         div.point_content_part2 li{

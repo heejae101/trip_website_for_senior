@@ -16,6 +16,18 @@
 
     <!-- 스타일 시트 영역 -->
     <style>
+        /* 폰트 */
+        @font-face{ /* 일반크기 */
+            font-family: 'nanum';
+            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-cBd.ttf);
+            font-weight: 400;
+        }
+        @font-face{ 
+            font-family: 'nanum';
+            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-eHv.ttf);
+            font-weight: 700;
+        }
+
         /* 회원계정 전체 페이지 영역 */
         div.customer_account{
             width: 960px;
@@ -27,13 +39,15 @@
         /* 회원정보 변경 페이지의 제목 */
         p.customer_account_id_box{
             font-size: 2.0rem;
-            font-weight: 700;
+            font-weight: bold;
+            font-family: 'nanum';
             margin-top: 20px;
         }
 
         /* 회원정보 변경 페이지의 제목 하단 안내박스 */
         p.customer_account_pwd_box{
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            font-family: 'nanum';
             margin-top: 50px;
         }
 
@@ -45,18 +59,24 @@
             margin-top: 35px;
             /*border: 2px dotted black; /* 지울부분 */
         }
+        ::placeholder{
+            font-family: 'nanum';
+            font-size: 0.9rem;
+        }
         #id_box{
             width: 550px;
             height: 50px;
             margin-top: 25px;
             border: 2px solid black;
         }
+        
         #pwd_box{
             width: 550px;
             height: 50px;
             border: 2px solid black;
             margin-top: 10px;
         }
+       
 
 
         /* 취소 & 확인 버튼 박스 */
@@ -67,22 +87,26 @@
         button.btn_cancel{
             width: 300px;
             height: 50px;
+            font-family: 'nanum';
             font-size: 1.5rem;
             font-weight: 700;
         }
+        
         button.btn_check{
             width: 300px;
             height: 50px;
             font-size: 1.5rem;
             background-color: black;
             color: white;
+            font-family: 'nanum';
             font-weight: 700;
+            
         }
         div.customer_run button{ /* 마우스포인터 손가락모양 */
             cursor: pointer;
         }
-        div.customer_run button:hover{
-            border: 2px solid black;
+        div.customer_run button:hover{            
+            box-shadow: 4px 4px 8px #888;
         }
 
         
@@ -100,7 +124,7 @@
         </div>
         <!-- 아이디 & 비밀번호 입력 박스 -->
         <div class="customer_login">
-            <input type="text" id="id_box" value="010-0000-1111" placeholder="휴대번호를 입력하세요.">
+            <input type="text" id="id_box" value="" placeholder="010-0000-1111">
             <input type="password" id="pwd_box" name="pwd_enter" placeholder="비밀번호를 입력하세요.">
 
         </div>

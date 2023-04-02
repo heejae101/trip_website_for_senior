@@ -125,7 +125,7 @@ button{
 /* 일정보기 버튼 */
 .calender_btn{
     width: 130px;
-    height: 40px;
+    height: 60px;
     background-color: black;
     color: white;
     font-size: 20px;
@@ -137,6 +137,9 @@ button{
 .calender_area{
     /* text-align: center; */
     /* background-color: olivedrab; */
+    width: 90%;
+    margin: 20px auto;
+    padding-bottom: 20px;
     font-size: 22px;
     font-weight: 500;
 }
@@ -163,10 +166,14 @@ button{
 }
 .reservation_btn{
     width: 140px;
-    height: 40px;
+    height: 60px;
     font-size: 20px;
     border-radius: 5px;
     border: 0;
     color: white;
-    background-color: rgb(103, 161, 255);
+    background-color: black;
+}
+
+.reservation_btn:hover{
+    box-shadow: 4px 4px 8px #888;
 }

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/reset.css" rel="stylesheet"/>
+    <!-- travel_recommend css 연결 -->
+    <link href="../css/travel_recommend.css" rel="stylesheet"/>
+    <title>travel_recommend</title>
+</head>
+<body>
+    <!-- 여행지 추천 화면 -->
+    
+    <!------ 기능 ------------ 디자인 구현 --기능구현--
+    |         문구 드롭다운  |      X      |    X     |
+    | 낮은가격순/높은가격순  |      X      |    X     |
+    |      여행지 목록 표시  |      X      |    X     |
+    |        일정 보기 버튼  |      X      |    X     |
+    ---------------------------------------------------->
+    
+    <div class="wrap">
+        <!-- 네비게이션 따로 연결 -->
+        <nav></nav>
+
+        <div class="travel_recommend">
+
+            <!-- 문구 드롭다운 -->
+            <div class="center_drop">
+
+            </div>
+
+            <br/><br/>
+
+            <!-- 낮은 가격순 / 높은 가격순 -->
+            <ul class="filtering">
+                <li class="low_price"><a href="#">낮은가격순&nbsp;&nbsp;|</a></li>
+                <li class="high_price"><a href="#">높은가격순</a></li>
+            </ul>
+            
+            <!-- 목록(세로로)으로 추천 여행지 표시1 -->
+            <div class="travel_section">
+                <!-- 목록 이미지 영역 -->
+                <div class="travel_section_img">
+                    <!-- <img src="../images/test_img.jpg"> -->
+                </div>
+                
+
+                <!-- 목록 설명 영역 -->
+                <div class="travel_section_info">
+                    <!-- 목록 설명 영역_제목 -->
+                    <div class="travel_section_info_title">
+                        [샹그릴라/탄중아루VS라사리아] 호핑+자유시간 5일/6일
+                    </div>
+                    
+                    <!-- 목록 설명 영역_상세설명 -->
+                    <div class="travel_section_info_content">
+                        # 내나라여행 베스트셀러<br/>
+                        # 반딧불투어 사전옵션 할인혜택!!
+
+                    </div>
+
+                    <!-- 목록 설명 영역_가격 -->
+                    <div class="travel_section_info_price">
+                        700,000 ~
+                    </div>
+
+                    <!-- 일정보기 버튼 -->
+                    <div class="calender_btn_area">
+                        <button class="calender_btn">일정보기</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- 일정보기 버튼 클릭 시 캘린더 표시 영역 -->
+            <div class="calender_area">
+                <div class="calender"></div>
+
+                <!-- 캘린더 상세 일정 표시 -->
+                <div class="schedule_calender">05-16(화) 20:00 ~ 05-21(일) 19:00 4박6일</div>
+
+                <div class="reservation_btn_area">
+                    <button class="reservation_btn" onclick="location.href='#'">자세히 보기</button>
+                </div>
+            </div>
+
+
+
+            <!-- 목록(세로로)으로 추천 여행지 표시2 -->
+            <div class="travel_section">
+                <!-- 목록 이미지 영역 -->
+                <div class="travel_section_img">
+                    <!-- <img src="../images/test_img.jpg"> -->
+                </div>
+                
+
+                <!-- 목록 설명 영역 -->
+                <div class="travel_section_info">
+                    <!-- 목록 설명 영역_제목 -->
+                    <div class="travel_section_info_title">
+                        [동유럽 홀릭] 동유럽 발칸 6개국 11일 (오/헝/체/독/크/슬)
+                        
+                    </div>
+                    
+                    <!-- 목록 설명 영역_상세설명 -->
+                    <div class="travel_section_info_content">
+                        # 두브로브니크와 스플리트 #전일정 일급호텔
+                        # 내나라여행 베스트셀러
+                    </div>
+
+                    <!-- 목록 설명 영역_가격 -->
+                    <div class="travel_section_info_price">
+                        700,000 ~
+                    </div>
+
+                    <!-- 일정보기 버튼 -->
+                    <div class="calender_btn_area">
+                        <button class="calender_btn">일정보기</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- 일정보기 버튼 클릭 시 캘린더 표시 영역2 -->
+            <div class="calender_area">
+                <div class="calender"></div>
+
+                <!-- 캘린더 상세 일정 표시 -->
+                <div class="schedule_calender">05-16(화) 20:00 ~ 05-21(일) 19:00 4박6일</div>
+
+                <div class="reservation_btn_area">
+                    <button class="reservation_btn" onclick="location.href='#'">자세히 보기</button>
+                </div>
+            </div>
+
+
+
+
+            
+            <!-- 목록(세로로)으로 추천 여행지 표시3 -->
+            <div class="travel_section">
+                <!-- 목록 이미지 영역 -->
+                <div class="travel_section_img">
+                    <!-- <img src="../images/test_img.jpg"> -->
+                </div>
+                
+
+                <!-- 목록 설명 영역 -->
+                <div class="travel_section_info">
+                    <!-- 목록 설명 영역_제목 -->
+                    <div class="travel_section_info_title">
+                        [동유럽 홀릭] 동유럽 발칸 6개국 11일 (오/헝/체/독/크/슬)
+                        #두브로브니크와 스플리트 #전일정 일급호텔
+                    </div>
+                    
+                    <!-- 목록 설명 영역_상세설명 -->
+                    <div class="travel_section_info_content">
+                        # 내나라여행 베스트셀러<br/>
+                        # 인기여행지 top5
+                    </div>
+
+                    <!-- 목록 설명 영역_가격 -->
+                    <div class="travel_section_info_price">
+                        700,000 ~
+                    </div>
+
+                    <!-- 일정보기 버튼 -->
+                    <div class="calender_btn_area">
+                        <button class="calender_btn">일정보기</button>
+                    </div>
+
+                    
+                </div>
+
+                
+            </div>
+
+            <!-- 일정보기 버튼 클릭 시 캘린더 표시 영역3 -->
+            <div class="calender_area">
+                <div class="calender"></div>
+
+                <!-- 캘린더 상세 일정 표시 -->
+                <div class="schedule_calender">05-16(화) 20:00 ~ 05-21(일) 19:00 4박6일</div>
+
+                <div class="reservation_btn_area">
+                    <button class="reservation_btn" onclick="location.href='#'">자세히 보기</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

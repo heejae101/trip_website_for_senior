@@ -21,25 +21,35 @@
 
     <!-- 스크립트 부분 -->
     <script>
-        document.addEventListener('DOMContentLoaded',()=>{
-            const optionMenu = document.querySelector(".select-menu"),
-                selectBtn = optionMenu.querySelector(".select-btn"),
-                options = optionMenu.querySelectorAll(".option"),
-                sBtn_text = optionMenu.querySelector(".sBtn-text");
+    document.addEventListener('DOMContentLoaded',()=>{
+        const optionMenu = document.querySelector(".select-menu"),
+            selectBtn = optionMenu.querySelector(".select-btn"),
+            options = optionMenu.querySelectorAll(".option"),
+            sBtn_text = optionMenu.querySelector(".sBtn-text");
 
-            // select your option 누르면 클래스 명이 바뀜 
+        // select your option 누르면 클래스 명이 바뀜 
 
-            selectBtn.addEventListener('click', () => optionMenu.classList.toggle("active"));
+        // selectBtn.addEventListener('click', () => optionMenu.classList.toggle("active"));
 
-            options.forEach(option => {
-                option.addEventListener("click", () => {
-                    let selectedOption = option.querySelector(".option-text").innerText;
-                    sBtn_text.innerText = selectedOption;
-                    console.log(selectedOption);
-                    optionMenu.classList.remove("active");
-                })
+        const selectBtns = document.querySelectorAll('.select-btn');
+
+        console.log(options)
+        
+        selectBtns.forEach(selectBtn => {
+            selectBtn.addEventListener('click', () => {
+            selectBtn.parentElement.classList.toggle('active');
+            });
+        });
+
+        options.forEach(option => {
+            option.addEventListener("click", () => {
+                let selectedOption = option.querySelector(".option-text").innerText;
+                sBtn_text.innerText = selectedOption;
+                console.log(selectedOption);
+                optionMenu.classList.remove("active");
             })
         })
+    })
     </script>
 
 </head>
@@ -52,8 +62,10 @@
         |    고객센터 번호 :   X        |
         |    스크롤 다운   :   X        |
         -------------------------------->
+        <div id="customer-service" style="display: none;">사이트 이용하실 때 어려우신사항 있으시면<br>아래의 번호를 통해 문의해주시기 바랍니다.<hr>고객센터 연락처: 000-0000-0000</div>
         <section class="top_section">
             <!-- 카테고리 토글 -->
+            <video src="./video/3.mp4" muted autoplay loop style="width: 100vw; height: 100%; object-fit: cover;"></video>
             <div class="top_text_area">
                 <div class="top_nav">
                     <div class="top_nav_icon_area">
@@ -159,13 +171,18 @@
                     </span>
                 </div>
                 <div class="drop_down_btn">
-                    <button class="btn-type-round" onclick="myTasteBtnClick();">
+                    <button class="btn-type-round" onclick="window.location.href='./html/domestic_travel.html';">
                         <span>내 취향 여행 보기</span><span class="xi-angle-down-min"></span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                                </svg>
                     </button>
                 </div>
             </div>
             <!-- 고객센터 번호 -->
-            <div class="customer_service">
+            <div class="customer_service" style="display: none;">
                 <div class="customer_service_title">
                     <span class="font_white">고객센터</span>
                 </div>
@@ -180,7 +197,7 @@
 
             <!-- 스크롤 다운 버튼 -->
             <div class="down_btn">
-                <span class="font_white">더 많은 여행지를 보고싶으시다면</span>
+                <span class="font_white">더 많은 여행지를 보고싶으시다면<hr></span>
                 <div class="icon_area">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
@@ -197,7 +214,7 @@
                 <ul class="bxslider">
                     <li>
                         <a href="https://www.youtube.com/">
-                            <div class="img_item" style="background-image: url('/image/slider_popular/first_slider_popular_andong.jpg'); background-size : cover;">
+                            <div class="img_item" decoding="async" style="background-image: url('/image/slider_popular/first_slider_popular_andong.jpg'); background-size : cover;">
                                 <div class="item_info">
                                     <p class="tit">대만 4일</p>
                                 </div>
@@ -213,7 +230,7 @@
                     </li>
                     <li>
                         <a href="https://www.youtube.com/">
-                            <div class="img_item" style="background-image: url('/image/slider_popular/first_slider_popular_boracay.jpg'); background-size : cover;">
+                            <div class="img_item" decoding="async" style="background-image: url('/image/slider_popular/first_slider_popular_boracay.jpg'); background-size : cover;">
                                 <div class="item_info">
                                     <p class="tit">대만 4일</p>
                                 </div>
@@ -228,23 +245,7 @@
                         </a>
                     <li>
                         <a href="https://www.youtube.com/">
-                            <div class="img_item" style="background-image: url('/image/slider_popular/first_slider_popular_danyang.jpg'); background-size : cover;">
-                                <div class="item_info">
-                                    <p class="tit">대만 4일</p>
-                                </div>
-                                <!-- PC 화면 일때만 -->
-                                <div class="content">
-                                    <p class="pc_ver">설명</p>
-                                </div>
-                                <div class="cont">
-                                    <p class="aside">KOREA</p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/">
-                            <div class="img_item" style="background-image: url('/image/slider_popular/first_slider_popular_jeju.jpg'); background-size : cover;">
+                            <div class="img_item" decoding="async" style="background-image: url('/image/slider_popular/first_slider_popular_danyang.jpg'); background-size : cover;">
                                 <div class="item_info">
                                     <p class="tit">대만 4일</p>
                                 </div>
@@ -260,7 +261,7 @@
                     </li>
                     <li>
                         <a href="https://www.youtube.com/">
-                            <div class="img_item" style="background-image: url('/image/slider_popular/first_slider_popular_paris.jpg'); background-size : cover;">
+                            <div class="img_item" decoding="async" style="background-image: url('/image/slider_popular/first_slider_popular_jeju.jpg'); background-size : cover;">
                                 <div class="item_info">
                                     <p class="tit">대만 4일</p>
                                 </div>
@@ -276,7 +277,23 @@
                     </li>
                     <li>
                         <a href="https://www.youtube.com/">
-                            <div class="img_item" style="background-image: url('/image/slider_popular/first_slider_popular_sizuoka.jpg'); background-size : cover;">
+                            <div class="img_item" decoding="async" style="background-image: url('/image/slider_popular/first_slider_popular_paris.jpg'); background-size : cover;">
+                                <div class="item_info">
+                                    <p class="tit">대만 4일</p>
+                                </div>
+                                <!-- PC 화면 일때만 -->
+                                <div class="content">
+                                    <p class="pc_ver">설명</p>
+                                </div>
+                                <div class="cont">
+                                    <p class="aside">KOREA</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/">
+                            <div class="img_item" decoding="async" style="background-image: url('/image/slider_popular/first_slider_popular_sizuoka.jpg'); background-size : cover;">
                                 <div class="item_info">
                                     <p class="tit">대만 4일</p>
                                 </div>
@@ -312,23 +329,23 @@
                         <span>노년의 여행, 어떻게 시작해야할까?</span>
                     </div>
                     <div class="slide">
-                        <a href=""><img src="/image/guide_img_list/guide_img_list_2.jpg"></a>
+                        <a href=""><img src="/image/guide_img_list/guide_img_list_2.jpg" decoding="async"></a>
                         <span>우리나라 맞아?! 이국적인 국내 여행지 7</span>
                     </div>
                     <div class="slide">
-                        <a href=""><img src="/image/guide_img_list/guide_img_list_3.jpg"></a>
+                        <a href=""><img src="/image/guide_img_list/guide_img_list_3.jpg" decoding="async"></a>
                         <span>부모님과 함께 하는 여행, 여기로 가세요~</span>
                     </div>
                     <div class="slide">
-                        <a href=""><img src="/image/guide_img_list/guide_img_list_4.jpg"></a>
+                        <a href=""><img src="/image/guide_img_list/guide_img_list_4.jpg" decoding="async"></a>
                         <span>비행기 탑승, 어렵지 않아요!</span>
                     </div>
                     <div class="slide">
-                        <a href=""><img src="/image/guide_img_list/guide_img_list_5.jpg"></a>
+                        <a href=""><img src="/image/guide_img_list/guide_img_list_5.jpg" decoding="async"></a>
                         <span>박물관, 조승연 작가님이 알려드립니다!</span>
                     </div>
                     <div class="slide">
-                        <a href=""><img src="/image/guide_img_list/guide_img_list_6.jpg"></a>
+                        <a href=""><img src="/image/guide_img_list/guide_img_list_6.jpg" decoding="async"></a>
                         <span>일본여행, 이 영상 하나만 보고 가세요!</span>
                     </div>
                 </div>
@@ -389,9 +406,9 @@
                 });
 
                 $('.bxslider').bxSlider({
-                    minSlides: 3,
+                    minSlides: 4,
                     slideWidth: 800,
-                    maxSlides: 3,
+                    maxSlides: 4,
                     slideMargin: 50,
                     moveSlides: 1,
                     auto: true,

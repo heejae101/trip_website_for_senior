@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'nanum';
+    src: url('../font/NanumSquareNeo-cBd.ttf');
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: 'nanum';
+    src: url('../font/NanumSquareNeo-eHv.ttf');
+    font-weight: 700;
+}
+
+body {
+    background-color: skyblue;
+    text-align: center;
+    font-family: 'nanum';
+}
+
+svg{
+    fill: rgb(255, 255, 255);
+    /* padding: 10px; */
+}
+
+svg>path{
+    border: 5px solid black;
+    stroke:rgb(0, 0, 0);
+}
+
+svg>path:hover{
+    fill: rgb(255, 187, 187);
+    
+    border: 10px solid black;
+
+    box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
+}
+
+/* (상단 제목) 내나라여행 한눈에보기  */
+.title_korea{
+    margin: 50px 0;
+}
+
+/* (영역) 지역별 상세 설명 */
+.tour_korea{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    
+    /* margin: 0 auto; */
+}
+
+/* 지역별 상세 이미지 */
+.tour_korea_img{
+    margin: 10px auto;
+    width: 150px;
+    height: 100px;
+    border-radius: 100px;
+
+    background-color: rgb(249, 255, 181);
+}
+
+/* 지역별 상세 설명 */
+.tour_korea_info{
+    background-color: mistyrose;
+}

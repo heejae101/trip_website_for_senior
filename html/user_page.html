@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/reset.css" rel="stylesheet"/>
+    <!-- user_page css 연결 -->
+    <link href="../css/user_page.css" rel="stylesheet"/>
+    <title>user_page</title>
+</head>
+<body>
+    <!-- 마이페이지 화면 -->
+
+    <!------ 기능 -------- 구현 ------
+    |     네비게이션 바  |   X       |
+    |          예약내역  |   X       |
+    |          문의내역  |   X       |
+    |   서비스 바로가기  |   X       |
+    |              버튼  |   X       |
+    --------------------------------->
+    <div class="wrap">
+        <!-- 네비게이션 바 -->
+        <nav></nav>
+
+            <!-- 마이페이지 화면 -->
+            <div class="user_page">
+                
+                <!-- 나의 정보 title -->
+                <div class="user_page_title title">나의정보</div>
+                <br/>
+                
+                <!-- 예약내역 부분-->
+                <div class="user_reservation_details">
+                    <!-- 예약내역 title -->
+                    <div class="user_reservation_title title">예약내역</div>
+                    
+                    <!-- 예약내역 더보기버튼 -->
+                    <div class="user_reservation_more"><a href="test.html">더보기 ></a></div>
+
+                    <!-- 예약내역 리스트 표시 -->
+                    <div class="user_reservation_details_list">
+                        <!-- 예약내역 없을 시 -->
+                        <div class="no_reservation">예약내역이 없습니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <br/><br/>
+
+            <!-- 마이페이지 하단 부분 -->
+            <div class="user_page_bottom">
+
+                <!-- 문의내역 부분 -->
+                <div class="inquiry_details">
+                    
+                    <!-- 문의내역 title -->
+                    <div class="inquiry_details_title title">문의내역</div>
+                    
+                    <!-- 문의내역 더보기 버튼 -->
+                    <div class="inquiry_details_more"><a href="test.html">더보기 ></a></div>
+
+                    <!-- 문의내역 리스트 표시 -->
+                    <div class="inquiry_details_list">
+                        <ul>
+                            <li><a href="#">2023-01-05&nbsp;&nbsp;문의합니다.</a></li>
+                            <li><a href="#">2023-01-20&nbsp;&nbsp;문의합니다.</a></li>
+                            <li><a href="#">2023-03-01&nbsp;&nbsp;문의합니다.</a></li>
+                            <li><a href="#">2023-03-25&nbsp;&nbsp;문의합니다.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 서비스 바로가기 부분 -->
+                <div class="go_to_service">
+                    
+                    <div class="go_to_service_title title">서비스 바로가기</div>
+
+                    <!-- 서비스 바로가기 더보기 버튼-->
+                    <div class="go_to_service_more"><a href="test.html">더보기 ></a></div>
+
+                    <!-- 관심상품 / 포인트 / 할인쿠폰 / 회원정보수정 버튼-->
+                    <div class="go_to_service_btn">
+                        <!-- <button id="fav_btn">관심상품</button> -->
+                        <button class="btn">💵<br/>관심상품</button>
+                        <button class="btn">포인트</button>
+                        <button class="btn">할인쿠폰</button>
+                        <button class="btn">회원정보수정</button>
+                    </div>
+                </div>
+
+            </div>
+        <!-- 푸터 -->
+        <footer>
+
+        </footer>
+
+    </div>
+</body>
+</html>

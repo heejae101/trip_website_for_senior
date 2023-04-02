@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css default -->
+    <link href="./css/reset.css" rel="stylesheet" />
+    <!-- 스타일 시트 영역 -->
+    <style>
+
+    /* 전체 영역 */
+    div.customer_coupon{
+        width: 960px;
+        height: 800px;
+        text-align: center;
+        /* border: 1px dotted black;  */
+    }
+    /* 타이틀 글자 */
+    p.customer_coupon_title{
+        font-size: 2.0rem;
+        font-weight: 800;
+        margin: 20px 0 40px 0;
+    }
+    a{
+        color: black;
+    }
+
+
+    /* 할인쿠폰 영역 폰트(우선 클래스는 지정했으나) */
+    /* p.title_font{
+        @font-face{
+        font-family: 'nanum';
+        src: url(../font/NanumSquareNeo-eHv.ttf);
+        font-weight: 700;
+        }
+    } */
+
+
+    /* 쿠폰 종류 안내 및 전체 확인 메뉴 */
+    div.customer_coupon_type_nav{
+        font-size: 2.2rem;       
+        margin-left: 130px; 
+        margin-top: 60px; /* 윗 안내문과의 거리 */
+    }
+    /* 쿠폰종류 가로배치 */
+    div.customer_coupon_type_nav>ul{
+        width: 700px;
+        display: flex;
+        justify-content: space-around;
+        /*border: 1px dotted black; /* 지울부분 */
+    }
+    div.customer_coupon_type_nav a{
+        color: rgb(181, 180, 180);
+    }
+
+      
+
+    div.customer_coupon_type_nav a:first-child:hover{
+        font-weight: bold;
+        color: black;
+    }
+    div.customer_coupon_type_nav a:nth-child(2):hover{
+        font-weight: bold;
+    }
+    div.customer_coupon_type_nav a:nth-child(3):hover{
+        font-weight: bold;
+    }
+    div.customer_coupon_type_nav a:nth-child(4):hover{
+        font-weight: bold;
+    }
+    div.customer_coupon_type_nav a:last-child:hover{
+        font-weight: bold;
+    }
+
+    /* 보유중인 쿠폰 없음을 안내하는 영역 */
+    div.customer_coupon_inform{        
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 150px;
+    }
+
+   
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 할인 쿠폰 전체 화면 페이지 -->
+    <div class="customer_coupon">
+        <!-- 할인 쿠폰 제목 박스 -->
+        <div class="customer_coupon_title_box">
+            <p class="customer_coupon_title title_font">할인쿠폰</p>
+            <p>여행하다가 준비한 다양한 혜택으로 경제적인 여행 다녀오세요!</p>
+        </div>
+        <!-- 쿠폰 종류 안내 및 전체 확인 메뉴 -->
+        <div class="customer_coupon_type_nav">
+            <ul>
+                <li><a href="#">전체</a></li>
+                <li><a href="#">공항</a></li>
+                <li><a href="#">면세점</a></li>
+                <li><a href="#">환전</a></li>
+                <li><a href="#">로밍/와이파이</a></li>
+            </ul>
+
+
+
+
+        </div>
+        <!-- 보유중인 쿠폰 이미지 확인 안내 영역(여기서는 보유중인 쿠폰 없음을 안내) -->
+        <div class="customer_coupon_inform">
+            <p>현재 보유중인 쿠폰이 없습니다.</p>
+            
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-------------------
+    |                   |
+    |                   |
+    |                   |
+    |                   |
+    -------------------->
+
+    <!-- css default -->
+    <link href="./css/reset.css" rel="stylesheet" />
+
+    <!-- 스타일 시트 영역 -->
+    <style>
+        /* 회원계정 전체 페이지 영역 */
+        div.customer_account{
+            width: 960px;
+            height: 800px;
+            text-align: center;
+           /* border: 1px dotted black; /* 지울부분 */
+        }
+
+        /* 회원정보 변경 페이지의 제목 */
+        p.customer_account_id_box{
+            font-size: 2.0rem;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        /* 회원정보 변경 페이지의 제목 하단 안내박스 */
+        p.customer_account_pwd_box{
+            font-size: 1.1rem;
+            margin-top: 50px;
+        }
+
+        /* 아이디 & 비밀번호 입력 영역 */
+        div.customer_login{
+            width: 600px;
+            height: 150px;
+            margin-left: 180px;
+            margin-top: 35px;
+            /*border: 2px dotted black; /* 지울부분 */
+        }
+        #id_box{
+            width: 550px;
+            height: 50px;
+            margin-top: 25px;
+            border: 2px solid black;
+        }
+        #pwd_box{
+            width: 550px;
+            height: 50px;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+
+
+        /* 취소 & 확인 버튼 박스 */
+        div.customer_run{
+            margin-top: 10px;
+        }
+
+        button.btn_cancel{
+            width: 300px;
+            height: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        button.btn_check{
+            width: 300px;
+            height: 50px;
+            font-size: 1.5rem;
+            background-color: black;
+            color: white;
+            font-weight: 700;
+        }
+        div.customer_run button{ /* 마우스포인터 손가락모양 */
+            cursor: pointer;
+        }
+        div.customer_run button:hover{
+            border: 2px solid black;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <!-- 회원정보 변경 전체 페이지 -->
+    <div class="customer_account">
+        <!-- 회원정보 변경 제목 및 안내 박스 -->
+        <div class="customer_account_title">
+            <p class="customer_account_id_box">회원정보 변경</p>
+            <p class="customer_account_pwd_box">OOO님의 정보를 안전하게 보호하기 위하여 비밀번호를 다시 한 번 확인합니다.</p>
+        </div>
+        <!-- 아이디 & 비밀번호 입력 박스 -->
+        <div class="customer_login">
+            <input type="text" id="id_box" value="010-0000-1111" placeholder="휴대번호를 입력하세요.">
+            <input type="password" id="pwd_box" name="pwd_enter" placeholder="비밀번호를 입력하세요.">
+
+        </div>
+        <!-- 취소 & 확인 버튼 박스 -->
+        <div class="customer_run">
+            <a href="#"><button type="button" class="btn_cancel">취소</button></a>
+            <a href="#"><button type="button" class="btn_check">확인</button></a>            
+            
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css default -->
+    <link href="./css/reset.css" rel="stylesheet" />
+
+    <!-- 스타일시트 영역 -->
+    <style>
+    /* 관심상품 전체 화면 페이지 */
+    div.customer_interest{
+        width: 960px;
+        height: 900px;
+        text-align: center;
+        /*border: 1px dotted black; /* 지울 부분 */
+    }
+
+    /* 관심상품 타이틀과 안내 */
+    /* 타이틀 */
+    h1.customer_interest_title{
+        font-size: 2.0rem;
+        margin: 20px 0 40px 0px;
+    }
+    /* 관심상품 안내 */
+    span.customer_interest_inform{
+        
+        font-size: 1.0rem;
+    }
+
+    /* 맞춤상품 찾기 및 아이콘, 버튼영역 */
+    div.customer_products img{
+        margin: 150px 0 20px 0;
+    }
+
+    /* 상품없음 */
+    div.customer_products p{
+        font-weight: bold;
+    }
+
+
+    /* 상품 찾아보기 버튼 */
+    #customer_products_searching{
+        width: 200px;
+        height: 50px;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+    
+    #customer_products_searching:hover{
+            border: 2px solid black;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <!-- 관심상품 전체 화면 페이지 -->
+    <div class="customer_interest">
+        <!-- 관심상품 제목 & 안내 -->
+        <div class="customer_interest_title_box">
+            <h1 class="customer_interest_title">나의 관심상품</h1>
+            <span class="customer_interest_inform">관심상품은 최대 12개까지 등록할 수 있으며, 30일까지 보관됩니다.</span>
+        </div>
+
+        <!-- 맞춤상품 찾아보기 -->
+        <div class="customer_products">
+            <div> <!-- 이미지(담긴상품 없음) 조정 박스 -->
+                <img src="./images/interest.jpg">
+            </div>
+            <div> <!-- 상품 없음을 안내하는 박스 -->
+                <p>나의 관심 상품에 담긴 상품이 없습니다.</p>
+            </div>
+            <div> <!-- 맞춤상품 찾아보기 검색 박스 -->
+                <button type="text" id="customer_products_searching" name="btn">맞춤 상품 찾아보기</button>
+            </div>
+
+
+    </div>
+</body>
+</html>

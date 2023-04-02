@@ -1,0 +1,531 @@
+@font-face{
+    font-family: 'nanum';
+    src: url(../font/NanumSquareNeo-cBd.ttf);
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: 'nanum';
+    src: url(../font/NanumSquareNeo-eHv.ttf);
+    font-weight: 700;
+}
+
+em,span,a{
+    font-family: 'nanum';
+    font-weight: 400;
+    letter-spacing: -1.7px;
+    color: white;
+}
+
+.border_text{
+    font-family: 'nanum';
+    font-weight: 700;
+}
+
+a{
+    text-decoration:none;
+    color: white;
+}
+
+#customer-service {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 9999;
+}
+
+.blurEffect {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+  }
+
+/* ========================== top ========================== */
+/* top section 설정 */
+.top_section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url('/image/main_banner/first_banner.jpg');
+    background-repeat : no-repeat;
+    background-size : cover;
+    max-width: 100%;
+}
+
+.top_section>video::before{
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+/* 폰트 화이트 */
+.font_white {
+    color: white;
+}
+
+/* 아이콘, nav 지역 설정 */
+.top_text_area{
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+/* 아이콘 크기 설정 */
+.bi-list, .bi-arrow-down-circle-fill{
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+/* 아이콘 위치 설정 */
+.top_nav_icon_area{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+/* top nav 가로 배치 설정 */
+div.top_nav{
+    display: inline-block;
+}
+
+/* 국내 여행, 해외 여행, 여행 가이드 부분 */
+div.top_nav_menu_area{
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 9999;
+}
+
+div.top_nav_menu_area>ul{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+}
+
+div.top_nav_menu_area li{
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+}
+
+/* login_nav 부분 설정  */
+div.login_nav{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+}
+
+div.login_nav>ul{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+}
+
+div.login_nav li{
+    display: inline-block;
+    text-align: center;
+    /* margin-left: 10px; */
+    padding: 10px;
+}
+
+/* dropdown 부분 */
+
+
+/* 고객센터부분 */
+div.customer_service{
+    width: 320px;
+    height: 65;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* 스크롤 다운 버튼 */
+div.down_btn{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    display: inline-block;
+    bottom: 20px;
+    right: 20px;
+}
+
+div.down_btn>span, .icon_area{
+    display: inline-block;
+    font-size: 20px;
+}
+
+div.down_btn hr{
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+/* ======================= center_drop ================== */
+.center_drop{
+    position: absolute;
+    top:40%;
+    left:22.5%;
+    width: 800px;
+    height: 200px;
+}
+
+em,.sBtn-text{
+    font-size: 27px;
+}
+
+.text_area{
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    position: relative;
+}
+
+/* .text_area em{
+    position: absolute;
+} */
+
+.text_area>span, .select-menu{
+    display: inline-block;
+}
+
+.select-menu{
+    width: 220px;
+    height: 50px;
+}
+
+.select-menu .select-btn{
+    display: flex;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 1000px;
+    /* border-radius: 8px; */
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    /* box-shadow: 0 0 5px rgba(0,0,0,0.1); */
+}
+
+.select-btn svg{
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.select-menu.active .select-btn svg{
+    transform: rotate(-180deg);
+}
+
+.options{
+    z-index: 1;
+}
+
+.select-menu .options{
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.select-menu.active .options{
+    display: block;
+}
+
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.options .option:hover{
+    background: #f2f2f2;            
+}
+
+.option .option-text{
+    font-size: 18px;
+    color: #333;
+}
+
+.select-menu .options{
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.options .option{
+    display: flex;
+    height: 55px;
+    cursor: pointer;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.options .option:hover{
+    font-weight: 600;
+    background: #f2f2f2;
+}
+
+.option .option-text{
+    font-size: 18px;
+    color: #333;
+}
+
+.text_area2{
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    position: relative;
+}
+
+.btn-type-round{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1.2;
+    text-decoration: none;
+    min-height: 50px;
+    background: black;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+/* ======================== center_drop ======================== */
+
+
+
+/* ========================== top end ========================== */
+
+
+
+
+
+/* ========================== middle ========================== */
+
+/* middle section 크기 설정 */
+.middle_section{
+    /* margin-top: 100px; */
+    width: 100%;
+    height: 900px;
+    background-color: #f2f2f2;
+}
+
+.text_popular{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 100px 0px 100px 0px;
+}
+
+.text_1{
+    letter-spacing: -3px;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 50px;
+    font-weight: 700px;
+}
+
+.slider_popular{
+    width: 100%;
+    height: 500px;
+}
+
+.slider_popular li{
+    width: 300px;
+    height: 480px;
+}
+
+.slider_popular a,.img_item{
+    width: 100%;
+    height: 100%;
+}
+
+.slider_popular .img_item{
+    position: relative;
+    border-radius: 12px;
+}
+
+.slider_popular .item_info{
+    font-size: 22px;
+    line-height: 1.4em;
+    max-height: 2.8em;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+.slider_popular .content{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
+.slider_popular .cont{
+    font-size: 42px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'nanum';
+    font-weight: 700;
+}
+
+/* ========================== middle end ========================== */
+
+
+
+
+
+/* ========================== guide section ========================== */
+
+.guide_section{
+    width: 100%;
+    height: 700px;
+    text-align: center;
+}
+
+.guide_text{
+    width: 100%;
+    height: 50px;
+    margin-top: 100px;
+}
+
+.guide_h1{
+    font-size: 50px;
+    letter-spacing: -3px;
+}
+
+.btn_more{
+    width: 75px;
+    height: 25px;
+    position: absolute;
+}
+
+
+.guide_youtube_video_area{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    
+}
+
+.guide_youtube_video_area>.more_btn{
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 70px;
+}
+
+.more_btn>a{
+    color: black;
+}
+
+.slider5{
+    box-shadow: none;
+}
+
+div.slide img{
+    border-radius: 12px;
+}
+
+div.slide span{
+    font-size: 22px;
+    height: 25px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.bx-wrapper{
+    margin-left: 30px;
+    margin-right: 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+.bi-arrow-left-circle,.bi-arrow-right-circle{
+    width: 60px;
+    height: 60px;
+    fill:black;
+}
+
+.bi-arrow-left-circle:hover,.bi-arrow-right-circle:hover{
+    cursor: pointer;
+}
+
+.left_arrow_area{
+    width: 60px;
+    height: 60px;
+    z-index: 200;
+    position: absolute;
+    left: 0;
+    top: 35%;
+}
+
+.right_arrow_area{
+    width: 60px;
+    height: 60px;
+    z-index: 200;
+    position: absolute;
+    right: 0;
+    top: 35%;
+}
+
+/* ========================== guide section end ========================== */
+
+
+
+
+/* ========================== footer ========================== */
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
+
+.footer_top {
+    width: 600px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.footer_top ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_top li{
+    display: inline-block;
+    padding: 20px;
+}
+
+.footer_bottom {
+    width: 300px;
+    height: 200px;
+}
+
+/* ========================== footer end ========================== */

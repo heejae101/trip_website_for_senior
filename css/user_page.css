@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'nanum';
+    src: url('../font/NanumSquareNeo-cBd.ttf');
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: 'nanum';
+    src: url('../font/NanumSquareNeo-eHv.ttf');
+    font-weight: 700;
+}
+
+.wrap{
+    width: 90%;
+    margin: 40px auto;
+    font-family: 'nanum';
+
+    /* background-color: antiquewhite; */
+}
+
+button{
+    font-family: 'nanum';
+    cursor: pointer;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.user_page{
+    margin-top: 40px;
+}
+
+/* 나의 정보 title */
+.user_page_title{
+    /* font-family: 'recipe'; */
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 예약내역 부분 */
+.user_reservation_details{
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 400px;
+    /* background-color: rgb(255, 199, 179); */
+}
+
+/* 예약내역 title */
+.user_reservation_title{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 0;
+    left: 10px;
+}
+
+/* 예약내역 더보기 버튼 */
+.user_reservation_more{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    cursor: pointer;
+}
+
+/* 예약내역 리스트 표시 */
+.user_reservation_details_list{
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    bottom: 0;
+    border: 1px solid gray;
+    /* background-color: rgb(185, 185, 185); */
+}
+
+/* 예약내역 없을 시 */
+.no_reservation{
+    font-size: 25px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* 마이페이지 하단 부분 */
+.user_page_bottom{
+    /* margin: 0 auto; */
+    display: flex;
+    margin-top: 40px;
+    
+}
+
+/* 문의내역 부분 */
+.inquiry_details{
+    position: relative;
+    margin-left: 4%;
+    
+    /* flex-direction: row; */
+    width: 45%;
+    height: 400px;
+    /* background-color: rgb(255, 189, 255); */
+    
+
+}
+
+/* 문의내역 title */
+.inquiry_details_title{
+    font-size: 35px;
+    left: 10px;
+    position: absolute;
+    /* right: 10px; */
+}
+
+/* 문의내역 더보기 버튼 */
+.inquiry_details_more{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    cursor: pointer;
+}
+
+/* 문의내역 리스트 표시 */
+.inquiry_details_list{
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    bottom: 0;
+    /* background-color: rgb(185, 185, 185); */
+}
+
+/* 문의내역 리스트 각 영역별 */
+.inquiry_details_list li{
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+/* 서비스 바로가기 부분 */
+.go_to_service{
+    position: relative;
+    width: 45%;
+    height: 400px;
+    margin-left: 4%;
+    /* background-color: olivedrab; */
+}
+
+/* 서비스 바로가기 title */
+.go_to_service_title{
+    font-size: 35px;
+    left: 10px;
+    position: absolute;
+}
+
+/* 서비스 더보기 버튼 */
+.go_to_service_more{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    cursor: pointer;
+}
+
+/* 관심상품 / 포인트 / 할인쿠폰 / 회원정보수정 버튼 */
+.go_to_service_btn{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 각 버튼 */
+.btn{
+    font-size: 30px;
+    width: 50%;
+    height: 175px;
+    line-height: 40px;
+    background-color: white;
+    border: 0.1px solid rgb(209, 209, 209);
+    /* font-family: 'recipe'; */
+}
+
+.btn:hover{
+    /* border: 0.5px solid black; */
+    box-shadow: inset 2px 2px 10px 5px rgb(225, 225, 225);
+}

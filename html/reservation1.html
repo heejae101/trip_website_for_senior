@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/reservation1.css" rel="stylesheet">
+    <title>reservation1</title>
+</head>
+<body>
+    <!-- 여행지 예약화면 페이지 -->
+
+    
+    <div class="wrap">
+        
+        <!-- 여행지 상품 제목(이름) -->
+        <div class="title_reservation1">
+            새로운 튀르키예 ♡ 완전 일주 9일 [아시아나직항/ALL특급호텔/3대옵션(밸리/돌마/피에르롯티)] HIT
+        </div>
+        
+        <hr/>
+        <!-- 여행지 상품 상단 -->
+        <div class="reservation1_top">
+
+            <!-- 여행지 상품 상단_왼쪽 -->
+            <div class="reservation1_top_l">
+
+                <!-- 여행지 상품 대표이미지 -->
+                <div class="reservation1_img">
+                    <img src="../images/test_img.jpg" class="title_img"/>
+                </div>
+
+                <!-- 여행지 상품 가격 상세설명 [테이블] -->
+                <div class="detail_price_table">
+                    <table>
+                        <tr>
+                            <th>구분</th>
+                            <th>성인</th>
+                            <th>아동</th>
+                            <th>유아</th>
+                        </tr>
+
+                        <tr>
+                            <th>상품가격</th>
+                            <td>100,000</td>
+                            <td>100,000</td>
+                            <td>무료</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- 여행지 상품 상단 오른쪽 고정 nav -->
+        <!-- 여행지 상품 상단_오른쪽, 상품가격 표시 -->
+        <div class="reservation1_top_r">
+
+            <!-- 코드, 일정 표시 -->
+            <div class="code_plan">
+                <span>코드 : GFGS235D</span><br/><br/>
+                <span>일정 : 2박 3일</span>
+            </div>
+
+            <!-- 인원수 설정 -->
+            <div class="age">성인</div>
+            <div class="members">
+                
+                <div class="age_price">100,000</div>
+                <!-- 인원수 +/- 버튼 -->
+                <!-- adult -->
+                <div class="plus_min_btn">
+                    <span class="minus" onclick="changeValue(this, 'adult', -1)">-</span>
+                    <span class="adult">0</span>
+                    <span class="plus" onclick="changeValue(this, 'adult', +1)">+</span>
+                </div>
+            </div>
+
+
+
+            <div class="age">아동</div>
+            <div class="members">
+                <div class="age_price">100,000</div>
+                <!-- 인원수 +/- 버튼 -->
+                <!-- child -->
+                <div class="plus_min_btn">
+                    <span class="minus" onclick="changeValue(this, 'child', -1)">-</span>
+                    <span class="child">0</span>
+                    <span class="plus" onclick="changeValue(this, 'child', +1)">+</span>
+                </div>
+                
+            </div>
+
+
+            <div class="age toddler_a">유아</div>
+            <div class="age_year toddler_a">(2021.05.12~2023.05.11)</div>
+            <div class="members">
+                
+                <!-- toddler 나이 표시 영역 -->
+                <div class="toddler_area">
+                    <div class="toddler_year_area">
+                        
+                        
+                    </div>
+                    <div class="age_price">무료</div>
+                </div>
+                <!-- 인원수 +/- 버튼 -->
+                <!-- toddler -->
+                <div class="plus_min_btn">
+                    <span class="minus" onclick="changeValue(this, 'toddler', -1)">-</span>
+                    <span class="toddler">0</span>
+                    <span class="plus" onclick="changeValue(this, 'toddler', +1)">+</span>
+                </div>
+            </div>
+
+            <!-- 최종 합계 금액 -->
+            <div class="total_price">
+                <div class="total_price_text">최종합계금액</div>
+                <div class="total_price_number">1,000,000</div>
+            </div>
+
+            <!-- 예약하기 버튼 -->
+            <div class="reservation_btn_area">
+                <button class="reservation_btn" onclick="location.href='#'">예약하기</button>
+            </div>
+            
+        </div>
+        <hr/>
+        <!-- 여행지 상품 하단 -->
+        <div class="reservation1_bottom">
+            <ul>
+                <li><a href="#">상품&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="#">여행일정&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="#">예약안내사항&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="#">상품문의&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="#">약관정보&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="#">해외안전정보&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="#">기타</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        function changeValue(btn, target, value){
+            const num = document.querySelector(`.${target}`);
+            let currentValue = parseInt(num.innerText);
+            currentValue += value;
+            if (currentValue < 0){
+                currentValue = 0;
+            };
+            num.innerText = currentValue;
+        }
+    </script>
+</body>
+</html>

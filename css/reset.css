@@ -1,93 +1,3 @@
-<<<<<<< HEAD
-@charset utf-8;
-
-/* @font-face{
-  font-family:"궁서체";
-  src:url();
-}      다운 받아서 쓰는 방식으로 저작권 등의 문제로 인해 권하지 않는 방식 */
-
-/* CSS 초기화 */
-html, body, div, span, img, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, 
-address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, 
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, 
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
-margin:0;
-padding:0;
-border:0;
-outline:0;
-font-size:100%;
-vertical-align:baseline;
-background:transparent;
-}
-
-body{
-font-family:'Montserrat',DroidSans,AppleSDGothicNeo,Sans-serif,Helvetica;
-line-height:1;
-}
-/* 시맨틱 태그를 지원하지 않는 브라우저를 위해서 */
-article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section{
-display:block;
-}
-
-nav ul, ol, li{
-list-style:none;
-margin:0;
-padding:0;
-border:0;
-}
-
-a{
-margin:0;
-padding:0;
-font-size:100%;
-vertical-align:baseline;
-background:transparent;
-text-decoration:none;
-}
-
-img, div{
-vertical-align:top;    /* 태그의 간격을 없애기 위해서 */
-}
-
-hr{
-display:block;
-height:2px;
-border:0;
-margin:0;
-padding:0;
-}
-
-input, textarea{
-width:100%;
-margin:0;
-padding:0;
-border:0;
-border-bottom:1px solid #757575;
-color:#3f51b5;
-font-family:'Montserrat';
-font-size:12px;
-vertical-align:top;
-border-radius:0;
-box-sizing:content-box;
-appearance:none;
-}
-
-/*  */
-/* 모질라, 파이어폭스 등의 브라우저 접두사(vender prefix) */
-input::-moz-input-placeholder, textarea::-moz-textarea-placeholder{
-color:#3f51b5;
-}
-
-/* 사파리, 크롬 등, 브라우저 접두사(vender prefix) */
-input::-webkit-input-placeholder, textarea::-webkit-textarea-placeholder{
-color:#3f51b5;
-}
-
-/* 마이크로소프트   인터넷 익스플로러 브라우저 접두사(vender prefix) */
-input::-ms-input-placeholder, textarea::-webkit-textarea-placeholder{
-  color:#3f51b5;
-  }
-=======
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -101,34 +11,33 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+   display: block;
 }
 body {
-	line-height: 1;
+   line-height: 1;
 }
 ol, ul {
-	list-style: none;
+   list-style: none;
 }
 blockquote, q {
-	quotes: none;
+   quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+   content: '';
+   content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+   border-collapse: collapse;
+   border-spacing: 0;
 }
->>>>>>> b54640d968e4fa404ee95a77692c1bde6116fd53

@@ -37,6 +37,8 @@ svg>path:hover{
 /* (상단 제목) 내나라여행 한눈에보기  */
 .title_korea{
     margin: 50px 0;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 /* (영역) 지역별 상세 설명 */

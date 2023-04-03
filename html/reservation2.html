@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="icon" href="../image/favicon.ico">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/reservation2.css" rel="stylesheet">
+    <title>여행하다</title>
+    
+</head>
+<body>
+    <div class="wrap">
+        <!-- 네비게이션 바 -->
+        <nav></nav>
+
+        <h1>상품 예약하기</h1>
+
+        <!-- 상품 예약 영역 -->
+        <div class="reservation2">
+            
+            <!-- 상품안내 -->
+            <div class="kiosk_reservation2">
+                <img class='kiosk_reservation2_img' src="../image/yun/img_box_hottkaido.jpg">
+                
+                <!-- 상품 상세설명 -->
+                <div class="kiosk_reservation2_info">
+                    <!-- 상품코드 -->
+                    <div class="code">상품코드 : AHWE13FXD</div>
+                    
+                    <div class="info_text">[북해도 4일]</div>
+                </div>
+            </div>
+
+            <!-- 약관동의 -->
+            <div class="terms_reservation2">
+                <h2>약관동의</h2>
+
+                <!-- 약관 동의 체크 부분 -->
+                <div class="terms_reservation2_check">
+
+                </div>
+            </div>
+
+            <!-- 예약정보 -->
+            <div class="info1_reservation2">
+                <h2>예약정보</h2>
+
+                <!-- 예약 상세정보 테이블 -->
+                <div class="info1_reservation2_detail">
+                    <table>
+                        <tr>
+                            <th>상품명</th>
+                            <td>[북해도 4일]</td>
+                        </tr>
+                        <tr>
+                            <th>이용항공</th>
+                            <td>진에어</td>
+                        </tr>
+                        <tr>
+                            <th>여행기간</th>
+                            <td>2023년 05월 30일 (화) ~ 2023년 06월 03일 (토)</td>
+                        </tr>
+                        <tr>
+                            <th>일정</th>
+                            <td>
+                                한국출발 2023년 05월 24일 (수) 08:20LJ231 &#8594; 현지도착 2023년 05월 24일 (수) 11:00 LJ231<br/>
+                                현지출발 2023년 05월 27일 (토) 12:00LJ232 &#8594; 한국도착 2023년 05월 27일 (토) 15:00LJ232
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>성인요금</th>
+                            <td>949,000원 [만 12세 이상] (기본상품가: 880,800원, 유류할증료: 68,200 원, 제세공과금 0원)</td>
+                        </tr>
+                        <tr>
+                            <th>아동요금</th>
+                            <td>0원 [만 12세 미만] (기본상품가 : 880,800원, 유류할증료 : 68,200원, 제세공과금 0원)</td>
+                        </tr>
+                        <tr>
+                            <th>유아요금</th>
+                            <td>0원 [24개월 미만] (기본상품가 : 100,000원, 유류할증료 : 0원, 제세공과금 0원)</td>
+                        </tr>
+                        <tr>
+                            <th>포인트</th>
+                            <td>기본상품가의 1% (성인1인 기준 : 8,808P 적립) *포인트는 여행 도착 후 7일 이후 자동 적립됩니다.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 예약자정보 -->
+            <div class="info2_reservation2">
+                <h2>예약자 정보</h2>
+
+                <!-- 예약자 상세정보 -->
+                <div class="info2_reservation2_detail">
+
+                    <form>
+                        <table>
+                            <tr>
+                                <th>대표 예약자명</th>
+                                <td>
+                                    <input type="text" name="name">
+                                    <input type="radio" name="oneself" id="oneself"/> 본인포함
+                                    <input type="radio" name="oneself" id="oneself"/> 
+                                    본인 비포함 (여행 동반자 정보는 담당자 통화 시 확인)
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰 번호</th>
+                                <td>
+                                    <input type="text" id="phonenum"oninput="autoHyphen2(this)" maxlength="13" placeholder="전화번호를 입력해보세요!">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <input type="text" >
+                                    @
+                                    <input type="text">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- 여행자 정보 -->
+            <div class="traveler_information">
+                <h2>여행자 정보</h2>
+                <div class="traveler_information_info">
+                    <ul>
+                        <li>
+                            <div class="age">성인</div>
+                            <div class="members">
+                                
+                                
+                                <!-- 인원수 +/- 버튼 -->
+                                <!-- adult -->
+                                <div class="plus_min_btn">
+                                    <span class="minus" onclick="changeValue(this, 'adult', -1)">-</span>
+                                    <span class="adult">0</span>
+                                    <span class="plus" onclick="changeValue(this, 'adult', +1)">+</span>
+                                </div>
+
+                                <div class="age_price">100,000</div>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <div class="age">성인</div>
+                            <div class="members">
+                                
+                                
+                                <!-- 인원수 +/- 버튼 -->
+                                <!-- child -->
+                                <div class="plus_min_btn">
+                                    <span class="minus" onclick="changeValue(this, 'child', -1)">-</span>
+                                    <span class="child">0</span>
+                                    <span class="plus" onclick="changeValue(this, 'child', +1)">+</span>
+                                </div>
+
+                                <div class="age_price">100,000</div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="age">성인</div>
+                            <div class="members">
+                                
+                                
+                                <!-- 인원수 +/- 버튼 -->
+                                <!-- toddler -->
+                                <div class="plus_min_btn">
+                                    <span class="minus" onclick="changeValue(this, 'toddler', -1)">-</span>
+                                    <span class="toddler">0</span>
+                                    <span class="plus" onclick="changeValue(this, 'toddler', +1)">+</span>
+                                </div>
+
+                                <span class="age_price">100,000</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="total_price">
+                                <div class="total_price_text">최종합계금액</div>
+                                <div class="total_price_number">1,000,000</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- 기타 요청사항 -->
+            <div class="etc_reservation2">
+                <h2>기타 요청사항</h2>
+
+                <!-- 요청사항 입력창 (1000자 이내)-->
+                <form>
+                    <p><textarea placeholder="1000자 이내로 입력해주세요."></textarea></p>
+                </form>
+                <!-- <input type="text" class="etc_reservation2_input"> -->
+
+            </div>
+
+
+            <!-- 예약하기/취소하기 버튼 -->
+            <div class="btn_area">
+                <!-- 예약하기 버튼 -->
+                <button class="btn_reservation2">예약하기</button>
+
+                <!-- 취소하기 버튼 -->
+                <button class="btn_cancle">취소하기</button>
+            </div>
+            
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 전화번호 스크립트 참고 : https://gurtn.tistory.com/86
+
+        // **** 전화번호 스크립트 ****
+        // autoHypen2 함수는 target 매개변수로 전달된 input 요소의 값 처리
+        const autoHyphen2 = (target) => {
+        // input 요소에 입력된 값 가져옴
+        target.value = target.value
+        // replace(/[^0-9]/g, '')는 입력된 값에서 숫자를 제외한 모든 문자열을 제거
+        .replace(/[^0-9]/g, '')
+        // 아래 정규식은 세 개의 괄호로 구분된 세 개의 그룹으로 나누어져 있음
+        // 첫 번째 그룹(`\d{0,3}`) : 0~3자리 숫자, 0~4자리 숫자, 0~4자리 숫자
+        // 각 그룹($1,$2,$3)은 최대 3자리, 4자리, 4자리 숫자, 그룹들 사이에 하이픈(-) 추가됨
+        // 입력된 문자열 전체가 이 패턴과 일치해야 함.('^', '$'는 각각 문자열의 시작과 끝을 의미)
+        .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+        }
+
+        // 인원수 조정 버튼 스크립트
+        function changeValue(btn, target, value){
+            const num = document.querySelector(`.${target}`);
+            let currentValue = parseInt(num.innerText);
+            currentValue += value;
+            if (currentValue < 0){
+                currentValue = 0;
+            };
+            num.innerText = currentValue;
+        }
+    </script>
+    
+</body>
+</html>

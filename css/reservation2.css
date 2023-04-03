@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'nanum';
+    src: url('../font/NanumSquareNeo-cBd.ttf');
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: 'nanum';
+    src: url('../font/NanumSquareNeo-eHv.ttf');
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: 'nanum';
+    src: url('../font/NanumSquareNeo-dEb.ttf');
+    font-weight: 500;
+}
+
+.wrap{
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'nanum';
+    /* background-color: antiquewhite; */
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+/* 상품예약 영역 */
+.reservation2{
+    margin: 0 auto;
+}
+
+/* 상품안내 */
+.kiosk_reservation2{
+    display: flex;
+    width: 90%;
+    /* height: 200px; */
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* background-color: blue; */
+}
+
+/* .kiosk_reservation2_img{
+    background-size: cover;
+    width: 100%;
+    margin: 10px;
+    height: 600px;
+
+} */
+
+.kiosk_reservation2_img{
+    width: 200px;
+    height: 200px;
+}
+
+/* 상품 상세설명 */
+.kiosk_reservation2_info{
+    /* position: absolute; */
+    width: 70%;
+    margin-left: 10px;
+    padding: 20px;
+    /* background-color: rgb(255, 197, 197); */
+}
+
+/* 상품 코드 */
+.code{
+    margin-bottom: 20px;
+}
+
+/* 상품 상세설명 텍스트 */
+.info_text{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* 약관동의 부분 */
+
+h2{
+    font-size: 30px;
+    margin: 120px 60px 50px 60px ;
+}
+
+.terms_reservation2{
+    margin-bottom: 30px;
+}
+
+
+
+.terms_reservation2_check{
+    width: 90%;
+    height: 300px;
+    background-color: rgb(224, 254, 255);
+    margin: 0 auto;
+}
+
+
+/* 예약정보 부분 */
+.info1_reservation2{
+    margin-bottom: 30px;
+}
+.info1_reservation2_detail{
+    margin: 0 auto;
+    width: 90%;
+    /* background-color: rgb(243, 255, 226); */
+}
+
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+    line-height: 25px;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    /* background-color: #e7e7e7; */
+}
+
+th,td{
+    padding: 10px;
+    border-bottom: 1px solid #b4b4b4;
+    /* border-bottom: 1px solid #b4b4b4; */
+}
+th{
+    font-weight: 500;
+    border-right: 1px solid #b4b4b4;
+}
+
+
+
+
+/* 예약자정보 부분 */
+/* .info2_reservation2{
+
+} */
+
+.info2_reservation2_detail{
+    margin: 0 auto;
+    width: 90%;
+    /* height: 300px; */
+    /* background-color: rgb(213, 255, 245); */
+}
+
+
+/* 여행자 정보 부분 */
+.traveler_information_info{
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    font-size: 20px;
+    width: 90%;
+    height: 150px;
+    margin-left: 60px;
+    padding: 20px 0;
+    /* background-color: rgb(255, 255, 0); */
+}
+
+.traveler_information_info>ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.traveler_information_info li>span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.age{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+/* 최종합계 금액 */
+/* .total_price_text{
+    display: block;
+} */
+
+ul>li{
+    padding-top: 20px;
+    /* border-right: 1px solid black; */
+}
+
+/* 인원수 +/- 버튼 */
+.plus_min_btn{
+    height: 40px;
+    width: 130px;
+    font-size: 20px;
+    border: 2px solid rgba(145, 145, 145, 0.2);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.plus_min_btn>span{
+    width: 100%;
+    text-align: center;
+}
+
+.age_price{
+    font-weight: 500;
+}
+
+
+.total_price{
+    margin-top: 30px;
+}
+
+.total_price_text{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 기타 요청사항 부분 */
+/* .etc_reservation2{
+} */
+
+textarea{
+    width: 90%;
+    height: 150px;
+    margin-left: 60px;
+    font-family: 'nanum';
+    font-weight: 400;
+    font-size: 20px;
+}
+/* .etc_reservation2_input{
+    width: 90%;
+    height: 300px;
+    margin-left: 50px;
+} */
+
+
+/* 예약하기/취소하기 버튼 */
+.btn_area{
+    width: 90%;
+    
+    margin: 50px auto;
+}
+
+.btn_reservation2{
+    margin-left: 30px;
+    width: 45%;
+    height: 60px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+.btn_cancle{
+    margin-left: 30px;
+    width: 45%;
+    height: 60px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+}
+
+
+button{
+    font-family: 'nanum';
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 4px 4px 8px #888;
+}
+
+

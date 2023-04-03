@@ -62,14 +62,23 @@ hr{
 }
 
 /* 여행지 상품 대표 이미지 부분 */
-.reservation1_img{
+.title_img{
+    background-size: cover;
+    width: 100%;
+    margin: 10px;
+    height: 600px;
+}
+
+/* .reservation1_img{
     margin-bottom: 30px;
 }
 
 .title_img{
     width: 100%;
     height: 500px;
-}
+} */
+
+
 
 /* 여행지 상품 가격 상세설명 [테이블] */
 .detail_price_table{
@@ -135,6 +144,9 @@ tr>th:nth-child(1){
     margin-bottom: 10px;
 }
 
+
+
+
 /* 인원수 +/- 버튼 */
 .plus_min_btn{
     height: 40px;
@@ -150,15 +162,16 @@ tr>th:nth-child(1){
     position: absolute;
     right: 40px;
     bottom: 15px;
-    
+
+    /* 여러번 클릭 시 드래그 방지 */
+    user-select: none;
+    cursor: pointer;
 }
 
 .plus_min_btn>span{
     width: 100%;
     text-align: center;
     /* font-weight: 500; */
-    
-    
 
 }
 
@@ -193,6 +206,9 @@ tr>th:nth-child(1){
 .total_price_text{
     margin-bottom: 10px;
 }
+
+
+
 
 /* 예약하기 버튼 */
 .reservation_btn_area{
@@ -251,6 +267,6 @@ tr>th:nth-child(1){
 }
 
 /* 일정보기 버튼 클릭 시 캘린더 표시 영역 */
-/* .calender_area{
+/* .calendar_area{
     
 } */

@@ -3,109 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=euc-kr">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>여행하다</title>
 
-  <link href="reset.css">  <!-- css reset -->
+  <!-- favicon image-->
+  <link href="../image/favicon.ico" rel="icon" />
+
+  <!-- adjust css -->
+  <link href="../css/reset.css" rel="stylesheet" />  <!-- css reset -->
+  <link href="../css/signup_default.css" rel="stylesheet" />  <!-- css default:sign up -->
+  <link href="../css/2-4.signup_page4.css" rel="stylesheet" />
 </head>
 
 
-<style>
-/*---------------------------------------------default function--------------------------------------------*/
-  ul{
-    padding-left:0;   /* remove default margin */
-  }
-
-  li{
-    display:inline-block;
-    margin-right:10px;
-    list-style: none;  
-  }
-
-  button{
-    border:none;
-  }
-
-  a{
-    cursor:pointer;
-  }
-/*-------------------------------------------entitle container----------------------------------------------*/
-  div#wrap{
-      display:flex;
-      flex-flow:row wrap;
-      width:100%;
-      margin:0 auto;
-    }
-  /*-----------------------------------header : have to remove/change----------------------------------------*/
-  header.header{
-    display:flex;
-    position:relative;
-    justify-content:flex-end;
-    width:100%;
-  }
-
-  header.header>nav{
-    width:100%;
-    min-height:50px;
-    background:red;
-  }
- /*----------------------------------------Adjust to main section : all page-----------------------------------------*/
-  section.sign_in_section{
-     display:flex;
-     width:100%;
-     align-items: center;
-     justify-content:center;
-     margin-top:100px;
-     /* background:yellow; */
-   }
-
-  h1.sign_in_text{
-    text-align:center;
-  }
-
-  div.progress{
-    text-align:center;
-  }
-
-  div.progress li{
-    margin:0px 20px;
-  }
-
-  div.progress h2.progress_forth_text{
-    background-color:orange;
-  }
-
-  div.success_sign_in_message1{
-    margin:50px;
-    text-align:center;
-  }
-
-  span.success_sign_in_message1_text{
-    display:block;
-    font-size:1.5rem;
-  }
-
-  div.success_sign_in_message2{
-    text-align:center;
-  }
-
-  span.success_sign_in_message2_text{
-    font-size:1.8rem;
-    font-weight:800;
-  }
-
-/*------------------------------------footer:have to remove/change------------------------------------*/
-  footer.footer{
-    width:100%;
-    height:50px;
-    background:red;
-    margin-top:120px;
-  }
-/*-----------------------------------------------------------------------------------------------------*/
-
-</style>
-
-<body>
+<body onload="Timer();">
 
   <div id="wrap">
 <!---------------------------- have to remove/change:header ------------------------------->
@@ -116,7 +28,9 @@
     <section class="sign_in_section">
       <form action="" method="post" name="member">
       
-        <h1 class="sign_in_text">회원가입</h1>
+        <div class="sign_in_logo">
+          <h1>회원가입</h1>
+        </div>
 
         <div class="progress">
           <ul>
@@ -127,22 +41,50 @@
           </ul>
         </div>
 
+        <div class="success_sign_in_logo">
+          <img src="../image/login/logo_plane.svg" alt="logo plane">
+        </div>
+
         <div class="success_sign_in_message1">
           <span class="success_sign_in_message1_text">축하합니다! 회원가입이 완료되었습니다.</span>
           <span class="success_sign_in_message1_text">즐거운 여행되시기 바랍니다</span>
         </div>
 
         <div class="success_sign_in_message2">
-          <span class="success_sign_in_message2_text">2초 뒤에 메인페이지로 이동합니다.</span>
+          <span id="success_sign_in_count">2</span>
+          <span class="success_sign_in_message2_text">초 뒤에 메인페이지로 이동합니다.</span>
         </div>
 
       </form>
     </section>
 <!----------------------------footer(have to remove/change)----------------------------->
     <footer class="footer"></footer>
-<!------------------------------------------------------------------------------------------>
+
   </div>
 
 </body>
+
+
+<script>
+/*------------auto website chaning after 2seconds-----------*/
+  function Timer(){
+    setTimeout("locateKap()",2000);
+  }
+  function locateKap(){
+    location.replace("../index.html");
+  }
+/*------------------2seconds countdown text-------------------------*/
+  // setTimeout(function(){
+  //   location.reload();
+  // },2000);
+
+  let time=2;
+  const interval=setInterval(function(){
+    time--;
+     if (time===1) document.getElementById("success_sign_in_count").innerHTML="1";
+     if (time===0) clearInterval(interval);
+  },1000);
+
+</script>
 
 </html>

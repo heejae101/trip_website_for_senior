@@ -6,210 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>여행하다</title>
 
-  <link href="reset.css">  <!-- css reset -->
+  <!-- favicon image-->
+  <link href="../image/favicon.ico" rel="icon" />
+
+  <!-- adjust css -->
+  <link href="../css/reset.css" rel="stylesheet" />  
+  <link href="../css/signup_default.css" rel="stylesheet" />
+  <link href="../css/2-1.signup_page1.css" rel="stylesheet" />
 </head>
 
-<style>
-
-/*---------------------------------------------default function--------------------------------------------*/
-  ul{
-    padding-left:0;   /* remove default margin */
-  }
-
-  li{
-    display:inline-block;
-    margin-right:10px;
-    list-style: none;  
-  }
-
-  button{
-    border:none;
-  }
-
-  a{
-    cursor:pointer;
-  }
-/*-------------------------------------------------------------------------------------------------------*/  
-
-  div#wrap{
-    display:flex;
-    flex-flow:row wrap;
-    width:100%;
-    margin:0 auto;
-  }
-
-/*----------------------------------header : have to remove/change----------------------------------------*/
-  header.header{
-    display:flex;
-    position:relative;
-    justify-content:flex-end;
-    width:100%;
-  }
-
-  header.header>nav{
-    width:100%;
-    min-height:50px;
-    background:red;
-  }
-/*--------------------------------------------------------------------------------------------------------*/
-  section.sign_in_section{
-    display:flex;
-    width:100%;
-    align-items: center;
-    justify-content:center;
-    margin-top:30px;
-    /* background:yellow; */
-  }
-
-  div.sign_in_text{
-    text-align:center;
-  }
-
-  div.progress{
-    text-align:center;
-  }
-
-  div.progress li{
-    margin:0px 20px;
-  }
-
-  h2.progress_first_text{
-    background-color:orange;
-  }
-
-  div.help_text{
-    text-align:left;
-  }
-
-  input.check_list_terms{
-    font-size:20px;
-  }
-
-  input.check_list_entitle{
-    width:18px;
-    height:18px;
-  }
-
-  span.check_list_entitle_txt{
-    font-size:18px;
-    margin-left:2px;
-  }
-
-  div.check_list li{
-    display:block;
-  }
-
-  div.check_list li>span.essential_red{
-    color:red;
-  }
-
-  div.check_list span.check_list_text{
-    font-size:0.8rem;
-    font-weight:600;
-  }
-
-  div.sign_in_btn_list{
-    margin:10px;
-  }
-
-  button.sign_in_btn_normal{
-    width:190px;
-    height:44px;
-    border-radius:5px;
-    background-color:#545353;
-    color:white;
-  }
-
-/*-------------------------------- part : move to next page ----------------------------------*/
-  @font-face {
-  font-family: "KakaoBold"; /* make font-family */
-  src: url("font/KakaoOTFBold.otf") format("opentype"); /* import font file */
-}
-
-  div.sign_in_btn_container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    width:100%;
-    margin:0 auto;
-    margin-top:30px;     /* have to delete */
-    margin-bottom:50px;  /* have to delete */
-  }
-
-  button.sign_in_btn{
-    width:200px;
-    height:39px;
-  }
-
-  button.sign_in_btn:hover{
-    box-shadow:2px 2px 5px #ABA9A9;
-    margin:0px 5px 5px 0px;
-  }
-
-  /* normal login */
-  button.sign_in_btn_normal{
-    width:175px;
-    height:39px;
-    background-color:#545353;
-    color:#fff;
-    border:none;
-    padding:10px 20px;
-    border-radius:4px;
-    cursor:pointer;
-    font-weight:800;
-    font-size:0.8rem;
-  }  
-
-  /* naver login */
-  button.sign_in_btn_naver{
-    background-color:#2DB400;
-    color:#fff;
-    border:none;
-    padding:10px 20px;
-    border-radius:4px;
-    cursor:pointer;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:"Nanum Gothic", sans-serif;
-    font-weight:800;
-    font-size:0.8rem; 
-  }
-
-  button.sign_in_btn_naver img{
-    width:20px;
-    margin-right:10px;
-  }
-  
-  /* kakao login */
-  button.sign_in_btn_kakao{
-    background-color:#FFCD00;
-    color:#000;
-    border:none;
-    padding:10px 20px;
-    border-radius:4px;
-    cursor:pointer;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-family:"KakaoBold";
-    font-weight:800;
-    font-size:0.8rem;
-  }
-
-  button.sign_in_btn_kakao img{
-    width: 20px;
-    margin-right: 10px;
-  }
-/*------------------------------------footer:have to remove/change------------------------------------*/
-  footer.footer{
-    width:100%;
-    height:50px;
-    background:red;
-  }
-/*-----------------------------------------------------------------------------------------------------*/
-
-</style>
 
 <body>
 
@@ -223,7 +28,7 @@
       <section class="sign_in_section">
       <form action="" method="post" name="member"> 
 
-        <div class="sign_in_text">
+        <div class="sign_in_logo">
           <h1>회원가입</h1>
         </div>
 
@@ -282,12 +87,12 @@
         </div>
 
         <div class="sign_in_btn_container">
-          <button class="sign_in_btn sign_in_btn_normal">일반 회원가입</button>
-          <button class="sign_in_btn sign_in_btn_naver">
-             <img src="img/logo_img_naver.png" alt="Naver logo" />네이버로 회원가입
+          <button class="sign_in_btn sign_in_btn_normal" onclick="location.href='../html/2-2.signup_page2.html'">일반 회원가입</button>
+          <button class="sign_in_btn sign_in_btn_naver" onclick="location.href='https://www.naver.com/'">
+             <img src="../image/login/logo_img_naver.png" alt="Naver logo" />네이버로 회원가입
           </button>
-          <button class="sign_in_btn sign_in_btn_kakao">
-             <img src="img/logo_img_kakao11.png" alt="Kakao logo" />카카오로 회원가입
+          <button class="sign_in_btn sign_in_btn_kakao" onclick="location.href='https://www.kakaocorp.com/page/'">
+             <img src="../image/login/logo_img_kakao11.png" alt="Kakao logo" />카카오로 회원가입
           </button>
         </div>
 

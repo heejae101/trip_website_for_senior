@@ -64,8 +64,13 @@ div.phone_verification{
   margin-top:30px;
 }
 
+<<<<<<< HEAD
 div.phone_verification button.phone_verification_btn{
   width:500px;
+=======
+button.phone_verification_btn{
+  width:600px;
+>>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7
   height:50px;
   color:#000000;
   padding:10px 20px;
@@ -98,6 +103,7 @@ footer.footer{
   height:50px;
   background:red;
 }
+<<<<<<< HEAD
 /*-----------------------------------------------------------------------------------------------------*/
 @media all and (max-width:720px){
     div.sign_in_logo h1{
@@ -132,3 +138,6 @@ footer.footer{
      text-align:left;
     }
   }
+=======
+/*-----------------------------------------------------------------------------------------------------*/
+>>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7

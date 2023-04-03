@@ -63,17 +63,29 @@ div.success_sign_in_message1{
   text-align:center;
 }
 
+<<<<<<< HEAD
 div.success_sign_in_message1 span.success_sign_in_message1_text{
+=======
+span.success_sign_in_message1_text{
+>>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7
   display:block;
   font-size:1.5rem;
 }
 
 div.success_sign_in_message2{
+<<<<<<< HEAD
   font-size:1.8rem;
   text-align:center;
 }
 
 span#success_sign_in_count .success_sign_in_message2_text{
+=======
+  text-align:center;
+}
+
+span.success_sign_in_message2_text{
+  font-size:1.8rem;
+>>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7
   font-weight:800;
 }
 
@@ -83,6 +95,7 @@ footer.footer{
   height:50px;
   background:red;
 }
+<<<<<<< HEAD
 /*------------------------------keyframe : auto moving svg image---------------------------------*/
 div.success_sign_in_logo img{
   animation:moveto 3s infinite alternate ease-in-out; /* 속도 */
@@ -133,3 +146,6 @@ div.success_sign_in_logo img{
       font-size:1.4rem;
     }
   }
+=======
+/*-----------------------------------------------------------------------------------------------------*/
+>>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7

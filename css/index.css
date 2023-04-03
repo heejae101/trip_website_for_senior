@@ -14,7 +14,6 @@ em,span,a{
     font-family: 'nanum';
     font-weight: 400;
     letter-spacing: -1.7px;
-    color: white;
 }
 
 .border_text{
@@ -36,29 +35,10 @@ a{
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .blurEffect {
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
-  }
-
-/* ========================== top ========================== */
-/* top section 설정 */
-.top_section{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-image: url('/image/main_banner/first_banner.jpg');
-    background-repeat : no-repeat;
-    background-size : cover;
-    max-width: 100%;
-}
-
-.top_section>video::before{
-    width: 100%;
-    height: 100%;
     filter: blur(10px);
     -webkit-filter: blur(10px);
 }
@@ -68,15 +48,38 @@ a{
     color: white;
 }
 
+/* ========================== top ========================== */
+/* top section 설정
+   배경 설정
+*/
+.top_section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* background-image: url('/image/main_banner/first_banner.jpg');
+    background-repeat : no-repeat;
+    background-size : cover;
+    max-width: 100%; */
+}
+
+.top_section>video{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
 /* 아이콘, nav 지역 설정 */
 .top_text_area{
     width: 100%;
     height: 100px;
     position: relative;
+    z-index: 999;
+    /* border-bottom: 1px solid ; */
 }
 
 /* 아이콘 크기 설정 */
-.bi-list, .bi-arrow-down-circle-fill{
+.bi-list, .bi-arrow-right-short{
     width: 40px;
     height: 40px;
     color: white;
@@ -89,6 +92,20 @@ a{
     left: 20px;
 }
 
+.icon{
+    font-family: 'nanum';
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0px;
+    color: skyblue;
+}
+
+.top_nav_icon_area>img{
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
+}
+
 /* top nav 가로 배치 설정 */
 div.top_nav{
     display: inline-block;
@@ -98,8 +115,7 @@ div.top_nav{
 div.top_nav_menu_area{
     position: absolute;
     top: 20px;
-    left: 70px;
-    z-index: 9999;
+    left: 180px;
 }
 
 div.top_nav_menu_area>ul{
@@ -119,11 +135,10 @@ div.login_nav{
     position: absolute;
     right: 20px;
     top: 20px;
-    z-index: 9999;
 }
 
 div.login_nav>ul{
-    width: 300px;
+    width: 350px;
     height: 30px;
     padding: 10px;
 }
@@ -149,23 +164,56 @@ div.customer_service{
 
 /* 스크롤 다운 버튼 */
 div.down_btn{
-    width: 300px;
-    height: 50px;
+    width: 310px;
+    height: 60px;
     position: absolute;
     display: inline-block;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
 }
 
-div.down_btn>span, .icon_area{
-    display: inline-block;
-    font-size: 20px;
+div.down_btn:hover{
 }
 
+.down_btn_items {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+div.down_btn_items>span{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+div.down_btn_items>.down_btn_icon{
+    position: absolute;
+    top: 10px;
+    left: 260px;
+}
+
+.down_btn_icon:hover{
+    animation: motion 0.5s /* 속도 */
+    linear 0.5s   /* 처음부터 끝까지 일정 속도로 진행 */
+    infinite alternate; /* 무한 반복 */
+}
+
+@keyframes motion {
+	0% {margin-left: 0px;} /* 처음 위치 */
+	100% {margin-left: 10px;} /* 마지막 위치 */
+  }
+
 div.down_btn hr{
+    width: 300px;
+    position: absolute;
     border: 1px solid white;
     border-radius: 12px;
+    bottom: 0;
 }
+
 
 /* ======================= center_drop ================== */
 .center_drop{
@@ -204,7 +252,6 @@ em,.sBtn-text{
     display: flex;
     height: 50px;
     font-size: 18px;
-    font-weight: 1000px;
     /* border-radius: 8px; */
     align-items: center;
     justify-content: space-around;
@@ -350,6 +397,20 @@ em,.sBtn-text{
 .slider_popular{
     width: 100%;
     height: 500px;
+    position: relative;
+}
+
+.slider_left{
+    position: absolute;
+    top:50%;
+    left: 20px;
+
+}
+
+.slider_right{
+    position: absolute;
+    top:50%;
+    right: 20px;
 }
 
 .slider_popular li{
@@ -389,6 +450,22 @@ em,.sBtn-text{
     left: 20px;
     font-family: 'nanum';
     font-weight: 700;
+}
+
+.slider_popular .rank{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+}
+
+.rank>span{
+    font-size: 20px;
+    letter-spacing:1px;
 }
 
 /* ========================== middle end ========================== */
@@ -467,32 +544,32 @@ div.slide span{
     background: none;
 }
 
-.bi-arrow-left-circle,.bi-arrow-right-circle{
-    width: 60px;
-    height: 60px;
+.left_arrow_img,.right_arrow_img{
+    width: 40px;
+    height: 40px;
     fill:black;
 }
 
-.bi-arrow-left-circle:hover,.bi-arrow-right-circle:hover{
+.left_arrow_img:hover,.right_arrow_img:hover{
     cursor: pointer;
 }
 
 .left_arrow_area{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     z-index: 200;
     position: absolute;
     left: 0;
-    top: 35%;
+    top: 45%;
 }
 
 .right_arrow_area{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     z-index: 200;
     position: absolute;
     right: 0;
-    top: 35%;
+    top: 45%;
 }
 
 /* ========================== guide section end ========================== */
@@ -507,25 +584,63 @@ div.slide span{
     background-color: black;
 }
 
-.footer_top {
-    width: 600px;
+.footer_top{
+    width: 100%;
     height: 100px;
+    text-align: center;
+}
+
+.footer_top>span{
+    font-family: 'nanum';
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0px;
+    color: skyblue;
+}
+
+.footer_top>img{
+    width: 30px;
+    height: 30px;
+    padding-top: 3px;
+}
+.footer_bottom {
+    width: 600px;
+    height: 50px;
     margin: 0 auto;
 }
 
-.footer_top ul{
+.footer_bottom ul{
     display: flex;
     justify-content: space-between;
 }
 
-.footer_top li{
+.footer_bottom li{
     display: inline-block;
     padding: 20px;
 }
 
-.footer_bottom {
-    width: 300px;
-    height: 200px;
+.footer_top {
+    padding: 20px 0 20px 0;
+    width: 100%;
+    height: 50px;
+}
+
+.footer_sns{
+    padding-top: 30px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.footer_sns>.icon_area{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_text_area{
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* ========================== footer end ========================== */

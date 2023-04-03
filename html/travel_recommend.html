@@ -379,9 +379,7 @@
             var btn = document.querySelector('.calendar_btn');
             var target = document.querySelector('.calendar_area');
 
-            console.log(btn,target);
-
-            btn.addEventListener('click', target =>{
+            btn.addEventListener('click', event =>{
                 if (target.style.display === "none") {
                     target.style.display = "block";
                 } else {

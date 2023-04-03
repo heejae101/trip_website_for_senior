@@ -517,6 +517,7 @@ em,.sBtn-text{
 }
 
 .more_btn>a{
+    padding-bottom: 20px;
     color: black;
 }
 

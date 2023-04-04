@@ -62,7 +62,7 @@
         |    고객센터 번호 :   X        |
         |    스크롤 다운   :   X        |
         -------------------------------->
-        <div id="customer-service" style="display: block; box-shadow: 3px black;">사이트 이용하실 때 어려우신사항 있으시면<br><br>아래의 번호를 통해 문의해주시기 바랍니다.<hr>고객센터 연락처: 000-0000-0000</div>
+        <div class="customer-service" style="box-shadow: 3px black;">사이트 이용하실 때 어려우신사항 있으시면<br><br>아래의 번호를 통해 문의해주시기 바랍니다.<hr>고객센터 연락처: 000-0000-0000</div>
         <section class="top_section">
             <video src="./video/mixkit-clouds-and-blue-sky-background-2408.mp4" muted autoplay loop style="width: 100vw; height: 100%; object-fit: cover; backdrop-filter: blur(10px);"></video>
             <!-- 카테고리 토글 -->
@@ -88,11 +88,11 @@
                             <li><a href=""><span class="font_white">나의 정보 확인</span></a></li>
                             <li><a href=""><span class="font_white">로그인</span></a></li>
                         </ul>
-                        <div class="list_nav">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                            </svg>
-                        </div>
+                    </div>
+                    <div class="list_nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
                     </div>
                 </div>
             <!-- 문구 드롭다운 -->
@@ -129,7 +129,7 @@
                     <em class="font_white">여행을 떠나고 싶어요</em>
                 </div>
                 <div class="text_area2">
-                    <span>
+                    <span class="front_span">
                         <div class="select-menu">
                             <div class="select-btn">
                                 <span class="sBtn-text border_text font_white">&#128051;&nbsp;국내</span>
@@ -150,6 +150,8 @@
                             </ul>
                         </div>
                         <em class="font_white">에서</em>
+                    </span>
+                    <span class="back_span">
                         <div class="select-menu">
                             <div class="select-btn">
                                 <span class="sBtn-text border_text font_white">&#128051;&nbsp;즉흥적인 여행</span>
@@ -172,8 +174,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <em class="font_white">여행을 떠나고 싶어요</em>
                     </span>
+                    <em class="font_white">여행을 떠나고 싶어요</em>
                 </div>
                 <div class="drop_down_btn">
                     <button class="btn-type-round" onclick="window.location.href='./html/reservation1.html';">
@@ -181,20 +183,6 @@
                     </button>
                 </div>
             </div>
-            <!-- 고객센터 번호 -->
-            <div class="customer_service" style="display: none;">
-                <div class="customer_service_title">
-                    <span class="font_white">고객센터</span>
-                </div>
-                <div class="customer_service_top">
-                    <span class="font_white">사이트 이용하실 때 어려우신사항 있으시면</span><br>
-                    <span class="font_white">아래의 번호를 통해 문의해주시기 바랍니다.</span>
-                </div>
-                <div class="customer_service_bottom">
-                    <span class="font_white">010-0000-0000</span>
-                </div>
-            </div>
-
             <!-- 스크롤 다운 버튼 -->
             <div class="down_btn">
                 <div class="down_btn_items">
@@ -211,7 +199,7 @@
 
         <section class="middle_section">
             <div class="text_popular">
-                <span class="text_1 border_text">가장 사랑받는 월간 Best 여행지!</span>
+                <span class="text_1 border_text">가장 사랑받는 월간 <br class="pc_blind"> Best 여행지!</span>
             </div>
             <div class="slider_popular">
                 <ul class="bxslider">
@@ -340,15 +328,17 @@
 
         <section class="guide_section">
             <div class="guide_text">
-                <span class="guide_h1 border_text">다양한 여행지 영상 보기</span>
+                <span class="guide_h1 border_text">다양한 여행지 <br class="pc_blind"> 영상 보기</span>
             </div>
             <div class="guide_youtube_video_area">
                 <div class="more_btn">
                     <a href="https://www.naver.com/">
-                        <span>더 보기</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-                        </svg>
+                        <span>
+                            더 보기
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                            </svg>
+                        </span>
                     </a>
                 </div>
                 <div class="slider5">
@@ -462,6 +452,17 @@
                 $('.slider_right').click(function () {
                     popular_slider.goToNextSlide();
                 });
+
+                // var mediaQuery = window.matchMedia('(max-width: 890px)');
+
+                // if (mediaQuery.matches) {
+                // // 화면이 768px 이하일 때
+                // slider.reloadSlider({
+                //     minSlides: 3,
+                //     maxSlides: 3,
+                //     slideWidth: 600
+                // });
+                // }
             });
     </script>
 </body>

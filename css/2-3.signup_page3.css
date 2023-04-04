@@ -28,57 +28,65 @@ div.sign_in_logo{
 }
 
 div.sign_in_logo h1{
-  font-size:2.5rem;
+  font-size:40px;
   font-weight:800;
 }
 
 div.progress{
-  text-align:center;
-}
-
-div.progress{
-  margin:30px 0;
+  margin:40px 0;
   text-align:center;
 }
 
 div.progress li{
-  font-size:1.5rem;
+  font-size:32px;
   font-weight:800;
   margin:0px 20px;
 }
 
-div.progress h2.progress_third_text{
-  border-bottom:2px solid #000000;
-  padding-bottom:5px;
+div.progress h2.progress_text{
+  padding:10px;
+}
+
+div.progress h2.progress_text_third{
+  background-color:rgb(253, 166, 4);
+  padding:10px;
+  border-radius:5px;
 }
 
 div.help_text{
-  margin:10px 0;
-  text-align:center;
+  margin:20px 30px;
+  text-align:left;
 }
 
-div.help_text h3{
-  font-size:1rem; 
-  margin-bottom:20px; 
+div.help_text span{
+  font-size:20px; 
 }
 
 /*---------------------------------------------------------------------------*/
 div.input_user_information{
-  justify-content:center;
-  padding-left:50px;
+  padding-left:80px;
   font-family:"Noto Sans KR", sans-serif;
   /* background-color:yellow; */
 }
 
-div.input_user_information li{
-  display:block;
-  margin-top:20px;
+div.input_user_information_input{
+  margin-left:10px;
 }
 
-span.input_explanation{
+div.input_user_information_input li{
   display:block;
-  margin:0 5px;
-  font-size:0.9rem;
+  margin-top:30px;
+}
+
+div.input_user_information_input label{
+  font-size:20px;
+}
+
+div.input_user_information_input span.input_explanation{
+  display:block;
+  margin:5px 5px;
+  font-size:1rem;
+  font-weight:700;
 }
 
 div.input_user_information label{
@@ -90,14 +98,14 @@ div.input_user_information span.essential_red{
 }
 
 div.input_user_information input{
-  width:300px;
-  height:25px;
+  width:320px;
+  height:35px;
   margin-top:5px;
   border-radius:2px;
 }
 
-div.input_user_information input#email_input{
-  width:280px;
+div.input_user_information label#check_email_text{
+  font-size:18px;
 }
 
 div.input_user_information input#check_email{
@@ -111,25 +119,29 @@ div.input_user_information span.input_explanation_email{
 
 /*----------------------------login button-------------------------------*/
 div.input_user_information_btn{
+  text-align:center;
   margin-top:20px;
 }
 
-button.btn_btn{
-  width:310px;
-  height:40px;
-  margin-top:5px;
+div.input_user_information_btn button.btn_btn{
+  width:340px;
+  height:50px;
+  font-size:1.5rem;
+  font-weight:700;
   border-radius:5px;
   cursor:pointer;
+  font-family:"nanum";
 }
 
 button.btn_sign_in{
-  background-color:#439BFF;
+  background-color:black;
   color:white;
 }
 
 button.btn_back{
-  background-color:#545353;
-  color:#fff;
+  background-color:white;
+  border:2px solid rgb(191, 186, 186);
+  color:black;
 }
 /*------------------------------------footer:have to remove/change------------------------------------*/
 footer.footer{
@@ -137,4 +149,4 @@ footer.footer{
   height:50px;
   background:red;
 }
-/*-----------------------------------------------------------------------------------------------------*/
+

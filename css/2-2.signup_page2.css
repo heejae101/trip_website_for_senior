@@ -28,33 +28,38 @@ div.sign_in_logo{
 }
 
 div.sign_in_logo h1{
-  font-size:2.5rem;
+  font-size:40px;
   font-weight:800;
 }
 
 div.progress{
-  margin:30px 0;
+  margin:40px 0;
   text-align:center;
 }
 
 div.progress li{
-  font-size:1.5rem;
+  font-size:32px;
   font-weight:800;
   margin:0px 20px;
 }
 
-div.progress h2.progress_second_text{
-  border-bottom:2px solid #000000;
-  padding-bottom:5px;
+div.progress h2.progress_text{
+  padding:10px;
+}
+
+div.progress h2.progress_text_second{
+  background-color:rgb(253, 166, 4);
+  padding:10px;
+  border-radius:5px;
 }
 /*-------------------------------------------------Adjust to main section : 2nd page-----------------------------------------------------*/
 div.help_text{
-  margin:10px 0;
+  margin:20px 30px;
   text-align:left;
 }
 
-div.help_text h3{
-  font-size:1.2rem; 
+div.help_text span{
+  font-size:23px; 
   margin-bottom:20px; 
 }
 
@@ -64,13 +69,8 @@ div.phone_verification{
   margin-top:30px;
 }
 
-<<<<<<< HEAD
 div.phone_verification button.phone_verification_btn{
   width:500px;
-=======
-button.phone_verification_btn{
-  width:600px;
->>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7
   height:50px;
   color:#000000;
   padding:10px 20px;
@@ -90,11 +90,13 @@ button.phone_verification_btn img{
 }
 
 div.phone_verification_text{
-  margin-top:10px;
+  margin:20px 30px;
+  font-size:18px;
 }
 
 div.phone_verification_text span{
   font-family:"Noto Sans KR", sans-serif;
+  font-weight:800;
 }
 
 /*------------------------------------footer:have to remove/change------------------------------------*/
@@ -103,41 +105,3 @@ footer.footer{
   height:50px;
   background:red;
 }
-<<<<<<< HEAD
-/*-----------------------------------------------------------------------------------------------------*/
-@media all and (max-width:720px){
-    div.sign_in_logo h1{
-      font-size:2rem;
-    }
-    div.progress li{
-      font-size:1.15rem;
-      font-weight:800;
-      margin:0 2%;
-    }
-
-    /* div.help_text{
-      text-align:center;
-    } */
-
-    div.help_text h3{
-      font-size:1rem; 
-    }
-
-    div.phone_verification button.phone_verifiaction_btn{
-      width:300px;
-      padding:10px 2.777778%;
-    }
-
-    div.phone_verification_btn img{
-      width:2.777778%;
-      margin-right:1.388889%;
-    }
-
-    div.phone_verification_text span{
-     display:block;
-     text-align:left;
-    }
-  }
-=======
-/*-----------------------------------------------------------------------------------------------------*/
->>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7

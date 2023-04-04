@@ -13,6 +13,7 @@
   <link href="../css/reset.css" rel="stylesheet" />  <!-- css reset -->
   <link href="../css/signup_default.css" rel="stylesheet" />  <!-- css default:sign up -->
   <link href="../css/2-3.signup_page3.css" rel="stylesheet" />
+  <link href="../css/2-3.signup_page3_mediaquery.css" rel="stylesheet" />
 </head>
 
 
@@ -34,15 +35,19 @@
 
         <div class="progress">
           <ul>
-            <li><h2>1.약관동의</h2></li>
-            <li><h2>2.본인인증</h2></li>
-            <li><h2 class="progress_third_text">3.정보입력</h2></li>
-            <li><h2>4.가입완료</h2></li>    
+            <li><h2 class="progress_text">1.약관동의</h2></li>
+            <li><h2 class="progress_text">2.본인인증</h2></li>
+          </ul>
+
+          <ul>
+            <li><h2 class="progress_text progress_text_third">3.정보입력</h2></li>
+            <li><h2 class="progress_text">4.가입완료</h2></li>    
           </ul>
         </div>
 
         <div class="help_text">
-          <h3>* 고객분들이 서비스를 이용하기 위해 사이트에서 필요한 정보를 입력하는 페이지입니다.</h3>
+          <span class="help_text1">* 고객분들이 서비스를 이용하기 위해 사이트에서</span>
+          <span class="help_text2"> 필요한 정보를 입력하는 페이지입니다.</span>
         </div>
 
         <div class="input_user_information">
@@ -84,21 +89,21 @@
                 <label for="email" name="email">
                   이메일<span class="essential_red">(필수)</span>
                 </label><br/>
-                <input id="email_input" type="text" name="email_1" reqired/> @ <input type="text" name="email_2" reqired/><br/>
+                <input type="text" name="email_1" reqired/> @ <input type="text" name="email_2" reqired/><br/>
 
                 <input type="checkbox" id="check_email" name="check_email"/>
-                <label for="check_email" name="check_email">이메일 정보 수신동의</label><br/>
-                <span class="input_explanation input_explanation_email">1. 여행상품과 관련정보(특가상품/신상품/할인쿠폰/뉴스레터 등)의 안내에 활용합니다.</span>
-                <span class="input_explanation input_explanation_email">2. 제휴 이벤트 등 제3자와의 마케팅 활용 시 별도의 동의를 받고 진행합니다.</span>
+                <label id="check_email_text" for="check_email" name="check_email">이메일 정보 수신동의</label><br/>
+                <span class="input_explanation input_explanation_email_1">1. 여행상품과 관련정보(특가상품/신상품/할인쿠폰/뉴스레터 등)의 안내에 활용합니다.</span>
+                <span class="input_explanation input_explanation_email_2">2. 제휴 이벤트 등 제3자와의 마케팅 활용 시 별도의 동의를 받고 진행합니다.</span>
               </li>
             </ul>
           </div>
 
-          <div class="input_user_information_btn">
-            <button type="button" class="btn_btn btn_sign_in" onclick="location.href='../html/2-4.signup_page4.html'">회원가입</button>
-            <button type="button" class="btn_btn btn_back" onclick="location.href='../html/2-2.signup_page2.html'">뒤로가기</button>
-          </div>
+        </div>
 
+        <div class="input_user_information_btn">
+          <button type="button" class="btn_btn btn_sign_in" onclick="location.href='../html/2-4.signup_page4.html'">회원가입</button>
+          <button type="button" class="btn_btn btn_back" onclick="location.href='../html/2-2.signup_page2.html'">뒤로가기</button>
         </div>
 
       </form>

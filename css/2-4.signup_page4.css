@@ -28,24 +28,29 @@ div.sign_in_logo{
 }
 
 div.sign_in_logo h1{
-  font-size:2.5rem;
+  font-size:40px;
   font-weight:800;
 }
 
 div.progress{
-  margin:30px 0;
+  margin:40px 0;
   text-align:center;
 }
 
 div.progress li{
-  font-size:1.5rem;
+  font-size:32px;
   font-weight:800;
   margin:0px 20px;
 }
 
-div.progress h2.progress_forth_text{
-  border-bottom:2px solid #000000;
-  padding-bottom:5px;
+div.progress h2.progress_text{
+  padding:10px;
+}
+
+div.progress h2.progress_text_forth{
+  background-color:rgb(253, 166, 4);
+  padding:10px;
+  border-radius:5px;
 }
 
 div.success_sign_in_logo{
@@ -63,29 +68,17 @@ div.success_sign_in_message1{
   text-align:center;
 }
 
-<<<<<<< HEAD
 div.success_sign_in_message1 span.success_sign_in_message1_text{
-=======
-span.success_sign_in_message1_text{
->>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7
   display:block;
   font-size:1.5rem;
 }
 
 div.success_sign_in_message2{
-<<<<<<< HEAD
   font-size:1.8rem;
   text-align:center;
 }
 
 span#success_sign_in_count .success_sign_in_message2_text{
-=======
-  text-align:center;
-}
-
-span.success_sign_in_message2_text{
-  font-size:1.8rem;
->>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7
   font-weight:800;
 }
 
@@ -95,10 +88,9 @@ footer.footer{
   height:50px;
   background:red;
 }
-<<<<<<< HEAD
 /*------------------------------keyframe : auto moving svg image---------------------------------*/
 div.success_sign_in_logo img{
-  animation:moveto 3s infinite alternate ease-in-out; /* 속도 */
+  animation:moveto 5s infinite alternate ease-in-out; /* 속도 */
 }
 
 @keyframes moveto {
@@ -118,34 +110,3 @@ div.success_sign_in_logo img{
   transform:translate(1000px,0px);
  }
 }
-/*----------------------------mediaquery : mobile(max-width:720px)---------------------------------*/
-  @media all and (max-width:720px){
-    div.sign_in_logo h1{
-      font-size:2rem;
-    }
-    div.progress li{
-      font-size:1.15rem;
-      font-weight:800;
-      margin:0 2%;
-    }
-
-    div.success_sign_in_logo img{
-      width:27.777778%;
-      height:27.777778%
-    }
-
-    div.success_sign_in_message1{
-      margin:6.944444%;
-    }
-
-    div.success_sign_in_message1 span.success_sign_in_message1_text{
-      font-size:1rem;
-    }
-
-    div.success_sign_in_message2{
-      font-size:1.4rem;
-    }
-  }
-=======
-/*-----------------------------------------------------------------------------------------------------*/
->>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7

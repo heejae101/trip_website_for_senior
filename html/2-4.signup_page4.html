@@ -14,14 +14,11 @@
   <link href="../css/reset.css" rel="stylesheet" />  <!-- css reset -->
   <link href="../css/signup_default.css" rel="stylesheet" />  <!-- css default:sign up -->
   <link href="../css/2-4.signup_page4.css" rel="stylesheet" />
+  <link href="../css/2-4.signup_page4_mediaquery.css" rel="stylesheet" />
 </head>
 
 
-<<<<<<< HEAD
 <body onload="Timer();">
-=======
-<body>
->>>>>>> 877cb96a325c19ee00aeef7567e13273eafc53b7
 
   <div id="wrap">
 <!---------------------------- have to remove/change:header ------------------------------->
@@ -38,10 +35,13 @@
 
         <div class="progress">
           <ul>
-            <li><h2>1.약관동의</h2></li>
-            <li><h2>2.본인인증</h2></li>
-            <li><h2>3.정보입력</h2></li>
-            <li><h2 class="progress_forth_text">4.가입완료</h2></li>    
+            <li><h2 class="progress_text">1.약관동의</h2></li>
+            <li><h2 class="progress_text">2.본인인증</h2></li>
+          </ul>
+
+          <ul>
+            <li><h2 class="progress_text">3.정보입력</h2></li>
+            <li><h2 class="progress_text progress_text_forth">4.가입완료</h2></li>    
           </ul>
         </div>
 
@@ -55,7 +55,7 @@
         </div>
 
         <div class="success_sign_in_message2">
-          <span id="success_sign_in_count">2</span>
+          <span id="success_sign_in_count">5</span>
           <span class="success_sign_in_message2_text">초 뒤에 메인페이지로 이동합니다.</span>
         </div>
 
@@ -72,23 +72,26 @@
 <script>
 /*------------auto website chaning after 2seconds-----------*/
   function Timer(){
-    setTimeout("locateKap()",2000);
+    setTimeout("locateKap()",5000);
   }
   function locateKap(){
     location.replace("../index.html");
   }
 /*------------------2seconds countdown text-------------------------*/
-  // setTimeout(function(){
-  //   location.reload();
-  // },2000);
+  /* setTimeout(function(){
+       location.reload();
+   },2000);     판도라의 상자    */
 
-  let time=2;
+  let time=5;
   const interval=setInterval(function(){
     time--;
+     if (time===4) document.getElementById("success_sign_in_count").innerHTML="4";
+     if (time===3) document.getElementById("success_sign_in_count").innerHTML="3";
+     if (time===2) document.getElementById("success_sign_in_count").innerHTML="2";
      if (time===1) document.getElementById("success_sign_in_count").innerHTML="1";
      if (time===0) clearInterval(interval);
   },1000);
 
-</script>
+  </script>
 
-</html>
+ </html>

@@ -21,7 +21,6 @@ body {
 em,span,a{
     font-family: 'nanum';
     font-weight: 400;
-    letter-spacing: -1.7px;
 }
 
 .font_black{
@@ -106,7 +105,7 @@ div.login_nav{
 }
 
 div.login_nav>ul{
-    width: 350px;
+    width: 400px;
     height: 30px;
     padding: 10px;
 }
@@ -198,16 +197,14 @@ svg{
     /* padding: 10px; */
 }
 
-svg>path,g{
+.korea_map path,g{
     border: 5px solid black;
     stroke:rgb(0, 0, 0);
 }
 
-svg>path:hover,g:hover{
+.korea_map path:hover,g:hover{
     fill: rgb(255, 187, 187);
-    
     border: 10px solid black;
-
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
 }
 

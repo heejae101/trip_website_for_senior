@@ -4,6 +4,11 @@
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
+
+    <!-- css default -->
+    <link href="../css/reset.css" rel="stylesheet" />
     <!-------------------
     |                   |
     |                   |
@@ -11,26 +16,27 @@
     |                   |
     -------------------->
 
-    <!-- css default -->
-    <link href="./css/reset.css" rel="stylesheet" />
+    
 
     <!-- 스타일 시트 영역 -->
     <style>
         /* 폰트 */
         @font-face{ /* 일반크기 */
             font-family: 'nanum';
-            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-cBd.ttf);
+            src: url(../font/NanumSquareNeo-cBd.ttf);
             font-weight: 400;
         }
         @font-face{ 
             font-family: 'nanum';
-            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-eHv.ttf);
+            src: url(../font/NanumSquareNeo-eHv.ttf);
             font-weight: 700;
         }
-
+        a{            
+            text-decoration: none;
+        }
         /* 회원계정 전체 페이지 영역 */
         div.customer_account{
-            width: 960px;
+            width: 100%;
             height: 800px;
             text-align: center;
            /* border: 1px dotted black; /* 지울부분 */
@@ -44,7 +50,7 @@
             margin-top: 20px;
         }
 
-        /* 회원정보 변경 페이지의 제목 하단 안내박스 */
+        /* 회원정보 변경 페이지의 제목 하단 안내박스(비번 다시 확인합니다) */
         p.customer_account_pwd_box{
             font-size: 1.2rem;
             font-family: 'nanum';
@@ -53,11 +59,15 @@
 
         /* 아이디 & 비밀번호 입력 영역 */
         div.customer_login{
-            width: 600px;
-            height: 150px;
-            margin-left: 180px;
-            margin-top: 35px;
-            /*border: 2px dotted black; /* 지울부분 */
+            width: 100%;
+            /* width: 62.5%; */
+            height: 170px;
+            
+            
+            
+        }
+        input#id_box{
+            font-size: 1.1rem;
         }
         ::placeholder{
             font-family: 'nanum';
@@ -81,13 +91,14 @@
 
         /* 취소 & 확인 버튼 박스 */
         div.customer_run{
-            margin-top: 10px;
+            margin-top: 20px;            
+           /*background-color: aqua; /* 지움 */
         }
 
         button.btn_cancel{
             width: 300px;
             height: 50px;
-            font-family: 'nanum';
+            font-family: 'nanum';            
             font-size: 1.5rem;
             font-weight: 700;
         }
@@ -99,9 +110,9 @@
             background-color: black;
             color: white;
             font-family: 'nanum';
-            font-weight: 700;
-            
+            font-weight: 700;            
         }
+
         div.customer_run button{ /* 마우스포인터 손가락모양 */
             cursor: pointer;
         }
@@ -109,8 +120,82 @@
             box-shadow: 4px 4px 8px #888;
         }
 
-        
 
+
+
+        /* 모바일용 CSS - 768px이하에서부터 가변그리드 적용 */
+        @media all and (min-width:768px){
+        div.mobile_down_nav{
+            display: none;
+        }
+    }
+        @media all and (max-width: 768px){
+        div.customer_account{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 100%;
+            margin: 0 auto;            
+        } 
+        div.customer_login{ /* 휴대번호와 비밀번호 입력창의 부모영역 */
+            /* width: 600px; */
+            width: 100%;
+            height: 150px;
+            margin: 0 auto;
+            /* margin-top: 35px; */        
+        }
+        #id_box{
+            width: 90%; /* 전체width의 90% */
+            height: 50px;
+            margin-top: 25px;
+            /* justify-content: center; */
+            border: 2px solid black;
+        }
+        
+        #pwd_box{
+            width: 90%;
+            height: 50px;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        /* 아래의 취소와 확인 버튼은 화면 하단에 고정되는데 아직 방법을 모르겠 */
+        button.btn_cancel{
+            width: 45%;
+            height: 50px;
+            font-family: 'nanum';
+            font-size: 1.5rem;
+            font-weight: 700;
+        }        
+        button.btn_check{
+            width: 45%;
+            height: 50px;
+            font-size: 1.5rem;
+            background-color: black;
+            color: white;
+            font-family: 'nanum';
+            font-weight: 700;            
+        }
+         /* 하단 세 메뉴(로그아웃, 공지사항, 고객센터) */
+        div.mobile_down_nav{
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+
+        }    
+        div.mobile_down_nav>ul{
+            width: 100%;
+            position: absolute;
+            top: 300px;
+            border-top: 2px solid black;
+            border-bottom: 1px solid black;
+        }
+        div.mobile_down_nav li{        
+            display: inline-block;
+            margin: 30px;
+            font-family: 'nanum';
+            font-size: 1.3rem;
+        }
+        
+    }
     </style>
 
 </head>
@@ -124,15 +209,23 @@
         </div>
         <!-- 아이디 & 비밀번호 입력 박스 -->
         <div class="customer_login">
-            <input type="text" id="id_box" value="" placeholder="010-0000-1111">
+            <input type="text" id="id_box" value="" placeholder="010-0000-1111"><br/>
             <input type="password" id="pwd_box" name="pwd_enter" placeholder="비밀번호를 입력하세요.">
 
         </div>
         <!-- 취소 & 확인 버튼 박스 -->
         <div class="customer_run">
             <a href="#"><button type="button" class="btn_cancel">취소</button></a>
-            <a href="#"><button type="button" class="btn_check">확인</button></a>            
-            
+            <a href="#"><button type="button" class="btn_check">확인</button></a>           
+        </div>
+
+        <!-- 모바일 설정 시 하단 메뉴들 -->
+        <div class="mobile_down_nav">
+            <ul>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
         </div>
     </div>
     

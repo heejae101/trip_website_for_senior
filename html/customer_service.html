@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
+    
     <!-- css default -->
-    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="../css/reset.css" rel="stylesheet" />
 
     <!-- 스타일시트 영역 -->
     <style>
         /* 폰트 */
         @font-face{ /* 일반크기 */
             font-family: 'nanum';
-            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-cBd.ttf);
+            src: url(../font/NanumSquareNeo-cBd.ttf);
             font-weight: 400;
         }
         @font-face{ 
-            font-family: 'nanum';
-            src: url(./webfont/NaverNanumSquareNeo/TTF/NanumSquareNeo-eHv.ttf);
+            font-family: 'nanum_1';
+            src: url(../font/NanumSquareNeo-eHv.ttf);
             font-weight: 700;
         }
 
@@ -29,8 +31,9 @@
         }
         /* 고객센터 전체 화면 페이지 */
         div.customer_service{
-            width: 960px;
-            height: 900px;            
+            width: 100%;
+            height: 900px;   
+            position: relative;                     
 
             /* border: 1px dotted black; /* 추후 지움 */
         }
@@ -39,18 +42,27 @@
         div.customer_title{
             margin-top: 20px; 
             text-align: center;
-            font-family: 'nanum';
-            font-size: 2.0rem;          
+            font-family: 'nanum_1';
+            font-size: 2.0rem;     
+            /* background-color: aquamarine;  */
+            width: 100%;   
             
+        }
+        .customer_search{
+            width: 100%;
+            overflow: hidden;
         }
         
         /* 무엇을 도와드릴까요? */
         div.customer_service p.customer_subtitle{
             font-family: 'nanum';
+            width: 45%;
+            text-align: center;
             font-size: 2rem;
             font-weight: 700;
-            margin-left: 80px; /* 이걸 마진으로 배치하는게 과연 편한 일일까? */
-            margin-bottom: 30px;            
+            /*margin-left: 80px; /* 이걸 마진으로 배치하는게 과연 편한 일일까? */
+            margin-bottom: 30px;     
+            /* background-color: aqua;        */
         }
         /* placeholder글씨 키우기 */
         ::placeholder{
@@ -60,23 +72,30 @@
 
         /* 텍스트 입력박스와 검색 버튼 영역(일렬, 정중앙 배열) */
         div.customer_service>div.customer_search{            
-            margin-left: 250px; /* 왼쪽에 공간을 줌으로서 가운데 부근에 배열 */
+            margin-left: 26%; /* 왼쪽에 공간을 줌으로서 가운데 부근에 배열 */
             margin-top: 50px;            
-        }              
+        }            
+         
 
         /* 검색 텍스트 입력박스 */
-        #search{
-            width: 450px;
-            height: 40px;
+        #username{
+            width: 600px;
+            height: 40px;            
+            /* margin-left:20px; */
             float: left;
             border: 2px solid rgb(218, 217, 217);
         }
 
         /* 검색 영역에 마우스를 올리면 테두리가 진해지는 효과 */
         #search:hover{
-            border: 2px solid black;
-            
+            border: 2px solid black;            
         }
+        #search{
+            width:45%;
+            height: 30px;
+            font-size: 17px;       
+            float: left;     
+        }        
 
         /* 돋보기 이미지(검색버튼) */
         img.search_btn{
@@ -93,7 +112,7 @@
             text-align: center; /* 각기 이미지와 텍스트를 각각 중앙에 정렬함 */
             width: 100%;
             height: 100px;
-            margin-top: 100px;
+            margin-top: 80px;
         }
 
         /* 개별 리스트 영역 */
@@ -112,19 +131,21 @@
 
         /* 자주하는 질문 영역 */
         div.customer_faq{
-            margin-top: 120px;
-            width: 100%;
-            height: 600px;            
+            margin-top: 180px;
+            width: 1000px;
+            height: 600px;           
+            position: absolute;
+            left: 50px;
            
             /*background-color: aqua; /* 지움 */
         }
         div.title{
             font-family: 'nanum';
             font-size: 1.5rem;
-            border-bottom: 2px solid black;
+            /* border-bottom: 2px solid black; */
             display: flex; /* 자주하는질문과 더보기를 떨어뜨리자 */
             /* justify-content: space-between; */
-            width: 100%;
+            width: 500px;
             height: 50px;     
             position: relative;     
         }
@@ -156,18 +177,20 @@
         
          /* 질문들 예시 part */  
         div.question{
+            width: 980px;
             position: relative;        
             font-family: 'nanum';
+            
         }
-        /* div.question>svg{
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }         */
+        
         div.question>ul{
             width: 100%;
             height: 60px;
+            text-align: center;
             border-bottom: 1px solid black;            
+        }
+        div.question>ul:nth-child(1){
+            border-top: 2px solid black;
         }
 
         div.question li.box1{
@@ -176,7 +199,7 @@
             line-height: 60px;
             /* font-family: 'nanum'; */
             font-size: 1.3rem;
-            font-weight: bold;
+            font-weight: bold;            
         }
 
         div.question li.box2{
@@ -193,9 +216,10 @@
             line-height: 60px; 
             /*font-weight: bold; /* 이건 추후 논의 후 결정하는게 나을듯 */
         }
-        div.question li.box4{ /* svg포함된 영역 */
+        /* 우측 아래방향 아이콘 위치 설정 */
+        div.question svg{ 
             position: absolute;
-            left: 900px;                   
+            left: 910px;                   
             height: 60px;  
             line-height: 60px;      
             font-size: 1.7rem;  
@@ -209,6 +233,104 @@
 
 
 
+        /* 모바일용 CSS - 768px 이하에서부터 가변그리드 적용 */
+        @media all and (max-width:768px){
+            div.question{
+                display: none;
+            }            
+
+            li.title_1{                
+                top: 50px;
+            }
+            div.question-1{
+                width: 980px;
+                position: relative;
+                top: 50px;
+            }
+            div.question-1>ul{
+            width: 50%;
+            height: 90px;
+            /* display: flex;
+            justify-content: center; */
+            /* text-align: center; */
+            font-family: 'nanum';
+            border-bottom: 1px solid black;   
+                
+             
+            }
+            div.question-1>ul:nth-child(1){
+                border-top: 2px solid black;
+            }
+            div.question-1 svg{
+                position: absolute;
+                right: 500px;                
+            }
+            div.question-1 li{
+                display: inline-block;
+            }
+            div.question-1 li.box1{
+            /* position: absolute; */
+            left: 20px;
+            top:5px;
+            /* line-height: 80px; */
+            
+            font-size: 1.3rem;
+            font-weight: bold;            
+            }
+            div.question-1 li.box2{
+            /* position: absolute; */
+            left: 43px;
+            top: 30px;
+            
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        div.mobile_down_nav{                
+                display: flex;
+                justify-content: space-around;
+                position: relative;    
+                top: 50px;    
+                right: 100px;
+            }    
+            div.mobile_down_nav>ul{                
+                width: 768px;
+                /* position: absolute; */
+                /* top: 50px; */
+                
+            }
+            div.mobile_down_nav li{        
+                display: inline-block;
+                margin: 25px;
+                font-family: 'nanum';
+                font-size: 1.3rem;
+            }
+            div.customer_service p.customer_subtitle{
+                width: 100%;
+                text-align: left;
+            }
+            #search{
+                width: 250px; 
+                height: 40px;
+                left: 3px;
+                text-align: left;
+                /* margin-top: 25px; */
+                justify-content: center;
+                border: 1px solid black;
+            }
+
+
+
+        }
+
+        @media all and (min-width:768px){
+            div.question-1{
+                display: none;
+            }
+            div.mobile_down_nav{
+                display: none;
+            }
+        }
+        
 
         
     
@@ -225,12 +347,12 @@
 
         <!-- 무엇을 도와드릴까요? & 검색 영역 -->
         <div class="customer_search">
-            <div> <!-- 검색창 박스 -->
+            <div id="searchbox_title"> <!-- 검색창 박스 -->
                 <p class="customer_subtitle">무엇을 도와드릴까요?</p>   
-                <input type="search" id="search" name="search" placeholder="검색어를 입력하세요." />
+                <input type="text" id="search" name="username" placeholder="검색어를 입력하세요.">
             </div>            
             <div> <!-- 검색하는 버튼(돋보기) -->
-                <a href="#"><img class="search_btn" src="./images/search_FILL0_wght400_GRAD0_opsz48.png"></a>
+                <a href="#"><img class="search_btn" src="../image/cwh/search_FILL0_wght400_GRAD0_opsz48.png"></a>
             </div>
             
         </div>
@@ -241,11 +363,11 @@
 
         <div class="customer_nav">
             <ul>
-                <li><a href="#"><img src="./images/inquiry.JPG"><p>1:1문의</p></a></li>
-                <li><a href="#"><img src="./images/suggest.JPG"><p>고객 서비스 개선 제안</p></a></li>
-                <li><a href="#"><img src="./images/survey.JPG"><p>고객만족도 조사</p></a></li>
-                <li><a href="#"><img src="./images/pay.JPG"><p>결제방법 안내</p></a></li>
-                <li><a href="#"><img src="./images/point.JPG"><p>포인트 안내</p></a></li>
+                <li><a href="#"><img src="../image/cwh/inquiry.JPG"><p>1:1문의</p></a></li>
+                <li><a href="#"><img src="../image/cwh/suggest.jpg"><p>고객 서비스 개선 제안</p></a></li>
+                <li><a href="#"><img src="../image/cwh/survey.JPG"><p>고객만족도 조사</p></a></li>
+                <li><a href="#"><img src="../image/cwh/pay.JPG"><p>결제방법 안내</p></a></li>
+                <li><a href="#"><img src="../image/cwh/point.JPG"><p>포인트 안내</p></a></li>
             </ul>
         </div>
         <!-- 자주하는 질문 -->
@@ -263,55 +385,94 @@
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">결제문의</li>
-                    <li class="box3">상품권 사용은 어떻게 하나요?</li>                    
-                    <li class="box4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </li></a>                                    
-                    
+                    <li class="box3">상품권 사용은 어떻게 하나요?</li>      
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>                                  
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">기타문의</li>
-                    <li class="box3">관심 상품은 어떻게 등록하나요?</li>            
-                    <li class="box4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </li></a>   
+                    <li class="box3">관심 상품은 어떻게 등록하나요?</li>          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">상품문의</li>
-                    <li class="box3">패키지여행 일정에 '자유 일정'이 있는데 그때는 무엇을 하나요?</li>
-                    <li class="box4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </li></a>   
+                    <li class="box3">패키지여행 일정에 '자유 일정'이 있는데 그때는 무엇을 하나요?</li>                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">결제문의</li>
-                    <li class="box3">인터넷에서 예약 시 요금 결제는 어떻게 하나요?</li>
-                    <li class="box4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </li></a>   
+                    <li class="box3">인터넷에서 예약 시 요금 결제는 어떻게 하나요?</li>                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
                 </ul>
                 <ul><a href="#">
                     <li class="box1">Q</li>
                     <li class="box2">결제문의</li>
-                    <li class="box3">예약 취소 후 바로 환불 처리가 되나요?</li>
-                    <li class="box4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </li></a>   
+                    <li class="box3">예약 취소 후 바로 환불 처리가 되나요?</li>                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
                 </ul>
-            </div>           
+            </div>     
+            
+            <!-- 모바일 사이즈 영역에서 표시될 부분 -->
+            
+            <div class="question-1">
+                <ul><a href="#">
+                    <li class="box1">Q 결제문의</li><br>
+                    <li class="box2">상품권 사용은 어떻게 하나요?</li>                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>                                  
+                </ul>
+                <ul><a href="#">
+                    <li class="box1">Q 기타문의</li><br>
+                    <li class="box2">관심 상품은 어떻게 등록하나요?</li>                             
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
+                </ul>
+                <ul><a href="#">
+                    <li class="box1">Q 상품문의</li><br>
+                    <li class="box2">패키지여행 일정에 '자유 일정'이 있는데 무엇인가요?</li>                                      
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
+                </ul>
+                <ul><a href="#">
+                    <li class="box1">Q 결제문의</li><br>
+                    <li class="box2">인터넷에서 예약 시 요금 결제는 어떻게 하나요?</li>                                   
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
+                </ul>
+                <ul><a href="#">
+                    <li class="box1">Q 결제문의</li><br>
+                    <li class="box2">예약 취소 후 바로 환불 처리가 되나요?</li>                                        
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg></a>   
+                </ul>
+            </div>     
+
+            <!-- 모바일 설정 시 하단 메뉴들 -->
+        <div class="mobile_down_nav">
+            <ul>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+            
             <!-- 여행이지 사이트 하단의 [공지사항] 영역은 제외하기로 -->
 
             

@@ -4,17 +4,34 @@
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
 
     <!-- css default -->
-    <link href="./css/reset.css" rel="stylesheet" />
+    <link href="../css/reset.css" rel="stylesheet" />
     <!-- 스타일 시트 영역 -->
     <style>
+    /* 폰트 */
+    @font-face{ /* 일반크기 */
+        font-family: 'nanum';
+        src: url(../font/NanumSquareNeo-cBd.ttf);
+        font-weight: 400;
+    }
+    @font-face{ 
+        font-family: 'nanum';
+        src: url(../font/NanumSquareNeo-eHv.ttf);
+        font-weight: 700;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
 
     /* 전체 영역 */
     div.customer_coupon{
-        width: 960px;
+        width: 95%;
         height: 800px;
         text-align: center;
+        font-family: 'nanum';
         /* border: 1px dotted black;  */
     }
     /* 타이틀 글자 */
@@ -23,36 +40,31 @@
         font-weight: 800;
         margin: 20px 0 40px 0;
     }
-    a{
-        color: black;
-    }
+    
 
 
-    /* 할인쿠폰 영역 폰트(우선 클래스는 지정했으나) */
-    /* p.title_font{
-        @font-face{
-        font-family: 'nanum';
-        src: url(../font/NanumSquareNeo-eHv.ttf);
-        font-weight: 700;
-        }
-    } */
+    
 
 
     /* 쿠폰 종류 안내 및 전체 확인 메뉴 */
     div.customer_coupon_type_nav{
-        font-size: 2.2rem;       
-        margin-left: 130px; 
-        margin-top: 60px; /* 윗 안내문과의 거리 */
+        font-size: 2.2rem;
+        width: 700px; /* 전체 960px의 75% */        
+        margin-left: 130px;
+        /* margin: 0px 100px; */
+        margin-top: 60px; /* 윗 안내문과의 거리 */        
+        /*background-color: aqua; /* 지움 */
     }
     /* 쿠폰종류 가로배치 */
     div.customer_coupon_type_nav>ul{
-        width: 700px;
+        /* width: 700px; */
         display: flex;
         justify-content: space-around;
         /*border: 1px dotted black; /* 지울부분 */
     }
+    
     div.customer_coupon_type_nav a{
-        color: rgb(181, 180, 180);
+        color: rgb(94, 94, 94);
     }
 
       
@@ -78,11 +90,60 @@
     div.customer_coupon_inform{        
         font-size: 1.2rem;
         font-weight: 600;
-        margin-top: 150px;
+        margin-top: 150px;        
     }
 
    
 
+    /* 모바일용 CSS - 720px이하에서부터 가변그리드 적용 */
+    @media all and (min-width: 720px){
+        div.mobile_down_nav{
+            display: none;
+        }
+    }
+    @media all and (max-width: 720px){
+        div.customer_coupon{
+            display: flex;
+            flex-flow: column nowrap;
+            /* flex-wrap: nowrap; */
+            width: 100%;
+            margin: 0 auto;  
+            position: relative;
+            /* background-color: aquamarine; /* 지움 */
+        }
+        div.customer_coupon_type_nav>ul{
+        width: 500px;
+        display: flex;
+        justify-content: space-around;    
+        font-size: 1.6rem;    
+        position: absolute; /* 좌측에 메뉴를 붙이기 위함 */
+        left: 3px;
+        /* margin-right:25px; */
+        }        
+        /* 하단 세 메뉴(로그아웃, 공지사항, 고객센터) */
+    div.mobile_down_nav{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top:50px;
+        
+    }    
+    div.mobile_down_nav>ul{
+        width: 100%;
+        position: absolute;
+        top: 500px;
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+    }
+    div.mobile_down_nav li{        
+        display: inline-block;
+        margin: 30px;
+        font-family: 'nanum';
+        font-size: 1.3rem;
+        
+    }
+        
+    }
 
 
 
@@ -114,6 +175,15 @@
         <div class="customer_coupon_inform">
             <p>현재 보유중인 쿠폰이 없습니다.</p>
             
+        </div>
+
+         <!-- 모바일 설정 시 하단 메뉴들 -->
+         <div class="mobile_down_nav">
+            <ul>
+                <li><a href="#">로그아웃</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
         </div>
     </div>    
 </body>

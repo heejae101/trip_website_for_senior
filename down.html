@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slide Down Bar on Scroll</title>
+    <style>
+        /* 슬라이드 다운 바의 스타일 */
+        .slide-down-bar {
+            width: 100%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            transition: top 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>스크롤 시 바 슬라이드 다운</h1>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+    <p>스크롤을 내리면 바가 슬라이드 다운됩니다.</p>
+
+    <div class="slide-down-bar">
+        <p>이곳에 슬라이드 다운될 내용을 입력하세요.</p>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            var slideDownBar = document.querySelector(".slide-down-bar");
+            var scrollPos = window.scrollY;
+            var triggerPos = 200; // 바가 슬라이드 다운되는 스크롤 위치
+
+            if (scrollPos >= triggerPos) {
+                slideDownBar.style.top = "0";
+                slideDownBar.style.display = "block";
+            } else {
+                slideDownBar.style.top = "-100px";
+                slideDownBar.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

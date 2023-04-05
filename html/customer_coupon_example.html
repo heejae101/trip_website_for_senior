@@ -3,209 +3,188 @@
 <head>
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>account_modification</title>
-
+    <title>coupon_example</title>
+    <!-- 파비콘 -->
     <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
-
-    <!-- css default -->
+    <!-- 외부 스타일시트 -->
     <link href="../css/reset.css" rel="stylesheet" />
-    <!-- 헤더 css -->
-    <link href="../css/nav_footer.css" rel="stylesheet"/>
-
-    
-
-    <!-- 스타일 시트 영역 -->
+    <!-- header&footer css -->
+    <link href="../css/nav_footer.css" rel="stylesheet" />
     <style>
         /* 폰트 */
-        @font-face{ /* 일반크기 */
-            font-family: 'nanum';
-            src: url(../font/NanumSquareNeo-cBd.ttf);
-            font-weight: 400;
-        }
-        @font-face{ 
-            font-family: 'nanum';
-            src: url(../font/NanumSquareNeo-eHv.ttf);
-            font-weight: 700;
-        }
-        a{            
-            text-decoration: none;
-        }
-        /* 회원계정 전체 페이지 영역 */
-        div.customer_account{
-            width: 100%;
-            height: 800px;
-            text-align: center;
-           /* border: 1px dotted black; /* 지울부분 */
-        }
+    @font-face{ /* 일반크기 */
+        font-family: 'nanum';
+        src: url(../font/NanumSquareNeo-cBd.ttf);
+        font-weight: 400;
+    }
+    @font-face{ 
+        font-family: 'nanum';
+        src: url(../font/NanumSquareNeo-eHv.ttf);
+        font-weight: 700;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    /* 전체 영역 */
+    div.customer_coupon{
+        width: 95%;
+        height: 800px;
+        text-align: center;
+        font-family: 'nanum';
+        /* border: 1px dotted black;  */
+    }
+    /* 타이틀 글자 */
+    p.customer_coupon_title{
+        font-size: 40px;
+        font-weight: 800;
+        margin: 20px 0 40px 0;
+    }
+    /* 쿠폰 종류 안내 및 전체 확인 메뉴 */
+    div.customer_coupon_type_nav{
+        font-size: 33px;
+        width: 77.54%; /* 전체 960px의 75% */               
+        margin-left: 200px;        
+        margin-top: 60px; /* 윗 안내문과의 거리 */           
+             
+    }
+    /* 쿠폰종류 가로배치 */
+    div.customer_coupon_type_nav>ul{        
+        display: flex;
+        /* text-align: center; */
+        justify-content: space-around;        
+    }
+    /* 쿠폰 종류 안내 내비 기본 색상 */
+    div.customer_coupon_type_nav a{
+        color: rgb(94, 94, 94);
+    }
+    /* 쿠폰 종류부분 호버 시 메뉴 진해짐 */
+    div.customer_coupon_type_nav a:first-child:hover{
+        font-weight: bold;
+        color: black;
+    }
+    div.customer_coupon_type_nav a:nth-child(2):hover{
+        font-weight: bold;
+    }
+    div.customer_coupon_type_nav a:nth-child(3):hover{
+        font-weight: bold;
+    }
+    div.customer_coupon_type_nav a:nth-child(4):hover{
+        font-weight: bold;
+    }
+    div.customer_coupon_type_nav a:last-child:hover{
+        font-weight: bold;
+    }
 
-        /* 회원정보 변경 페이지의 제목 */
-        p.customer_account_id_box{
-            font-size: 40px;
-            font-weight: bold;
-            font-family: 'nanum';
-            margin-top: 20px;
-        }
-
-        /* 회원정보 변경 페이지의 제목 하단 안내박스(비번 다시 확인합니다) */
-        p.customer_account_pwd_box{
-            font-size: 1.2rem;
-            font-family: 'nanum';
-            margin-top: 50px;
-        }
-
-        /* 아이디 & 비밀번호 입력 영역 */
-        div.customer_login{
-            width: 100%;
-            /* width: 62.5%; */
-            height: 170px;
-            
-            
-            
-        }
-        input#id_box{
-            font-size: 1.1rem;
-        }
-        ::placeholder{
-            font-family: 'nanum';
-            font-size: 0.9rem;
-        }
-        #id_box{
-            width: 550px;
-            height: 50px;
-            margin-top: 25px;
-            border: 2px solid black;
-        }
-        
-        #pwd_box{
-            width: 550px;
-            height: 50px;
-            border: 2px solid black;
-            margin-top: 10px;
-        }
-       
-
-
-        /* 취소 & 확인 버튼 박스 */
-        div.customer_run{
-            margin-top: 20px;            
-           /*background-color: aqua; /* 지움 */
-        }
-
-        button.btn_cancel{
-            width: 300px;
-            height: 50px;
-            font-family: 'nanum';            
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        
-        button.btn_check{
-            width: 300px;
-            height: 50px;
-            font-size: 1.5rem;
-            background-color: black;
-            color: white;
-            font-family: 'nanum';
-            font-weight: 700;            
-        }
-
-        div.customer_run button{ /* 마우스포인터 손가락모양 */
-            cursor: pointer;
-        }
-        div.customer_run button:hover{            
-            box-shadow: 4px 4px 8px #888;
-        }
+    /* 쿠폰 이미지 */
+    div.customer_coupon_inform{
+        overflow: hidden;        
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        margin-top: 100px;
+    }
+    div.customer_coupon_inform li{
+        display: inline-block;
+        font-size: 27px;
+    }
+    div.customer_coupon_inform img{
+        float: left;     
+        width: 450px;
+        height: 270px;
+        margin: 0 20px 0 20px;
+    }
 
 
-
-
-        /* 모바일용 CSS - 768px이하에서부터 가변그리드 적용 */
-        @media all and (min-width:870px){
+/* 모바일용 CSS - 720px이하에서부터 가변그리드 적용 */
+@media all and (min-width: 720px){
         div.mobile_down_nav{
             display: none;
         }
     }
-        @media all and (max-width: 870px){
-        div.customer_account{
+    @media all and (max-width: 720px){
+        div.customer_coupon{
             display: flex;
             flex-flow: column nowrap;
+            /* flex-wrap: nowrap; */
             width: 100%;
-            margin: 0 auto;            
-        } 
-        div.customer_login{ /* 휴대번호와 비밀번호 입력창의 부모영역 */
-            /* width: 600px; */
-            width: 100%;
-            height: 150px;
-            margin: 0 auto;
-            /* margin-top: 35px; */        
+            margin: 0 auto;  
+            position: relative;
+            /* background-color: aquamarine; /* 지움 */
         }
-        #id_box{
-            width: 90%; /* 전체width의 90% */
-            height: 50px;
-            margin-top: 25px;
-            /* justify-content: center; */
-            border: 2px solid black;
-        }
-        
-        #pwd_box{
-            width: 90%;
-            height: 50px;
-            border: 2px solid black;
-            margin-top: 10px;
-        }
-        /* 아래의 취소와 확인 버튼은 화면 하단에 고정되는데 아직 방법을 모르겠 */
-        button.btn_cancel{
-            width: 45%;
-            height: 50px;
-            font-family: 'nanum';
-            font-size: 1.5rem;
-            font-weight: 700;
+        div.customer_coupon_type_nav>ul{
+        width: 480px;
+        display: flex;
+        justify-content: space-around;    
+        font-size: 33px;    
+        position: absolute; /* 좌측에 메뉴를 붙이기 위함 */
+        left: 3px;
+        /* margin-right:25px; */
         }        
-        button.btn_check{
-            width: 45%;
-            height: 50px;
-            font-size: 1.5rem;
-            background-color: black;
-            color: white;
-            font-family: 'nanum';
-            font-weight: 700;            
-        }
-         /* 하단 세 메뉴(로그아웃, 공지사항, 고객센터) */
-        div.mobile_down_nav{
-            display: flex;
-            justify-content: space-around;
-            position: relative;            
-        }    
-        div.mobile_down_nav>ul{
+        /* 쿠폰 종류 */
+        div.customer_coupon_inform img{
+            /* width: 220px; */
             width: 100%;
+            height: 100px;
+        }
+        div.customer_coupon_inform li{
+            font-size: 14px;
+        }
+        /* 아래 두 영역은 모바일로 줄였을 때 두번째 줄로 위치시키기 위해 */
+        li.coupon_nav-1{            
             position: absolute;
-            top: 300px;
-            
-            border-top: 2px solid black;
-            border-bottom: 1px solid black;
+            top: 50px;
+            /* display: flex; */
+            justify-content: space-around;
+            left: 10px;
+            margin-left: 17px;
         }
-        div.mobile_down_nav li{        
-            display: inline-block;
-            margin: 30px;
-            font-family: 'nanum';
-            font-size: 1.5rem;            
+        li.coupon_nav-2{            
+            position: absolute;
+            top: 50px;
+            /* display: flex; */
+            justify-content: space-around;
+            right: 10px;
+            margin-right:5px;
         }
-        div.mobile_down_nav a{
-            color: black;
-        }
+
+
+        /* 하단 세 메뉴(로그아웃, 공지사항, 고객센터) */
+    div.mobile_down_nav{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top:50px;        
+    }    
+    div.mobile_down_nav>ul{
+        width: 100%;
+        position: absolute;
+        top: 500px;
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+    }
+    div.mobile_down_nav li{        
+        display: inline-block;
+        margin: 30px;
+        font-family: 'nanum';
+        font-size: 1.3rem;
         
     }
+        
+    }
+    /* 450px이하에서는 내용물이 보이지 않도록 추가함 */
     @media all and (max-width:450px){
-        div.customer_account{
+        div.customer_coupon{
             width: 450px;
             display: none;
         }
     }
-    </style>
 
+
+    </style>
 </head>
 <body>
-    <!-- 헤더영역 -->
+    <!-- header start -->
     <div class="top_text_area">
         <div class="top_nav">
             <div class="top_nav_icon_area">
@@ -216,7 +195,7 @@
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
                     <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z"/>
                 </svg> -->
-                <img src="../image/">
+                <img src="../image/travel.png">
             </div>
             <div class="top_nav_menu_area">
                 <ul>
@@ -236,38 +215,48 @@
             </ul>
         </div>
     </div>
-    <!-- 헤더영역 끝 -->
+    <!-- header end -->
 
-    <!-- 회원정보 변경 전체 페이지 -->
-    <div class="customer_account">
-        <!-- 회원정보 변경 제목 및 안내 박스 -->
-        <div class="customer_account_title">
-            <p class="customer_account_id_box">회원정보 변경</p>
-            <p class="customer_account_pwd_box">OOO님의 정보를 안전하게 보호하기 위하여 비밀번호를 다시 한 번 확인합니다.</p>
+    <!-- 할인 쿠폰 전체 화면 페이지 -->
+    <div class="customer_coupon">
+        <!-- 할인 쿠폰 제목 박스 -->
+        <div class="customer_coupon_title_box">
+            <p class="customer_coupon_title title_font">할인쿠폰</p>
+            <p>여행하다가 준비한 다양한 혜택으로 경제적인 여행 다녀오세요!</p>
         </div>
-        <!-- 아이디 & 비밀번호 입력 박스 -->
-        <div class="customer_login">
-            <input type="text" id="id_box" value="" placeholder="휴대폰 번호를 -없이 입력하세요"><br/>
-            <input type="password" id="pwd_box" name="pwd_enter" placeholder="비밀번호를 입력하세요.">
+        <!-- 쿠폰 종류 안내 및 전체 확인 메뉴 -->
+        <div class="customer_coupon_type_nav">
+            <ul>
+                <li><a href="#">전체</a></li>
+                <li><a href="#">공항</a></li>
+                <li><a href="#">면세점</a></li>
+                <li class="coupon_nav-1"><a href="#">환전</a></li>
+                <li class="coupon_nav-2"><a href="#">로밍/와이파이</a></li>
+            </ul>
+
+
+
 
         </div>
-        <!-- 취소 & 확인 버튼 박스 -->
-        <div class="customer_run">
-            <a href="#"><button type="button" class="btn_cancel">취소</button></a>
-            <a href="#"><button type="button" class="btn_check">확인</button></a>           
+        <!-- 보유중인 쿠폰 이미지 확인 안내 영역(여기서는 보유중인 쿠폰 없음을 안내) -->
+        <div class="customer_coupon_inform">            
+            <ul>
+                <li><img src="../image/cwh/coupon1.JPG" alt=""><br>하나은행 환율 우대권(최대 80%)</li>
+                <li><img src="../image/cwh/coupon2.JPG" alt=""><br>대한항공 좌석 할인권(최대 10%)</li>
+            </ul>
         </div>
 
-        <!-- 모바일 설정 시 하단 메뉴들 -->
-        <div class="mobile_down_nav">
+         <!-- 모바일 설정 시 하단 메뉴들 -->
+         <div class="mobile_down_nav">
             <ul>
                 <li><a href="#">로그아웃</a></li>
                 <li><a href="#">공지사항</a></li>
                 <li><a href="#">고객센터</a></li>
             </ul>
-        </div>
-    </div>
+        </div>        
+    </div>    
 
-    <!-- footer -->
+    <!-- footer start -->
     <footer>
         <div class="footer_top">
             <span class="font_white">여행하다</span>
@@ -302,6 +291,6 @@
             <p class="font_white">&copy;copyright All rights reserved</p>
         </div>
     </footer>
-    
+    <!-- footer end -->
 </body>
 </html>

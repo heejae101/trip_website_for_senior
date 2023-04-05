@@ -130,11 +130,14 @@
         div.mobile_down_nav a{
             color: black;
         }
-
-
-
    }
-
+    /* 450px이하에서는 화면이 보이지 않도록 표시 */
+    @media all and (max-width:450px){
+            div.customer_interest{
+                width: 450px;
+                display: none;
+            }
+       }
 
 
     </style>

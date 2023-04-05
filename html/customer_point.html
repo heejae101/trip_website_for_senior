@@ -53,7 +53,7 @@
 
         .customer_point_info{
             font-family: 'nanum';
-            font-size: 27px;
+            font-size: 23px;
             margin-top: 70px;
         }
         span.redmark{
@@ -262,7 +262,7 @@
             margin-right: 33px;
         }
 
-        /* 최하단 페이지 넘버링 */
+        /* 최하단 페이지 넘버링 */        
         div.pagination>ul{
             display: flex;
             justify-content: center;
@@ -271,7 +271,7 @@
             height: 100%;
             font-size: 1.3rem;
             font-weight: bold;  
-            margin-right: 15%;         
+            margin-right: 15%;                
         }
 
         
@@ -327,18 +327,18 @@
                 left: 0px;
             }
             div.customer_point_informbox_1 li{
-                font-size: 0.8rem;    
+                font-size: 1.0rem;    
             }
             div.customer_point_informbox_2-1{
                 position: absolute;
                 text-align: center;
                 line-height: 50px;
-                left: 260px;
+                left: 240px;
                 top: 10px;
             }
             div.customer_point_informbox_2-1 li{
-                font-size: 0.9rem;   
-                font-weight: bold; 
+                font-size: 1.1rem;   
+                /* font-weight: bold;  */
             }
             div.customer_point_informbox_3{
                 position: absolute;
@@ -346,7 +346,7 @@
                 top: 10px;
             }
             div.customer_point_informbox_3 li{
-                font-size: 0.8rem;    
+                font-size: 1.1rem;    
             }
             div.mobile_down_nav{
                 display: flex;
@@ -371,10 +371,11 @@
             }
        
     }
-    /* 570px이하에서는 움직이지 않도록 고정해 보는 것은 어떨까? */
-    @media all and (max-width:570px){
+    /* 450px 영역 추가 */
+    @media all and (max-width:450px){
         div.another_points_size{
-            width: 570px;
+            width: 450px;
+            display: none;
         }
     }
             
@@ -504,9 +505,9 @@
             <!-- 하단 페이지 넘버링 -->
             <div class="pagination">
                 <ul>
-                    <li><a href="#">&laquo;</a></li>
-                    <li><a href="#">1</a></li>                    
-                    <li><a href="#">&raquo;</a></li>
+                    <li><a href="#">&laquo;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#"> 1 </a></li>                    
+                    <li><a href="#"> &nbsp;&nbsp;&nbsp;&raquo;</a></li>
                   </ul>
             </div>
         </div>

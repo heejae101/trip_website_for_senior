@@ -339,9 +339,6 @@
                 border: 1px solid black;
             }
 
-            
-
-
         }
 
         @media all and (min-width:870px){
@@ -353,6 +350,14 @@
             }
             
         }
+
+        /* 450px이하에서는 화면이 보이지 않도록 표시 */
+       @media all and (max-width:450px){
+            div.customer_service{
+                width: 450px;
+                display: none;
+            }
+       }
         
 
         

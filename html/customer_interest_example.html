@@ -55,6 +55,7 @@
         border-radius: 10px;
         /*background-color: antiquewhite; /* 지울부분 */
     }
+    
     /* -- 여행지 목록(오른쪽) 상세설명 부분 -- */
 div.customer_products div.travel_section_info{
     position: relative;
@@ -124,7 +125,7 @@ div.products_image>img{
         width: 300px;
         height: 70px;
         margin-top: 400px;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
         cursor: pointer;
     }
     #customer_products_searching{
@@ -161,6 +162,11 @@ div.products_image>img{
     div>span.customer_interest_inform{
         display: none;
     }
+
+    
+
+
+
     /* 하단 로그아웃 포함한 메뉴 세개 */
     div.mobile_down_nav{
             display: flex;
@@ -170,7 +176,7 @@ div.products_image>img{
         div.mobile_down_nav>ul{
             width: 100%;
             position: absolute;
-            bottom: 30px;
+            bottom: 7px;
             
             border-top: 2px solid black;
             border-bottom: 1px solid black;
@@ -184,9 +190,13 @@ div.products_image>img{
         div.mobile_down_nav a{
             color: black;
         }
-
-
-
+   }
+   /* 450px이하에서는 화면이 보이지 않도록 표시 */
+   @media all and (max-width:450px){
+        div.customer_interest{
+            width: 450px;
+            display: none;
+        }
    }
 
 

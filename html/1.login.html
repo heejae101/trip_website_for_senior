@@ -41,19 +41,21 @@
             <ul>
               <li class="login_input_line1">
                 <label for="id" name="id">전화번호</label><br/>
-                <input class="login id_input" type="text" name="id" placeholder="-없이 입력하세요." required>
+                <input class="login" id="id_input" type="text" name="login_tel" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="휴대폰번호를 -없이 입력하세요.">
               </li>
+
               <li class="login_input_line2">
                 <label for="pwd" name="pwd">비밀번호</label><br/>
-                <input class="login pwd_input" ty1pe="password" name="pwd" required>
+                <input class="login" id="pwd_input" type="password" name="login_pwd">
               </li>
             </ul>
+
             <input class="login_id_check_box" type="checkbox" name="check">
             <span class="login_id_check_box_text">계정저장</span>
           </div>
 
           <div class="login_btn">
-            <button type="button" class="login_btn1 login_btn_basic" name="btn" onclick="location.href='../index.html'">로그인</button>
+            <button type="button" class="login_btn1 login_btn_basic" name="btn" onclick="login();">로그인</button>
           </div>
 
           <!-- 3. seperating border -->
@@ -65,23 +67,23 @@
           <div class="login_btn_container">
 
             <div class="login_btn">
-              <button class="login_btn1 login_find_password_btn" name="btn" >비밀번호 찾기</button>
+              <button type="button" class="login_btn1 login_find_password_btn" name="btn" onclick="location.href='customer_account.html'">비밀번호 찾기</button>
             </div>
 
             <!-- 5. login_oauth elements -->  
             <div class="login_oauth">
-              <button class="login_oauth_btn login_oauth_btn_naver" onclick="location.href='https://www.naver.com/'">
+              <button type="button" class="login_oauth_btn login_oauth_btn_naver" onclick="location.href='https://www.naver.com/'">
                 <img src="../image/login/logo_img_naver.png" alt="Naver logo" />네이버 로그인
               </button>
             
-              <button class="login_oauth_btn login_oauth_btn_kakao" onclick="location.href='https://www.kakaocorp.com/page/'">
-                <img src="../image/login/logo_img_kakao11.png" alt="Kakao logo" />카카오 로그인
+              <button type="button" class="login_oauth_btn login_oauth_btn_kakao" onclick="location.href='https://www.kakaocorp.com/page/'">
+                <img src="../image/login/logo_img_kakao11.png" alt="Kakao logo" >카카오 로그인
               </button>
             </div>
 
           <!-- 6. find account, sign up --> 
             <div class="login_btn">
-              <button type="button" class="login_btn1 signup_btn" name="btn" onclick="location.href='../html/2-1.signup_page1.html'">회원가입</button>
+              <button type="button" class="login_btn1 signup_btn" name="btn" onclick="location.href='2-1.signup_page1.html'">회원가입</button>
             </div>
 
           </div>
@@ -98,4 +100,37 @@
   </div> <!-- for wrap -->
 
 </body>
+
+
+<script type="text/javascript">
+  // Define an array to store login credentials
+  let users=[
+    {username:"01015771577", password:"A1352468"},
+    {username:"01016005222", password:"2710630bB"}
+  ];
+
+  function login(){
+    // Get the username and password entered by the user
+    let username=document.getElementById("id_input").value;
+    let password=document.getElementById("pwd_input").value;
+
+    // Check if the login credentials match any user in the array
+    let match=false;
+    for (let i = 0; i < users.length; i++) {
+      if (username === users[i].username && password === users[i].password){
+        match=true;
+        break;
+      }
+    }
+
+    // If the login credentials match, redirect to another HTML page
+    if (match){
+      window.location.href="../index.html";
+    } 
+    else {
+      alert("유효하지 않은 계정입니다.<br/>다시 입력해주세요.");
+    }
+  }
+</script>
+
 </html>

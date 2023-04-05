@@ -236,9 +236,12 @@ input.check_list_terms{
     margin-right: 7px;
   }
 
+#allCheck{
+    margin-bottom: 10px;
+}
 
-  span.check_list_entitle_txt{
-    font-size:23px;
+.check_list_entitle_txt{
+    font-size:27px;
     margin-left:2px;
   }
   

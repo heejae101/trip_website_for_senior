@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coupon</title>
+    <title>coupon_example</title>
     <!-- 파비콘 -->
     <link rel="shortcut icon" type="image/x-icon" href="../image/favicon.ico">
-
-    <!-- css default -->
+    <!-- 외부 스타일시트 -->
     <link href="../css/reset.css" rel="stylesheet" />
-    <!-- 헤더 푸터 -->
+    <!-- header&footer css -->
     <link href="../css/nav_footer.css" rel="stylesheet" />
-    <!-- 스타일 시트 영역 -->
     <style>
-    /* 폰트 */
+        /* 폰트 */
     @font-face{ /* 일반크기 */
         font-family: 'nanum';
         src: url(../font/NanumSquareNeo-cBd.ttf);
@@ -28,7 +26,6 @@
         text-decoration: none;
         color: black;
     }
-
     /* 전체 영역 */
     div.customer_coupon{
         width: 95%;
@@ -43,32 +40,25 @@
         font-weight: 800;
         margin: 20px 0 40px 0;
     }
-    
-
-
     /* 쿠폰 종류 안내 및 전체 확인 메뉴 */
     div.customer_coupon_type_nav{
-        font-size: 30px;
-        width: 69.54%; /* 전체 960px의 75% */        
-        margin-left: 130px;
-        /* margin: 0px 100px; */
-        margin-top: 60px; /* 윗 안내문과의 거리 */        
-        /*background-color: aqua; /* 지움 */
+        font-size: 33px;
+        width: 77.54%; /* 전체 960px의 75% */               
+        margin-left: 200px;        
+        margin-top: 60px; /* 윗 안내문과의 거리 */           
+             
     }
     /* 쿠폰종류 가로배치 */
-    div.customer_coupon_type_nav>ul{
-        /* width: 700px; */
+    div.customer_coupon_type_nav>ul{        
         display: flex;
-        justify-content: space-around;
-        /*border: 1px dotted black; /* 지울부분 */
+        /* text-align: center; */
+        justify-content: space-around;        
     }
-    
+    /* 쿠폰 종류 안내 내비 기본 색상 */
     div.customer_coupon_type_nav a{
         color: rgb(94, 94, 94);
     }
-
-      
-
+    /* 쿠폰 종류부분 호버 시 메뉴 진해짐 */
     div.customer_coupon_type_nav a:first-child:hover{
         font-weight: bold;
         color: black;
@@ -86,22 +76,33 @@
         font-weight: bold;
     }
 
-    /* 보유중인 쿠폰 없음을 안내하는 영역 */
-    div.customer_coupon_inform{        
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-top: 150px;        
+    /* 쿠폰 이미지 */
+    div.customer_coupon_inform{
+        overflow: hidden;        
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        margin-top: 100px;
+    }
+    div.customer_coupon_inform li{
+        display: inline-block;
+        font-size: 27px;
+    }
+    div.customer_coupon_inform img{
+        float: left;     
+        width: 450px;
+        height: 270px;
+        margin: 0 20px 0 20px;
     }
 
-   
 
-    /* 모바일용 CSS - 870px이하에서부터 가변그리드 적용 */
-    @media all and (min-width: 870px){
+/* 모바일용 CSS - 720px이하에서부터 가변그리드 적용 */
+@media all and (min-width: 720px){
         div.mobile_down_nav{
             display: none;
         }
     }
-    @media all and (max-width: 870px){
+    @media all and (max-width: 720px){
         div.customer_coupon{
             display: flex;
             flex-flow: column nowrap;
@@ -112,15 +113,23 @@
             /* background-color: aquamarine; /* 지움 */
         }
         div.customer_coupon_type_nav>ul{
-        width: 80%;
-        height: 100px;
+        width: 480px;
         display: flex;
         justify-content: space-around;    
-        font-size: 30px;    
+        font-size: 33px;    
         position: absolute; /* 좌측에 메뉴를 붙이기 위함 */
-        left: 30px;        
+        left: 3px;
         /* margin-right:25px; */
-        }     
+        }        
+        /* 쿠폰 종류 */
+        div.customer_coupon_inform img{
+            /* width: 220px; */
+            width: 100%;
+            height: 100px;
+        }
+        div.customer_coupon_inform li{
+            font-size: 14px;
+        }
         /* 아래 두 영역은 모바일로 줄였을 때 두번째 줄로 위치시키기 위해 */
         li.coupon_nav-1{            
             position: absolute;
@@ -136,33 +145,31 @@
             /* display: flex; */
             justify-content: space-around;
             right: 10px;
-            margin-right:15px;
+            margin-right:5px;
         }
-        
+
 
         /* 하단 세 메뉴(로그아웃, 공지사항, 고객센터) */
-        div.mobile_down_nav{
-            display: flex;
-            justify-content: space-around;
-            position: relative;            
-        }    
-        div.mobile_down_nav>ul{
-            width: 100%;
-            position: absolute;
-            top: 300px;
-            
-            border-top: 2px solid black;
-            border-bottom: 1px solid black;
-        }
-        div.mobile_down_nav li{        
-            display: inline-block;
-            margin: 30px;
-            font-family: 'nanum';
-            font-size: 1.5rem;            
-        }
-        div.mobile_down_nav a{
-            color: black;
-        }
+    div.mobile_down_nav{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        top:50px;        
+    }    
+    div.mobile_down_nav>ul{
+        width: 100%;
+        position: absolute;
+        top: 500px;
+        border-top: 2px solid black;
+        border-bottom: 1px solid black;
+    }
+    div.mobile_down_nav li{        
+        display: inline-block;
+        margin: 30px;
+        font-family: 'nanum';
+        font-size: 1.3rem;
+        
+    }
         
     }
 
@@ -226,9 +233,11 @@
 
         </div>
         <!-- 보유중인 쿠폰 이미지 확인 안내 영역(여기서는 보유중인 쿠폰 없음을 안내) -->
-        <div class="customer_coupon_inform">
-            <p>현재 보유중인 쿠폰이 없습니다.</p>
-            
+        <div class="customer_coupon_inform">            
+            <ul>
+                <li><img src="../image/cwh/coupon1.JPG" alt=""><br>하나은행 환율 우대권(최대 80%)</li>
+                <li><img src="../image/cwh/coupon2.JPG" alt=""><br>대한항공 좌석 할인권(최대 10%)</li>
+            </ul>
         </div>
 
          <!-- 모바일 설정 시 하단 메뉴들 -->

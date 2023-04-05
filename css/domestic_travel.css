@@ -314,11 +314,28 @@ svg{
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
 }
 
+<<<<<<< HEAD
 .main_section{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
+=======
+/* (상단 제목) 내나라여행 한눈에보기  */
+.title_korea{
+    margin: 50px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* (영역) 지역별 상세 설명 */
+.tour_korea{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    
+    /* margin: 0 auto; */
+>>>>>>> origin/yun
 }
 
 /* 지역별 상세 이미지 */

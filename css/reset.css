@@ -13,6 +13,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -22,10 +23,13 @@ time, mark, audio, video {
 =======
 =======
 >>>>>>> origin/cwh
+=======
+>>>>>>> origin/hig
    margin: 0;
    padding: 0;
    border: 0;
    font-size: 100%;
+<<<<<<< HEAD
 <<<<<<< HEAD
    /* font: inherit; */
    vertical-align: baseline;
@@ -34,16 +38,24 @@ time, mark, audio, video {
    font: inherit;
    vertical-align: baseline;
 >>>>>>> origin/cwh
+=======
+   font: inherit;
+   vertical-align: baseline;
+>>>>>>> origin/hig
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	display: block;
 =======
    display: block;
 >>>>>>> origin/cwh
+=======
+   display: block;
+>>>>>>> origin/hig
 }
 body {
    line-height: 1;
@@ -60,6 +72,7 @@ q:before, q:after {
    content: none;
 }
 table {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -88,4 +101,8 @@ table {
    border-collapse: collapse;
    border-spacing: 0;
 >>>>>>> origin/cwh
+=======
+   border-collapse: collapse;
+   border-spacing: 0;
+>>>>>>> origin/hig
 }

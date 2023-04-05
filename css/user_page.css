@@ -390,8 +390,16 @@ footer{
 /* ======================== footer end ========================= */
 
 
+
+/* =========== media query (max-width: 450px), ~450 =========== */
+@media(max-width: 450px){
+    
+}
+
+
+
 /* =========== media query (max-width: 870px), ~870px =========== */
-@media (max-width: 870px){
+@media (max-width: 890px){
     .wrap{
         display: flex;
         flex-direction: column;

@@ -18,10 +18,19 @@
 
 /* 전체적으로 가운데 90% 설정 */
 .wrap{
-    width: 70%;
-    margin-left: 50px;
+    width: 100%;
+    margin-left: 3%;
     font-family: 'nanum';
+    display: flex;
     /* background-color: antiquewhite; */
+}
+
+.wrap_l{
+    width: 75%;
+}
+
+.wrap_r{
+
 }
 
 /* ========================== top_nav ============================ */
@@ -178,17 +187,17 @@ hr{
 
 /* 여행지 상품 가격 상세설명 [테이블] */
 .detail_price_table{
-    /* margin-top: 30px; */
+    border-collapse: collapse;
     width: 100%;
-    height: 200px;
+    height: 100px;
+    margin: 40px 0;
+
+    font-size: 20px;
+    /* margin-top: 30px; */
+    /* width: 100%; */
     /* background-color: rgb(219, 219, 219); */
 }
 
-table{
-    border-collapse: collapse;
-    width: 100%;
-    font-size: 20px;
-}
 
 th,td{
     padding: 20px;
@@ -207,13 +216,13 @@ tr>th:nth-child(1){
 /* == 여행지 상품 상단_오른쪽 == */
 .reservation1_top_r{
     background-color: white;
-    width: 25%;
-    position: fixed;
+    width: 300px;
+    position: sticky;
+    /* position: fixed; */
     z-index: 1;
-    top: 120px;
-    right: 10px;
+    top: 140px;
+    right: 0px;
     font-size: 20px;
-    /* background-color: aliceblue; */
 }
 
 /* 테스트 */
@@ -337,15 +346,20 @@ tr>th:nth-child(1){
 .reservation1_bottom{
     margin-bottom: 50px;
     width: 90%;
-    padding-bottom: 20px;
+    font-size: 30px;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    border-top: 1.5px solid black;
     border-bottom: 1.5px solid black;
-    display: flex;
-    justify-content: space-around;
+    /* display: flex; */
+    
+    
 }
 
-/* .reservation1_bottom ul{
-    
-} */
+.reservation1_bottom ul{
+    /* flex-wrap: wrap;
+    justify-content: center; */
+}
 /* 여행지 상품 하단 하나하나 영역 */
 .reservation1_bottom li{
     font-size: 25px;
@@ -398,7 +412,7 @@ tr>th:nth-child(1){
     background-size: cover;
     width: 90%;
     margin-bottom: 70px;
-    height: 400px;
+    height: 500px;
 }
 
 /* ======================== footer ========================= */
@@ -469,10 +483,52 @@ footer{
 /* ======================== footer end ========================= */
 
 
+
+/* =========== media query (max-width: 450px), ~450 =========== */
+@media(max-width: 450px){
+
+    .title_img{
+        background-size: auto 100%;
+        width: 30%;
+    }
+    
+
+    .wrap{
+        width: 100px;
+    }
+
+    .detail_price_table{
+        width: 50px;
+        height: 100px;
+        font-size: 0.8rem;
+        margin-left: 0;
+        /* overflow-x: auto; */
+        /* table-layout: fixed; */
+    }
+
+    .reservation1_bottom_img{
+        
+        height: 250px;
+    }
+}
+
 /* =========== media query (max-width: 870px), ~870px =========== */
-@media (max-width: 870px){
+@media (max-width: 890px){
     .reservation1_top_r{
         display: none;
+    }
+
+    hr,.title_reservation1,.detail_price_table,.reservation1_bottom{
+        width: 117%;
+    }
+
+    .reservation1_bottom_img{
+        width: 117%;
+        height: 400px;
+    }
+
+    .reservation1_top_l{
+        width: 117%;
     }
 
     .wrap{
@@ -480,14 +536,16 @@ footer{
     }
 
     .title_img{
-        width: 100%;
+        width: 115%;
         height: 50vh;
         margin: 10px auto;
     }
 
     .detail_price_table{
         margin-top: 40px;
+        
     }
+    
 
     .reservation_btn_m{
         display: block;

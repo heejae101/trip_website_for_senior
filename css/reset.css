@@ -11,98 +11,33 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-=======
-=======
->>>>>>> origin/cwh
-=======
->>>>>>> origin/hig
-   margin: 0;
-   padding: 0;
-   border: 0;
-   font-size: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-   /* font: inherit; */
-   vertical-align: baseline;
->>>>>>> origin/yun
-=======
-   font: inherit;
-   vertical-align: baseline;
->>>>>>> origin/cwh
-=======
-   font: inherit;
-   vertical-align: baseline;
->>>>>>> origin/hig
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	display: block;
-=======
-   display: block;
->>>>>>> origin/cwh
-=======
-   display: block;
->>>>>>> origin/hig
 }
 body {
-   line-height: 1;
+	line-height: 1;
 }
 ol, ul {
-   list-style: none;
+	list-style: none;
 }
 blockquote, q {
-   quotes: none;
+	quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-   content: '';
-   content: none;
+	content: '';
+	content: none;
 }
 table {
-<<<<<<< HEAD
-<<<<<<< HEAD
 	border-collapse: collapse;
 	border-spacing: 0;
-=======
-   display: block;
-}
-body {
-   line-height: 1;
-}
-ol, ul {
-   list-style: none;
-}
-blockquote, q {
-   quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-   content: '';
-   content: none;
-}
-table {
-   border-collapse: collapse;
-   border-spacing: 0;
->>>>>>> origin/yun
-=======
-   border-collapse: collapse;
-   border-spacing: 0;
->>>>>>> origin/cwh
-=======
-   border-collapse: collapse;
-   border-spacing: 0;
->>>>>>> origin/hig
 }

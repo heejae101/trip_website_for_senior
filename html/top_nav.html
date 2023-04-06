@@ -5,39 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top nav include file</title>
+
     <!-- 아이콘 -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
-    
+    <!-- <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/> -->
+
     <!-- 리셋 시트 -->
-    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/reset.css"> -->
 
     <!-- 스타일 시트 -->
-    <link href="../css/top_nav.css" rel="stylesheet" type="text/css"/>
+    <!-- <link href="../css/top_nav.css" rel="stylesheet" type="text/css"/> -->
+    <!-- <link href="../css/footer.css" rel="stylesheet" type="text/css"/> -->
+
+    <script type="text/javascript" src="../js/top_nav.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded',()=>{
-            const navBar = document.querySelector("nav"),
-                menuBtns = document.querySelectorAll(".menu-icon");
-                // overlay = document.querySelector(".overlay");
-
-            menuBtns.forEach((menuBtn) => {
-                menuBtn.addEventListener("click", () => {
-                    console.log('click')
-                    navBar.classList.toggle("open");
-                });
-            });
+            list_click();
         });
-        /* ======================== slider ====================== */
     </script>
-
 </head>
 <body>
     <nav>
         <div class="sidebar">
             <div class="logo">
-                <i class="bx bx-menu menu-icon"></i>
-                <span class="logo-name">여행하다</span>
-                <img src="../image/travel.png">
+                <a href="">
+                    <i class="bx bx-menu menu-icon"></i>
+                    <span class="logo-name">여행하다</span>
+                    <img src="../image/travel.png">
+                </a>
             </div>
     
             <div class="sidebar-content">

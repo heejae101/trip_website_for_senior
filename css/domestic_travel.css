@@ -397,7 +397,7 @@ svg{
     height: 22%;
     position: absolute;
     top: 120px;
-    left: 270px;
+    left: 320px;
 }
 
 .tour_korea_img_incheon{
@@ -438,7 +438,7 @@ svg{
     width: 12%;
     height: 22%;
     position: absolute;
-    bottom: 180px;
+    bottom: 200px;
     left: 270px;
 }
 
@@ -685,7 +685,7 @@ svg{
     }
 
     .korea_map{
-        width: 100%;
+        width: 468px;
         height: 100vh;
     }
 

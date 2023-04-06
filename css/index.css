@@ -380,7 +380,7 @@ div.down_btn hr{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 45vh;
+    height: 50vh;
 }
 
 em,.sBtn-text{
@@ -634,6 +634,11 @@ em,.sBtn-text{
     left: 20px;
 }
 
+.slider_popular .item_info>.tit{
+    position: relative;
+    z-index: 99;
+}
+
 .slider_popular .content{
     position: absolute;
     top: 100px;
@@ -658,7 +663,7 @@ em,.sBtn-text{
     align-items: center;
     position: absolute;
     right: 10px;
-    z-index: 99;
+    z-index: 9;
 }
 
 .rank>span{
@@ -984,10 +989,6 @@ div.slide span{
         display: none;
     }
 
-    .down_btn{
-        /* margin-top: 100px; */
-    }
-
     .down_btn span{
         font-size: 1.5rem;
     }
@@ -1055,6 +1056,10 @@ div.slide span{
     }
 
     /* ==============footer============== */
+    .footer_bottom{
+
+    }
+
     .footer_top span{
         font-size: 1.5rem;
     }

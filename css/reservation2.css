@@ -830,7 +830,8 @@ button:hover {
     }
 
     .top_text_area {
-        width: 90%;
+        width: 95%;
+        height: 25px;
         /* background-color: #f2f2f2;
         padding: 20px;
         display: none;

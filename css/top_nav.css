@@ -10,12 +10,6 @@
     font-weight: 700;
 }
 
-body {
-  background-color: skyblue;
-  text-align: center;
-  font-family: 'nanum';
-}
-
 .open{
     z-index: 9999;
 }

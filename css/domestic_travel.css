@@ -28,7 +28,6 @@ nav {
     position: fixed;
     top: 0;
     right: 0;
-    height: 70px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -137,12 +136,12 @@ em,span,a{
     font-weight: 400;
 }
 
-.font_black{
-    color:black;
-}
-
 .font_white{
     color: white;
+}
+
+.font_black{
+    color:black;
 }
 
 a{
@@ -314,13 +313,13 @@ svg{
     box-shadow: 5px 5px 5px 5px rgb(0, 0, 0);
 }
 
-<<<<<<< HEAD
 .main_section{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
-=======
+}
+
 /* (상단 제목) 내나라여행 한눈에보기  */
 .title_korea{
     margin: 50px 0;
@@ -335,7 +334,6 @@ svg{
     border-radius: 10px;
     
     /* margin: 0 auto; */
->>>>>>> origin/yun
 }
 
 /* 지역별 상세 이미지 */
@@ -561,12 +559,16 @@ svg{
     text-align: center;
 }
 
+.pc_blind{
+    display: block;
+}
+
 /* ======================== footer end ========================= */
 
 @media (max-width: 890px){
 
-    .pc_blind{
-        display: block;
+    .nav{
+        display: flex;
     }
 
     .top_text_area{
@@ -630,11 +632,11 @@ svg{
         display: none;
     }
 
-    .main_section{
-        justify-content: center;
-    }
-
     .korea_map{
+        width: 100%;
+        height: 100vh;
+    }
+    .korea_map>svg{
         width: 100%;
         height: 100vh;
     }

@@ -501,21 +501,15 @@
         }
 
 
+        // 약관동의 전체체크 스크립트
+        function selectAll(selectAll) {
+            const checkboxes = document.getElementsByName('terms');
 
+            checkboxes.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            });
+        }
 
-        // function checkForm(){
-        //     if (frm.check1.checked != true){
-        //         alert('약관동의 (필수) 부분에 동의해주세요.');
-        //         frm.confirm.focus();
-
-        //         return false;
-        //     }
-        // }
-
-        // for(let i=1; i < 5; i++){
-        //     let checkloop = 'check' + i;
-        //     console.log(checkloop);
-        // }
 
         function checkForm() {
             const name = document.getElementById('name');
@@ -570,38 +564,42 @@
 
         // 필수 입력부분
 
-        // 인원수 조정 버튼 스크립트
+        // 선택한 인원수에 맞게 총 가격을 변동시켜 주는 changeValue 함수
         function changeValue(btn, target, value, won) {
+            // 총 가격을 표시하는 엘리먼트를 가져온다
             const total_price = document.querySelector('.total_price_number');
-            let current_total_price = parseInt(total_price.innerText);
 
+            // 현재 총 가격을 정수로 파싱한다
+            let current_total_price = parseInt(total_price.innerText.replace(/,/g, ""));
+
+            // 수량을 표시하는 엘리먼트를 가져온다
             const num = document.querySelector(`.${target}`);
-            let currentNum = parseInt(num.innerText);
 
-            if (currentNum === 0 && value < 0) {
+            // 현재 수량을 정수로 파싱한다
+            let currentValue = parseInt(num.innerText);
+
+            if (currentValue === 0 && value < 0) {
                 btn.disabled = true;
             } else {
-                currentNum += value;
+                currentValue += value;
+                // 지정된 가격을 총 가격에 더한다
                 current_total_price += won;
 
-                if (currentNum < 0) {
-                    currentNum = 0;
-                }
+                // 만약 새로운 수량이 0보다 작으면 0으로 설정한다
+                if (currentValue < 0) {
+                    currentValue = 0;
+                };
             }
 
+            // 콤마 추가
+            const comma_total_price = current_total_price.toLocaleString();
+
+            // 수량 엘리먼트의 텍스트 콘텐츠를 새 값으로 업데이트한다
+            num.innerText = currentValue;
+
+            // 총 가격 엘리먼트의 텍스트 콘텐츠를 새 값으로 업데이트한다
+            current_total_price = comma_total_price + ' 원';
             total_price.innerText = current_total_price;
-            num.innerText = currentNum;
-
-
-        }
-
-        // 약관동의 전체체크 스크립트
-        function selectAll(selectAll) {
-            const checkboxes = document.getElementsByName('terms');
-
-            checkboxes.forEach((checkbox) => {
-                checkbox.checked = selectAll.checked;
-            });
         }
     </script>
 

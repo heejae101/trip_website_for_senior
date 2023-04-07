@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- favicon -->
     <link rel="icon" href="../image/favicon.ico">
     <!-- css -->
@@ -82,7 +82,7 @@
                 <!-- 여행지 상품 하단 -->
 
                 <h2>↔ 좌우로 움직여 메뉴를 확인하세요</h2>
-                
+
                 <div class="reservation1_bottom">
                     <ul>
                         <li><a href="#">상품</a></li>
@@ -118,12 +118,10 @@
                     </ul>
 
                     <!-- 여행지 사진 -->
-                    <div class="reservation1_bottom_img"
-                        style="background-image: url(../image/yun/hottkaido1.jpg);">
+                    <div class="reservation1_bottom_img" style="background-image: url(../image/yun/hottkaido1.jpg);">
                     </div>
 
-                    <div class="reservation1_bottom_img"
-                        style="background-image: url(../image/yun/hottkaido3.jpg);">
+                    <div class="reservation1_bottom_img" style="background-image: url(../image/yun/hottkaido3.jpg);">
                     </div>
 
 
@@ -135,16 +133,13 @@
                             산이 만들어졌습니다.</li>
                     </ul>
 
-                    <div class="reservation1_bottom_img"
-                        style="background-image: url(../image/yun/hottkaido4.jpg);">
+                    <div class="reservation1_bottom_img" style="background-image: url(../image/yun/hottkaido4.jpg);">
                     </div>
 
-                    <div class="reservation1_bottom_img"
-                        style="background-image: url(../image/yun/hottkaido5.jpg);">
+                    <div class="reservation1_bottom_img" style="background-image: url(../image/yun/hottkaido5.jpg);">
                     </div>
 
-                    <div class="reservation1_bottom_img"
-                        style="background-image: url(../image/yun/hottkaido6.jpg);">
+                    <div class="reservation1_bottom_img" style="background-image: url(../image/yun/hottkaido6.jpg);">
                     </div>
 
 
@@ -163,17 +158,15 @@
                         <li>북해도의 거점도시로서 당시의 번영을 말해주는 창고를 비롯한 역사 깊은 건물들을 볼 수 있습니다.</li>
                     </ul>
 
-                    <div class="reservation1_bottom_img"
-                        style="background-image: url(../image/yun/hottkaido2.jpg);">
+                    <div class="reservation1_bottom_img" style="background-image: url(../image/yun/hottkaido2.jpg);">
                     </div>
-                    <div class="reservation1_bottom_img"
-                        style="background-image: url(../image/yun/hottkaido7.jpg);">
+                    <div class="reservation1_bottom_img" style="background-image: url(../image/yun/hottkaido7.jpg);">
                     </div>
 
 
 
                 </div>
-                
+
 
             </div>
         </div>
@@ -278,18 +271,13 @@
         function changeValue(btn, target, value, won) {
             // 총 가격을 표시하는 엘리먼트를 가져온다
             const total_price = document.querySelector('.total_price_number');
-            // console.log(total_price);
-            total_price = total_price.replace(",", "");
-            console.log(typeof(total_price));
-            
+
             // 현재 총 가격을 정수로 파싱한다
-            let current_total_price = parseInt(total_price.innerText);
-            console.log(current_total_price);
-            // console.log(typeof(current_total_price));
+            let current_total_price = parseInt(total_price.innerText.replace(/,/g, ""));
 
             // 수량을 표시하는 엘리먼트를 가져온다
             const num = document.querySelector(`.${target}`);
-            // console.log(`.${target}`);
+
             // 현재 수량을 정수로 파싱한다
             let currentValue = parseInt(num.innerText);
 
@@ -307,18 +295,16 @@
             }
 
             // 콤마 추가
-            // comma_total_price = current_total_price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-            
+            const comma_total_price = current_total_price.toLocaleString();
+
             // 수량 엘리먼트의 텍스트 콘텐츠를 새 값으로 업데이트한다
             num.innerText = currentValue;
-            
+
             // 총 가격 엘리먼트의 텍스트 콘텐츠를 새 값으로 업데이트한다
-            // current_total_price
-            // comma_total_price
-            current_total_price = current_total_price + ' 원';
+            current_total_price = comma_total_price + ' 원';
             total_price.innerText = current_total_price;
-            
         }
+
 
 
 

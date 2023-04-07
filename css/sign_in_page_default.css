@@ -29,7 +29,6 @@ div#wrap{
   width:100%;
   margin:0 auto;
   font-family:"nanum";
-<<<<<<<< HEAD:css/sign_in_page_default.css
   align-items: center;
   justify-content:center;
   /* background-color:yellow; */
@@ -67,6 +66,3 @@ div.progress h2.progress_text{
   padding:10px;
   border-radius:5px;
 } 
-========
-}
->>>>>>>> 6a8eb788ebf43c949cfe7a7a4899d9a546e5a16b:css/signup_default.css

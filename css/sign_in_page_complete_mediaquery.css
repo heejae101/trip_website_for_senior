@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:css/sign_in_page_complete_mediaquery.css
 /* =========== media query (max-width: 450px), ~450 =========== */
   @media(max-width: 450px){
 
@@ -8,6 +9,13 @@
 
     div.sign_in_logo{
       margin:50px 0px;
+========
+/*----------------------------mediaquery : mobile(max-width:720px)---------------------------------*/
+  @media all and (max-width:870px){
+    
+    div.sign_in_logo h1{
+      font-size:2rem;
+>>>>>>>> 6a8eb788ebf43c949cfe7a7a4899d9a546e5a16b:css/2-4.signup_page4_mediaquery.css
     }
 
     div.progress ul{
@@ -18,8 +26,13 @@
       display:inline-block;
       font-size:1.8rem;
       font-weight:800;
+<<<<<<<< HEAD:css/sign_in_page_complete_mediaquery.css
       margin:0 2.247191%;
     }    /* 여기까지가 sign in 공통부분 */
+========
+      margin:0 2.29885%;
+    }
+>>>>>>>> 6a8eb788ebf43c949cfe7a7a4899d9a546e5a16b:css/2-4.signup_page4_mediaquery.css
 
     div.success_sign_in_logo img{
       width:22.988506%;
@@ -27,14 +40,14 @@
     }
 
     div.success_sign_in_message1{
-      margin:5.617978%;
+      margin:5.747126%;
     }
 
     div.success_sign_in_message1 span.success_sign_in_message1_text{
-      font-size:1.2rem;
+      font-size:1rem;
     }
 
     div.success_sign_in_message2{
-      font-size:1.5rem;
+      font-size:1.2rem;
     }
   }

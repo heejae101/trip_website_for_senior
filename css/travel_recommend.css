@@ -251,8 +251,8 @@ em,.sBtn-text{
 
 /* 여행지 목록(왼쪽) 사진부분 */
 .travel_section_img{
-    /* background-image: url(../image/yun/img_box_1.jpg); */
     background-size: cover;
+    background-position: center center;
     /* background-size: contain; */
     /* background-repeat: no-repeat; */
     width: 70%;

@@ -1,10 +1,8 @@
-/* =========== media query (max-width: 450px), ~450 =========== */
-@media(max-width: 450px){
+@media all and (max-width:870px){
 
-}
-
-/* =========== media query (max-width: 890px), ~890px =========== */
-@media all and (max-width:890px){
+    div.sign_in_logo h1{
+      font-size:2rem;
+    }
 
     div.sign_in_logo{
       margin:50px 0px;
@@ -27,6 +25,7 @@
     }
 
     div.help_text span{
+<<<<<<<< HEAD:css/sign_in_page_phone_mediaquery.css
       display:inline-block;
       font-size:1.5rem;
     } /* page 1 2 3 */
@@ -39,6 +38,28 @@
     div.phone_verification_text{
       margin:20px 0px 80px 0px;
       font-size:15px;
+========
+      display:block;
+      font-size:1.3rem;
+    }
+
+    div.help_text span.help_text2{
+      margin-left:2.5%;
+    }
+
+    div.phone_verification button.phone_verification_btn{
+      width:57.471264%;
+      padding:10px 2.777778%;
+    }
+
+    div.phone_verification_btn img{
+      width:2.298851%;
+      margin-right:1.149425%;
+    }
+
+    div.phone_verification_text{
+      margin:20px 3.448276%;
+>>>>>>>> 6a8eb788ebf43c949cfe7a7a4899d9a546e5a16b:css/2-2.signup_page2_mediaquery.css
     }
     div.phone_verification_text span{
      display:inline-block;

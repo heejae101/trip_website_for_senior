@@ -10,6 +10,15 @@
     <!-- css default -->
     <link href="../css/reset.css" rel="stylesheet" />
     
+    <!-- 아이콘 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+
+    <!-- 리셋 시트 -->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <!-- 스타일 시트 -->
+    <link href="../css/top_nav.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/footer.css" rel="stylesheet" type="text/css"/>
 
     
 
@@ -185,26 +194,24 @@
         }
         div.mobile_down_nav li{        
             display: inline-block;
-            margin: 30px;
+            margin: 20px;
             font-family: 'nanum';
-            font-size: 1.5rem;            
+            font-size: 20px;            
         }
         div.mobile_down_nav a{
             color: black;
         }
         
     }
-    /* @media all and (max-width:450px){
-        div.customer_account{
-            width: 450px;
-            display: none;
-        }
-    } */
+    
     </style>
 
 </head>
 <body>
-    
+    <!-- 헤더 넣을 부분 -->
+    <header data-include="./top_nav.html"></header>
+    <!-- 헤더 -->
+
 
     <!-- 회원정보 변경 전체 페이지 -->
     <div class="customer_account">
@@ -235,7 +242,52 @@
         </div>
     </div>
 
+ <!-- 푸터 -->
+ <footer data-include="./footer.html"></footer>
+ <!-- 푸터 -->
  
-    
+ <script>
+    function includeHTML(callback){
+      let z, elmnt, file, xhttp;
+      z = document.getElementsByTagName("*");
+      for (let i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("data-include");
+        if (file) {
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("data-include");
+              includeHTML(callback);
+            }//if
+          }//onreadystatechange
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          return;
+          if (this.readyState != 4) return;
+        }//if - file
+      }//for
+      if (callback) callback();
+    }//includeHTML
+
+    function findMenuBtns() {
+      const navBar = document.querySelector("nav");
+      const menuBtns = document.querySelectorAll(".menu-icon");
+      menuBtns.forEach((menuBtn) => {
+        menuBtn.addEventListener("click", () => {
+          console.log('click');
+          navBar.classList.toggle("open");
+        });
+      });
+    }
+
+    /* ✨ 실행 */
+    document.addEventListener('DOMContentLoaded',()=>{
+      includeHTML(findMenuBtns);
+    });
+  </script>
 </body>
 </html>

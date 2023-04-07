@@ -9,6 +9,16 @@
 
     <!-- css default -->
     <link href="../css/reset.css" rel="stylesheet" />
+
+    <!-- 아이콘 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+
+    <!-- 리셋 시트 -->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <!-- 스타일 시트 -->
+    <link href="../css/top_nav.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/footer.css" rel="stylesheet" type="text/css"/>
     
 
     <!-- 스타일시트 영역 -->
@@ -116,13 +126,13 @@
             width: 100%;
             position: absolute;
             bottom: 30px;
-            
+            left:-5%;
             border-top: 2px solid black;
             border-bottom: 1px solid black;
         }
         div.mobile_down_nav li{        
             display: inline-block;
-            margin: 30px;
+            margin: 15px;
             font-family: 'nanum';
             font-size: 1.5rem;            
         }
@@ -130,20 +140,16 @@
             color: black;
         }
    }
-    /* 450px이하에서는 화면이 보이지 않도록 표시 */
-    /* @media all and (max-width:450px){
-            div.customer_interest{
-                width: 450px;
-                display: none;
-            }
-       } */
+    
 
 
     </style>
 
 </head>
 <body>
-    
+    <!-- header -->
+    <header data-include="./top_nav.html"></header>
+    <!-- header -->
 
     <!-- 관심상품 전체 화면 페이지 -->
     <div class="customer_interest">
@@ -178,5 +184,54 @@
            
 
         </div>
+
+
+        <!-- footer -->
+        <footer data-include="./footer.html"></footer>
+        <!-- footer -->
+
+        <script>
+            function includeHTML(callback){
+              let z, elmnt, file, xhttp;
+              z = document.getElementsByTagName("*");
+              for (let i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("data-include");
+                if (file) {
+                  xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                      if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                      if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                      /* Remove the attribute, and call this function once more: */
+                      elmnt.removeAttribute("data-include");
+                      includeHTML(callback);
+                    }//if
+                  }//onreadystatechange
+                  xhttp.open("GET", file, true);
+                  xhttp.send();
+                  return;
+                  if (this.readyState != 4) return;
+                }//if - file
+              }//for
+              if (callback) callback();
+            }//includeHTML
+      
+            function findMenuBtns() {
+              const navBar = document.querySelector("nav");
+              const menuBtns = document.querySelectorAll(".menu-icon");
+              menuBtns.forEach((menuBtn) => {
+                menuBtn.addEventListener("click", () => {
+                  console.log('click');
+                  navBar.classList.toggle("open");
+                });
+              });
+            }
+      
+            /* ✨ 실행 */
+            document.addEventListener('DOMContentLoaded',()=>{
+              includeHTML(findMenuBtns);
+            });
+          </script>
 </body>
 </html>

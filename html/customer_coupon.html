@@ -9,6 +9,16 @@
 
     <!-- css default -->
     <link href="../css/reset.css" rel="stylesheet" />
+
+    <!-- 아이콘 -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+
+    <!-- 리셋 시트 -->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+
+    <!-- 스타일 시트 -->
+    <link href="../css/top_nav.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/footer.css" rel="stylesheet" type="text/css"/>
     
     <!-- 스타일 시트 영역 -->
     <style>
@@ -34,6 +44,7 @@
         height: 800px;
         text-align: center;
         font-family: 'nanum';
+        position: relative;
         /* border: 1px dotted black;  */
     }
     /* 타이틀 글자 */
@@ -47,8 +58,11 @@
 
     /* 쿠폰 종류 안내 및 전체 확인 메뉴 */
     div.customer_coupon_type_nav{
+        position: absolute;
         font-size: 30px;
-        width: 69.54%; /* 전체 960px의 75% */        
+        width: 700px; /* 전체 960px의 75% */   
+        left: 47%;     
+        transform:translateX(-63%);
         margin-left: 130px;
         /* margin: 0px 100px; */
         margin-top: 60px; /* 윗 안내문과의 거리 */        
@@ -95,12 +109,12 @@
    
 
     /* 모바일용 CSS - 870px이하에서부터 가변그리드 적용 */
-    @media all and (min-width: 870px){
+    @media all and (min-width: 890px){
         div.mobile_down_nav{
             display: none;
         }
     }
-    @media all and (max-width: 870px){
+    @media all and (max-width: 890px){
         div.customer_coupon{
             display: flex;
             flex-flow: column nowrap;
@@ -110,14 +124,25 @@
             position: relative;
             /* background-color: aquamarine; /* 지움 */
         }
+        div.customer_coupon_type_nav{
+            position: absolute;
+            left: 35%;
+            top: 100px;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 100px;
+            /* background-color: aqua; */
+        }
+
         div.customer_coupon_type_nav>ul{
-        width: 80%;
+        width: 65%;
         height: 100px;
         display: flex;
         justify-content: space-around;    
-        font-size: 30px;    
+        font-size: 25px;    
         position: absolute; /* 좌측에 메뉴를 붙이기 위함 */
-        left: 30px;        
+        left: 35px;
+        /* background-color: aquamarine; */
         /* margin-right:25px; */
         }     
         /* 아래 두 영역은 모바일로 줄였을 때 두번째 줄로 위치시키기 위해 */
@@ -149,26 +174,24 @@
             width: 100%;
             position: absolute;
             top: 300px;
-            
+            font-size: 20px;
             border-top: 2px solid black;
             border-bottom: 1px solid black;
         }
         div.mobile_down_nav li{        
             display: inline-block;
-            margin: 30px;
+            margin: 20px;
             font-family: 'nanum';
-            font-size: 1.5rem;            
+            /* font-size: 20px;             */
         }
+
         div.mobile_down_nav a{
             color: black;
         }
         
     }
-    @media all and (max-width:450px){
-        div.customer_coupon{
-            width: 450px;
-            display: none;
-        }
+    @media all and (max-width:890px){
+        
     }
 
 
@@ -176,6 +199,9 @@
     </style>
 </head>
 <body>
+    <!-- header -->
+    <header data-include="./top_nav.html"></header>
+    <!-- header -->
    
 
     <!-- 할인 쿠폰 전체 화면 페이지 -->
@@ -215,6 +241,52 @@
         </div>        
     </div>    
 
+    <!-- footer -->
+    <footer data-include="./footer.html"></footer>
+    <!-- footer -->
     
+    <script>
+        function includeHTML(callback){
+          let z, elmnt, file, xhttp;
+          z = document.getElementsByTagName("*");
+          for (let i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            file = elmnt.getAttribute("data-include");
+            if (file) {
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("data-include");
+                  includeHTML(callback);
+                }//if
+              }//onreadystatechange
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              return;
+              if (this.readyState != 4) return;
+            }//if - file
+          }//for
+          if (callback) callback();
+        }//includeHTML
+  
+        function findMenuBtns() {
+          const navBar = document.querySelector("nav");
+          const menuBtns = document.querySelectorAll(".menu-icon");
+          menuBtns.forEach((menuBtn) => {
+            menuBtn.addEventListener("click", () => {
+              console.log('click');
+              navBar.classList.toggle("open");
+            });
+          });
+        }
+  
+        /* ✨ 실행 */
+        document.addEventListener('DOMContentLoaded',()=>{
+          includeHTML(findMenuBtns);
+        });
+      </script>
 </body>
 </html>

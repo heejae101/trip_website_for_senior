@@ -39,7 +39,10 @@ body, html {
 }
 
 .customer-service {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -47,8 +50,15 @@ body, html {
     color: #fff;
     padding: 10px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'nanum';
+    font-weight: 400;
 }
+
+.customer-service>svg{
+    padding-right: 20px;
+}
+
 
 .mobile_nav{
     width: 100%;
@@ -718,7 +728,7 @@ em,.sBtn-text{
 }
 
 .more_btn>a{
-    padding-bottom: 20px;
+    padding-right: 30px;
     color: black;
 }
 
@@ -885,7 +895,7 @@ div.slide span{
 
     .center_drop{
         margin-top: 9%;
-        height: 60%;
+        height: 55%;
         padding-top: 0px;
         align-items: center;
     }
@@ -1002,6 +1012,7 @@ div.slide span{
     }
 
     .text_popular{
+        width: 90%;
         text-align: left;
         padding-top: 50px;
         padding-bottom: 50px;
@@ -1040,7 +1051,7 @@ div.slide span{
     }
 
     .guide_text{
-        width: 100%;
+        width: 90%;
         height: 100px;
         text-align: left;
         padding-top: 50px;

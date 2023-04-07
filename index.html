@@ -60,37 +60,6 @@
             });
         });
 
-        // overlay.addEventListener("click", () => {
-        //     navBar.classList.remove("open");
-        // });
-
-        // // 네비게이션 바의 초기 위치
-        // const initialNavTop = 0;
-
-        // // 네비게이션 바의 높이
-        // const navHeight = 50;
-
-        // // 네비게이션 바 DOM 요소를 참조하는 변수
-        // const slide_Down_navBar = document.querySelector('.top_text_area');
-
-        // // 스크롤 이벤트 핸들러
-        // const handleScroll = () => {
-        //     // 현재 스크롤 위치 계산
-        //     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        //     // 네비게이션 바의 새로운 위치 계산
-        //     const navTop = initialNavTop - scrollTop;
-
-        //     // 네비게이션 바의 위치가 음수가 되지 않도록 제한
-        //     const newNavTop = Math.max(navTop, -navHeight);
-
-        //     // 네비게이션 바의 위치 설정
-        //     slide_Down_navBar.style.top = `${newNavTop}px`;
-        // };
-
-        // // 스크롤 이벤트 리스너 등록
-        // window.addEventListener('scroll', handleScroll);
-
         function scrollToTarget() {
         // 스크롤 타겟 위치의 Y 좌표를 계산
             const targetElement = document.querySelector('.target-section');
@@ -182,7 +151,12 @@
         |    스크롤 다운   :   X        |
         -------------------------------->
 
-        <div class="customer-service" style="box-shadow: 3px black; z-index: 999;">손자가 도와드려요!<hr>고객센터 연락처: 000-0000-0000</div>
+        <div class="customer-service" style="box-shadow: 3px black; z-index: 999;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <span>손주들이 도와드려요! <br><br> 고객센터 연락처: 010-1577-1577</span>
+        </div>
         <div class="mobile_nav">
             <ul>
                 <li>
@@ -498,6 +472,9 @@
                         <span>
                             더 보기
                         </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg>
                     </a>
                 </div>
                 <div class="slider5">

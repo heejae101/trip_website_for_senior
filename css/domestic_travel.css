@@ -354,6 +354,7 @@ svg{
 .korea_map{
     width: 45%;
     height: 100vh;
+    cursor: pointer;
 }
 
 .right_title_area{
@@ -678,15 +679,10 @@ svg{
         font-size: 2.5rem;
     }
 
-    .tour_korea_seoul, .tour_korea_incheon, .tour_korea_chungcheong,
-    .tour_korea_busan_jeolla, .tour_korea_gangwon, .tour_korea_gyeongsang, .tour_korea_busan,
-    .tour_korea_jeju{
-        display: none;
-    }
-
     .korea_map{
         width: 468px;
         height: 100vh;
+        cursor: pointer;
     }
 
     .korea_map>svg{
@@ -702,4 +698,13 @@ svg{
         width: 30px;
         height: 30px;
     }
+}
+
+@media (max-width: 1300px){
+    .tour_korea_seoul, .tour_korea_incheon, .tour_korea_chungcheong,
+    .tour_korea_busan_jeolla, .tour_korea_gangwon, .tour_korea_gyeongsang, .tour_korea_busan,
+    .tour_korea_jeju{
+        display: none;
+    }
+
 }

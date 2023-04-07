@@ -10,7 +10,6 @@ div.container{
   /* background-color:cyan; */
 }
 /*--------------------------------input elemets------------------------------*/
-
 div.main_logo{
   margin:50px 0;
   text-align:center;
@@ -21,13 +20,6 @@ div.main_logo h1{
   font-weight:700;
   font-size:40px;
   letter-spacing:0px;
-}
-
-div.login_home_icon{
-  text-align:center;
-  font-size:40px;
-  font-weight:800;
-  margin-bottom:30px;
 }
 
 div.login_input{
@@ -174,5 +166,6 @@ button.signup_btn{
   background-color:#fff;
   color: #000;
 }
+
 
 

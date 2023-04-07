@@ -265,6 +265,7 @@ div.login_nav li {
 /* 상품안내 title */
 .reservation2>h2 {
     font-size: 32px;
+    font-weight: 800;
     margin: 0 0 50px 60px;
 }
 
@@ -350,6 +351,20 @@ div.login_nav li {
     align-items: center;
 }
 
+.terms_reservation2_check>ul li{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.terms_reservation2_check>ul a{
+    font-weight: 700;
+    color: black;
+}
+
+.terms_reservation2_check>ul a:hover{
+    color: red;
+}
+
 
 /* ----- 체크박스 부분 ------ */
 .check_list_terms {
@@ -368,6 +383,7 @@ div.login_nav li {
 
 
 span.check_list_entitle_txt {
+    font-weight: 700;
     font-size: 23px;
     margin-left: 2px;
 }
@@ -381,7 +397,7 @@ div.check_list li>span.essential_red {
 }
 
 div.check_list span.check_list_text {
-    font-size: 0.8rem;
+    font-size: 23px;
     font-weight: 600;
 }
 

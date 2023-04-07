@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,25 @@
     <!-- favicon -->
     <link rel="icon" href="../image/favicon.ico">
     <!-- css -->
-    <link href="../css/reset.css" rel="stylesheet"/>
+    <link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/yun.css" rel="stylesheet">
     <!-- travel_recommend css 연결 -->
-    <link href="../css/travel_recommend.css" rel="stylesheet"/>
+    <link href="../css/travel_recommend.css" rel="stylesheet" />
 
-    
+
     <!-- 아이콘 -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
     <!-- 스타일 시트 -->
-    <link href="../css/top_nav.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/footer.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/top_nav.css" rel="stylesheet" type="text/css" />
+    <link href="../css/footer.css" rel="stylesheet" type="text/css" />
 
     <title>여행하다</title>
 </head>
+
 <body>
     <!-- 여행지 추천 화면 -->
-    
+
     <!------ 기능 ------------ 디자인 구현 --기능구현--
     |         문구 드롭다운  |      X      |    X     |
     | 낮은가격순/높은가격순  |      X      |    X     |
@@ -32,14 +34,14 @@
     |        일정 보기 버튼  |      X      |    X     |
     ---------------------------------------------------->
 
-    
+
     <script>
         // 달력 스크립트 부분 
-        window.onload = function () { 
+        window.onload = function () {
             // 웹 페이지가 로드되면 buildCalendar 실행
             buildCalendar();
             dropdownList();
-        }    
+        }
 
         let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
         let today = new Date();     // 페이지를 로드한 날짜를 저장
@@ -120,17 +122,17 @@
             return value;
         }
 
-        function dropdownList(){
+        function dropdownList() {
             const optionMenu = document.querySelector(".select-menu"),
-            selectBtn = optionMenu.querySelector(".select-btn"),
-            options = optionMenu.querySelectorAll(".option"),
-            sBtn_text = optionMenu.querySelector(".sBtn-text");
+                selectBtn = optionMenu.querySelector(".select-btn"),
+                options = optionMenu.querySelectorAll(".option"),
+                sBtn_text = optionMenu.querySelector(".sBtn-text");
 
             const selectBtns = document.querySelectorAll('.select-btn');
-        
+
             selectBtns.forEach(selectBtn => {
                 selectBtn.addEventListener('click', () => {
-                selectBtn.parentElement.classList.toggle('active');
+                    selectBtn.parentElement.classList.toggle('active');
                 });
             });
 
@@ -174,7 +176,7 @@
                                         d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                 </svg>
                             </div>
-                
+
                             <ul class="options">
                                 <li class="option">
                                     <span class="option-text">&#128587;&nbsp;나 홀로</span>
@@ -204,7 +206,7 @@
                                         d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                 </svg>
                             </div>
-                
+
                             <ul class="options">
                                 <li class="option">
                                     <span class="option-text">&#128051;&nbsp;국내</span>
@@ -226,7 +228,7 @@
                                         d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                                 </svg>
                             </div>
-                
+
                             <ul class="options">
                                 <li class="option">
                                     <span class="option-text">&#128051;&nbsp;즉흥적인 여행</span>
@@ -248,8 +250,8 @@
                     </button>
                 </div>
             </div>
-            
-        
+
+
 
 
 
@@ -258,14 +260,14 @@
                 <li class="low_price"><a href="#">낮은가격순</a></li>
                 <li class="high_price"><a href="#">높은가격순</a></li>
             </ul>
-            
+
             <!-- 목록(세로로)으로 추천 여행지 표시1 -->
             <div class="travel_section">
                 <!-- 목록 이미지 영역 -->
                 <div class="travel_section_img" style="background-image: url(../image/yun/img_box_1.jpg);">
                     <!-- <img src="../image/yun/img_box_1.jpg"> -->
                 </div>
-                
+
 
                 <!-- 목록 설명 영역 -->
                 <div class="travel_section_info">
@@ -273,13 +275,13 @@
                     <div class="travel_section_info_title">
                         [제주 3일] 한라산 등반
                     </div>
-                    
+
                     <!-- 목록 설명 영역_상세설명 -->
                     <div class="travel_section_info_content">
-                        # 성판악/관음사 # 1100고지<br/>
-                        # 백록담 # 산방산온천<br/><br/>
-                        - 항공편 : 진에어 <br/>
-                        - 여행기간 : 2박3일 
+                        # 성판악/관음사 # 1100고지<br />
+                        # 백록담 # 산방산온천<br /><br />
+                        - 항공편 : 진에어 <br />
+                        - 여행기간 : 2박3일
                     </div>
 
                     <!-- 목록 설명 영역_가격 -->
@@ -313,7 +315,7 @@
                                 </td>
                                 <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
                             </tr>
-                
+
                             <tr>
                                 <td>일</td>
                                 <td>월</td>
@@ -324,10 +326,10 @@
                                 <td>토</td>
                             </tr>
                         </thead>
-                
+
                         <tbody>
                         </tbody>
-                
+
                     </table>
                 </div>
 
@@ -337,9 +339,9 @@
                     <div class="calendar_help">
                         <h3 class="highlight">* 달력에 표시된 색상 설명</h3>
                         <div class="calender_help_info">
-                            - 회색 : 지난 날짜<br/>
-                            - 노란색 : 현재 날짜<br/>
-                            - 파란색 : 선택한 날짜<br/>
+                            - 회색 : 지난 날짜<br />
+                            - 노란색 : 현재 날짜<br />
+                            - 파란색 : 선택한 날짜<br />
                         </div>
                     </div>
 
@@ -362,23 +364,23 @@
                 <!-- 목록 이미지 영역 -->
                 <div class="travel_section_img" style="background-image: url(../image/yun/img_box_2.jpg);">
                 </div>
-                
+
 
                 <!-- 목록 설명 영역 -->
                 <div class="travel_section_info">
                     <!-- 목록 설명 영역_제목 -->
                     <div class="travel_section_info_title">
                         [제주 3일] 식도락 여행
-                        
+
                     </div>
-                    
+
                     <!-- 목록 설명 영역_상세설명 -->
                     <div class="travel_section_info_content">
-                        # 생선회/해산물<br/>
-                        # 흑돼지/말고기 코스요리<br/>
-                        # 감귤따기 체험<br/><br/>
+                        # 생선회/해산물<br />
+                        # 흑돼지/말고기 코스요리<br />
+                        # 감귤따기 체험<br /><br />
 
-                        - 항공편 : 진에어<br/>
+                        - 항공편 : 진에어<br />
                         - 여행기간 : 2박3일
                     </div>
 
@@ -399,7 +401,7 @@
 
             <!-- 일정보기 버튼 클릭 시 캘린더 표시 영역2 -->
             <div class="calendar_area">
-                
+
                 <!-- calendar -->
                 <div class="calendar">
                     <table class="Calendar">
@@ -412,7 +414,7 @@
                                 </td>
                                 <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
                             </tr>
-                
+
                             <tr>
                                 <td>일</td>
                                 <td>월</td>
@@ -423,10 +425,10 @@
                                 <td>토</td>
                             </tr>
                         </thead>
-                
+
                         <tbody>
                         </tbody>
-                
+
                     </table>
                 </div>
 
@@ -441,13 +443,13 @@
 
 
 
-            
+
             <!-- 목록(세로로)으로 추천 여행지 표시3 -->
             <div class="travel_section">
                 <!-- 목록 이미지 영역 -->
                 <div class="travel_section_img" style="background-image: url(../image/yun/img_box_3.jpg);">
                 </div>
-                
+
 
                 <!-- 목록 설명 영역 -->
                 <div class="travel_section_info">
@@ -455,14 +457,14 @@
                     <div class="travel_section_info_title">
                         [제주 3일] 골프 투어
                     </div>
-                    
+
                     <!-- 목록 설명 영역_상세설명 -->
                     <div class="travel_section_info_content">
-                        #부영CC<br/>
-                        #스프링데일CC<br/>
-                        #세인트포CC<br/><br/>
+                        #부영CC<br />
+                        #스프링데일CC<br />
+                        #세인트포CC<br /><br />
 
-                        - 항공편 : 대한항공<br/>
+                        - 항공편 : 대한항공<br />
                         - 여행기간 : 2박3일
                     </div>
 
@@ -476,10 +478,10 @@
                         <button class="calendar_btn">일정보기</button>
                     </div>
 
-                    
+
                 </div>
 
-                
+
             </div>
 
             <!-- 일정보기 버튼 클릭 시 캘린더 표시 영역3 -->
@@ -495,7 +497,7 @@
                                 </td>
                                 <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
                             </tr>
-                
+
                             <tr>
                                 <td>일</td>
                                 <td>월</td>
@@ -506,10 +508,10 @@
                                 <td>토</td>
                             </tr>
                         </thead>
-                
+
                         <tbody>
                         </tbody>
-                
+
                     </table>
                 </div>
 
@@ -524,66 +526,67 @@
         </div>
     </div>
 
-        <!-- footer -->
-        <footer data-include="./footer.html"></footer>
+    <!-- footer -->
+    <footer data-include="./footer.html"></footer>
 
-        
+
     <script>
-            var btn = document.querySelector('.calendar_btn');
-            var target = document.querySelector('.calendar_area');
+        var btn = document.querySelector('.calendar_btn');
+        var target = document.querySelector('.calendar_area');
 
-            btn.addEventListener('click', event =>{
-                if (target.style.display === "none") {
-                    target.style.display = "block";
-                } else {
-                    target.style.display = "none";
-                }
-            });
+        btn.addEventListener('click', event => {
+            if (target.style.display === "none") {
+                target.style.display = "block";
+            } else {
+                target.style.display = "none";
+            }
+        });
     </script>
 
     <!-- nav, footer ajax -->
     <script>
-        function includeHTML(callback){
-          let z, elmnt, file, xhttp;
-          z = document.getElementsByTagName("*");
-          for (let i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            file = elmnt.getAttribute("data-include");
-            if (file) {
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("data-include");
-                  includeHTML(callback);
-                }//if
-              }//onreadystatechange
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              return;
-              if (this.readyState != 4) return;
-            }//if - file
-          }//for
-          if (callback) callback();
+        function includeHTML(callback) {
+            let z, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (let i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("data-include");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            /* Remove the attribute, and call this function once more: */
+                            elmnt.removeAttribute("data-include");
+                            includeHTML(callback);
+                        }//if
+                    }//onreadystatechange
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                    if (this.readyState != 4) return;
+                }//if - file
+            }//for
+            if (callback) callback();
         }//includeHTML
-  
+
         function findMenuBtns() {
-          const navBar = document.querySelector("nav");
-          const menuBtns = document.querySelectorAll(".menu-icon");
-          menuBtns.forEach((menuBtn) => {
-            menuBtn.addEventListener("click", () => {
-              console.log('click');
-              navBar.classList.toggle("open");
+            const navBar = document.querySelector("nav");
+            const menuBtns = document.querySelectorAll(".menu-icon");
+            menuBtns.forEach((menuBtn) => {
+                menuBtn.addEventListener("click", () => {
+                    console.log('click');
+                    navBar.classList.toggle("open");
+                });
             });
-          });
         }
-  
+
         /* ✨ 실행 */
-        document.addEventListener('DOMContentLoaded',()=>{
-          includeHTML(findMenuBtns);
+        document.addEventListener('DOMContentLoaded', () => {
+            includeHTML(findMenuBtns);
         });
-      </script>
+    </script>
 </body>
+
 </html>

@@ -1,10 +1,8 @@
-/* =========== media query (max-width: 450px), ~450 =========== */
-@media(max-width: 450px){
+@media all and (max-width:870px){
 
-}
-
-/* =========== media query (max-width: 890px), ~890px =========== */
-@media all and (max-width:890px){
+    div.sign_in_logo h1{
+      font-size:2rem;
+    }
 
     div.progress ul{
       display:block;
@@ -24,7 +22,7 @@
 
     div.help_text span{
       display:block;
-      font-size:1.1rem;
+      font-size:1.3rem;
     }
 
     div.help_text span.help_text2{
@@ -32,7 +30,7 @@
     }
 
     div.phone_verification button.phone_verification_btn{
-      width:56.179775%;
+      width:57.471264%;
       padding:10px 2.777778%;
     }
 
@@ -43,7 +41,6 @@
 
     div.phone_verification_text{
       margin:20px 3.448276%;
-      font-size:15px;
     }
     div.phone_verification_text span{
      display:block;

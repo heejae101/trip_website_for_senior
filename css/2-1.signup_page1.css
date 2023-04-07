@@ -69,28 +69,27 @@ div.help_text span{
 }
 
 div.check_list{
+  width:720px;
   font-family:"Noto Sans KR", sans-serif;
+  /* background-color:yellow; */
 }
 
-div.check_list input.check_list_entitle{
+input.check_list_terms{
+  font-size:20px;
+}
+
+input.check_list_entitle{
   width:18px;
   height:18px;
 }
 
-div.check_list span.check_list_entitle_txt{
+span.check_list_entitle_txt{
   font-size:18px;
   margin-left:2px;
 }
 
-div.check_list span.check_list_text{
-  font-size:0.9rem;
-  font-weight:700;
-}
-
-div.check_list div.check_list_container{
-  display:flex;
-  justify-content:space-between;
-  width:840px;
+div.check_list_container{
+  width:720px;
   border-top : 2px solid gray;
   border-bottom : 2px solid gray;
   margin:10px 0;
@@ -101,31 +100,13 @@ div.check_list_container li{
   display:block;
 }
 
-div.check_list_container div.check_list_container_terms{
-  width:300px;
-  /* background-color:pink; */
-}
-
-div.check_list_container_terms input.check_list_terms{
-  font-size:20px;
-}
-
-div.check_list_container_agree{
-  width:100px;
-  margin-top:1.7px;
-}
-
-div.check_list_container_agree li{
-  margin-bottom:3.2px;
-}
-
-div.check_list_container_agree a{
-  color:#000000;
-  font-weight:700;
-}
-
 div.check_list_container li>span.essential_red{
   color:red;
+}
+
+div.check_list span.check_list_text{
+  font-size:0.9rem;
+  font-weight:600;
 }
 
 div.sign_in_btn_list{
@@ -213,5 +194,9 @@ button.sign_in_btn_kakao img{
   width: 20px;
   margin-right: 10px;
 }
-
-
+/*------------------------------------footer:have to remove/change------------------------------------*/
+footer.footer{
+  width:100%;
+  height:50px;
+  background:red;
+}

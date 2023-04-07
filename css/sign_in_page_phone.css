@@ -1,29 +1,27 @@
-/*----------------------------------------------Adjust to main section : all page---------------------------------------------------*/
 div.progress h2.progress_text_second{
   background-color:rgb(253, 166, 4);
-  padding:10px;
-  border-radius:5px;
 }
-/*-------------------------------------------------Adjust to main section : 2nd page-----------------------------------------------------*/
+
 div.help_text{
-  margin:20px 30px;
-  text-align:left;
+  margin:50px 0; 
+  text-align:center;
 }
 
 div.help_text span{
-  font-size:23px; 
-  margin-bottom:20px; 
-}
+  font-size:28px; 
+  font-weight:700; 
+}   /* page1,page2,page3 공통 */
+
+/*-------------------------------------------------Adjust to main section : 2nd page-----------------------------------------------------*/
 
 div.phone_verification{
   display:flex;
   justify-content:center;
-  margin-top:30px;
 }
 
 div.phone_verification button.phone_verification_btn{
-  width:500px;
-  height:50px;
+  width:700px;
+  height:60px;
   color:#000000;
   padding:10px 20px;
   border:2px solid #BFBFBF;
@@ -33,21 +31,23 @@ div.phone_verification button.phone_verification_btn{
   justify-content:center;
   align-items:center;
   font-weight:800;
-  font-size:1rem; 
+  font-size:1.5rem; 
 }
 
 button.phone_verification_btn img{
-  width:20px;
-  margin-right:10px;
+  width:30px;
+  margin-right:30px;
 }
 
 div.phone_verification_text{
-  margin:20px 30px;
+  text-align:center;
+  margin:20px 0px 80px 0px;
   font-size:18px;
 }
 
 div.phone_verification_text span{
   font-family:"Noto Sans KR", sans-serif;
+  font-size:20px;
   font-weight:800;
 }
 

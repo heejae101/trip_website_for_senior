@@ -3,15 +3,6 @@
   src: url("../font/KakaoOTFBold.otf") format("opentype"); /* import font file */
 }
 /*-------------------------------container for elements----------------------*/
-section.login_section{
-  display:flex;
-  width:100%;
-  align-items: center;
-  justify-content:center;
-  margin-top:30px;
-  /* background:yellow; */
-}
-
 div.container{ 
   width:450px;
   align-items:center;
@@ -20,23 +11,15 @@ div.container{
 }
 /*--------------------------------input elemets------------------------------*/
 div.main_logo{
-  width: 100%;
-  height: 100px;
-  text-align: center;
+  margin:50px 0;
+  text-align:center;
 }
 
-div.main_logo>span{
-  font-family: 'nanum';
-  font-weight: 700;
-  font-size: 30px;
-  letter-spacing: 0px;
-  color: skyblue;
-}
-
-div.main_logo>img{
-  width: 30px;
-  height: 30px;
-  padding-top: 3px;
+div.main_logo h1{
+  font-family:"nanum";
+  font-weight:700;
+  font-size:40px;
+  letter-spacing:0px;
 }
 
 div.login_input{
@@ -45,8 +28,9 @@ div.login_input{
 }
 
 div.login_input label{
-  font-size:20px;
+  font-size:23px;
   font-weight:800;
+  font-family:"nanum";
 }
 
 div.login_input input.login{
@@ -57,20 +41,21 @@ div.login_input input.login{
   border-bottom:1px solid black;
   box-shadow:none;
   margin-top:10px;
+  font-size:20px;
 }
 
 div.login_input li.login_input_line1{
-  margin-bottom:20px;
+  margin-bottom:30px;
 }
 
 div.login_input input.login_id_check_box{
-  width:20px;
-  height:20px;
-  margin:10px 0;
+  width:22px;
+  height:22px;
+  margin-top:15px;
 }
 
 div.login_input span.login_id_check_box_text{
-  font-size:20px; 
+  font-size:23px; 
   font-weight:800;
 }
 

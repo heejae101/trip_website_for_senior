@@ -2,65 +2,47 @@
 @media(max-width: 450px){
 
 }
-
 /* =========== media query (max-width: 890px), ~890px =========== */
 @media all and (max-width:890px){
-  section.sign_in_section{
-    margin:30px 0px 60px 0px;
-  }
-  
-  div.sign_in_logo h1{
-    font-size:2rem;
-  }
 
+  div.sign_in_logo{
+    margin:50px 0px;
+  }
   div.progress ul{
     display:block;
-    margin-top:-20px;
   }
-  
   div.progress li{
     display:inline-block;
-    font-size:1.5rem;
+    font-size:1.8rem;
     font-weight:800;
     margin:0 2.247191%;
-  }
+  }    /* 여기까지가 sign in 공통부분 */
 
   div.help_text{
-    margin:20px 3.370787%;
+    margin:50px 0px;
     text-align:center;
-  }
+  }  /* page 1 2 3 */
 
   div.help_text span{
-    display:inline-block;
-    font-size:1.1rem;
-  }
-
-  div.help_text span.help_text2{
-    margin-left:10px;
-  }
-
-  div.input_user_information{
-    padding-left:8.988764%;
-  }
+    display:block;
+    font-size:1.3rem;
+  } 
 
   div.input_user_information_input{
-    margin-left:1.123596%;
+    padding:0 6.944444%;
   }
 
   div.input_user_information_input span.input_explanation{
     margin:5px 0.561798%;
-    font-size:0.9rem;
+    font-size:1rem;
   }
-
-  /* div.input_user_information input{
-    width:36.781609%;
-  } */
 
   div.input_user_information_btn{
     display:block;
   }
 
   div.input_user_information_btn button.btn_btn{
+    width:350px;
     margin-top:10px;
   }
 }

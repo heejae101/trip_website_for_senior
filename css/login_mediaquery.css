@@ -1,11 +1,13 @@
-@media all and (max-width:870px){
+/* =========== media query (max-width: 450px), ~450 =========== */
+@media(max-width: 450px){
 
-  div.login_home_icon{ 
-    font-size:2rem;  
-  } 
+}
+
+/* =========== media query (max-width: 890px), ~890px =========== */
+@media all and (max-width:890px){
 
   div.login_input{
-    margin:0 1.149425%;  
+    margin:0 35px;  
   }
 
   div.login_input label{
@@ -13,7 +15,7 @@
   }
 
   div.login_input input.login{
-    width:400px;
+    width:340px;
     margin-left:20px;
   }
 
@@ -22,11 +24,11 @@
   }
 
   button.login_btn1{
-    width:400px;
+    width:340px;
   }
 
-  button.login_oauth_btn_naver, .login_oauth_btn_naver{
-    padding:10px 38px;
+  button.login_oauth_btn_naver, button.login_oauth_btn_kakao{
+    padding:10px 30px;
   }
 
   div.login_border{
@@ -35,12 +37,12 @@
   }
 
   div.login_border::before{ 
-    flex-grow:0.4;
+    flex-grow:0.28;
     margin:0 10px;
   }
   
   div.login_border::after{
-    flex-grow:0.4;
+    flex-grow:0.28;
     margin:0 10px;
   }
   

@@ -627,15 +627,7 @@ svg{
     }
 
     .top_text_area{
-        width: 95;
-        /* background-color: #f2f2f2;
-        padding: 20px;
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-        transition: top 0.3s ease-in-out; */
+        width: 90%;
     }
 
     .bi-list{

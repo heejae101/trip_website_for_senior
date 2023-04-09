@@ -80,7 +80,13 @@ div.check_list_container_agree{
   /* background-color:pink; */
 }
 
-div.check_list_container_agree a:hover{
+div.check_list_container_agree span{
+  color:black;
+  font-weight:600;
+}
+
+div.check_list_container_agree span:hover{
+  cursor:pointer;
   color:red;
 }
 

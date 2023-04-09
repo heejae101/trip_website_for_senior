@@ -25,24 +25,12 @@ a{
     color: white;
 }
 
-body, html {
-    height: 100%;
-}
-
-#wrap{
-    position: relative;
-    min-height: 100%;
-}
-
 .open{
-    z-index: 999;
+    z-index: 9999;
 }
 
 .customer-service {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -361,7 +349,6 @@ div.customer_service{
 
 /* 스크롤 다운 버튼 */
 .down_btn{
-    margin-top: 5vh;
     width: 100%;
     height: 90px;
     display: flex;
@@ -402,7 +389,7 @@ div.down_btn hr{
 
 /* ======================= center_drop ================== */
 .center_drop{
-    padding-top: 20vh;
+    padding-top: 200px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -661,11 +648,6 @@ em,.sBtn-text{
     left: 20px;
 }
 
-.slider_popular .item_info>.tit{
-    position: relative;
-    z-index: 99;
-}
-
 .slider_popular .content{
     position: absolute;
     top: 100px;
@@ -690,7 +672,7 @@ em,.sBtn-text{
     align-items: center;
     position: absolute;
     right: 10px;
-    z-index: 9;
+    z-index: 99;
 }
 
 .rank>span{
@@ -745,7 +727,7 @@ em,.sBtn-text{
 }
 
 .more_btn>a{
-    padding-right: 30px;
+    padding-bottom: 20px;
     color: black;
 }
 
@@ -891,11 +873,7 @@ div.slide span{
 /* ========================== footer end ========================== */
 
 @media (max-width: 890px){
-
-    .mobile_nav{
-        display: block;
-    }
-
+    
     .top_text_area{
         width: 90%;
     }
@@ -965,6 +943,10 @@ div.slide span{
         display: none;
     }
 
+    .down_btn{
+        /* margin-top: 100px; */
+    }
+
     .down_btn span{
         font-size: 1.5rem;
     }
@@ -978,7 +960,6 @@ div.slide span{
     }
 
     .text_popular{
-        width: 90%;
         text-align: left;
         padding-top: 50px;
         padding-bottom: 50px;
@@ -1022,7 +1003,7 @@ div.slide span{
     }
 
     .guide_text{
-        width: 90%;
+        width: 100%;
         height: 100px;
         text-align: left;
         padding-top: 50px;
@@ -1038,10 +1019,6 @@ div.slide span{
     }
 
     /* ==============footer============== */
-    .footer_bottom{
-
-    }
-
     .footer_top span{
         font-size: 1.5rem;
     }
